@@ -11,11 +11,15 @@
 - **PubNoteOutCheck** – validation of PubMed distribution XML against the distribution DTD  
 - **PubNoteOutExtract** – extraction of PubMed distribution XML documents from a set XML document  
 - **PubNoteOutIndent** – indentation of PubMed distribution XML documents from a single or a set XML document  
-- **PubNoteRender** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX
+- **PubNoteRender-XX** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX with multiple rendering choices
+  - English (A4), English (US-letter), German, French _(others welcome!)_
 
 \<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-2.xml` (copied from the repository to the directory named "T") is being validated using `PubNoteOutCheck` (found in the user's local copy of this git repository) _(click image to make larger)_: 
 
 <img src="images/interfaces.png" width="100%"/>
+
+Illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutCheck.bat PubMedOut-2.xml`  
+Illustrated shell invocation: `sh ~/git/crane/PubNote/shell/PubNoteOutCheck.sh PubMedOut-2.xml`  
 
 \<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
 
