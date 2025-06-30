@@ -103,8 +103,8 @@
               </table-cell>
               <table-cell>
                 <block text-align="end">
-                  <basic-link external-destination="https://RealtaOnline.com"
-                              text-decoration="underline" color="blue">
+                  <basic-link text-decoration="underline" color="blue"
+                external-destination="https://github.com/RealtaOnline/PubNote">
                     <xsl:text>&lt;PubNote></xsl:text>
                   </basic-link>
                   <xsl:text> - </xsl:text>
