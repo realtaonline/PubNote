@@ -17,7 +17,7 @@
 
 <img src="images/interfaces.png" width="100%"/>
 
-\<PubNote> publishes the original PubMed XML with multiple-language labels in PDF, HTML, DOCX, and, if useful, indented XML, without disturbing the original XML _(click image to make larger)_: 
+\<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
 
 <img src="images/formats.png" width="100%"/>
 
