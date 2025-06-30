@@ -1,3 +1,2 @@
-out/
-utilities/fop-config.local.xml
-utilities/fop-config.windows.xml
+utilities/fop/fop-config.local.xml
+utilities/fop/fop-config.windows.xml
