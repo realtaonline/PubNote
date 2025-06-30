@@ -1,6 +1,6 @@
 # \<PubNote> - a project in support of OLSPub and PubMed users
 
-\<PubNote> is an open-source resource for visualizing, preparing, and working with the XML metadata content that is submitted to and distributed from [OLSPub](https://www.zbmed.de/en/research/current-projects/olspub) in Europe and [PubMed](https://pubmed.ncbi.nlm.nih.gov/) in the US.
+\<PubNote> is an open-source resource for visualizing, preparing, and working between the angle brackets of XML metadata content that is submitted to and distributed from [OLSPub](https://www.zbmed.de/en/research/current-projects/olspub) in Europe and [PubMed](https://pubmed.ncbi.nlm.nih.gov/) in the US.
 
 \<PubNote> is conceived, initiated, and maintained by Ireland-based [Réalta Online Publishing Solutions Limited - https://RealtaOnline.com](https://RealtaOnline.com). Réalta is a purveyor of fast, accurate, and quality online and API publishing services for tailored single-source JATS XML publishing with high fidelity to PDF, HTML, and DOCX output formats. _[Contact us](mailto:support@RealtaOnline.com) for your off-site online JATS publishing needs without the maintenance of on-site publishing software._
 
@@ -33,7 +33,7 @@ To install \<PubNote> as a GitHub user, simply copy or clone the repository to a
 
 `git clone https://github.com/realtaonline/PubNote.git`
 
-You can then invoke the tools directly from the appropriate `shell/` or `windows\` subdirectories, or use drag-and-drop as shown above. No build step is required, however, you do need Java installed in your environment.
+You can then invoke the tools directly from the appropriate `shell/` or `windows\` subdirectories, or use drag-and-drop as shown above. No build step is required, however, you do need Java 11 or higher installed in your environment.
 
 If you are not a GitHub user and you can live without Mac drag-and-drop, you can also download `<PubNote>` as a ZIP file by clicking the green **\<> Code** button on the [GitHub repository page](https://github.com/realtaonline/PubNote) and choosing **Download ZIP**. Again, no build step is required, though Mac drag-and-drop won't work. Windows drag-and-drop should work as expected, though some users report problems after installing the ZIP on a networked drive.
 
