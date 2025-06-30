@@ -176,7 +176,7 @@
     <xsl:if test="normalize-space(.) and
                   empty(.//*[matches(name(.),'^[A-Z]')])">
       <inline font-family="Noto Sans">
-        <xsl:if test="$pn:spaceBeforeColon"><xsl:text> </xsl:text></xsl:if>
+        <xsl:if test="$pn:spaceBeforeColon">&#xa0;</xsl:if>
         <xsl:text>: </xsl:text>
         <xsl:apply-templates/>
       </inline>
