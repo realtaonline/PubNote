@@ -38,7 +38,11 @@
               <xsl:apply-templates select="html/body/div[@class='footer']"/>
             </wp:footer>
           </wp:headers-and-footers>
-          <wp:page-size orient="portrait" width="210mm" height="297mm"/>
+          <wp:page-size width="{
+(html/body/div[@class='pageInformation']/span[@class='pageWidth'],'210mm')[1]}"
+                        height="{
+(html/body/div[@class='pageInformation']/span[@class='pageHeight'],'297mm')[1]}"
+                        orient="portrait"/>
         </wp:page-sequence-properties>
         <wp:body>
           <xsl:apply-templates select="html/body/node() except

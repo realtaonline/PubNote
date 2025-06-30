@@ -94,7 +94,7 @@
        </span>
        <span class="pageHeight">
          <xsl:value-of 
-              select="/*/layout-master-set/simple-page-master[1]/@page-width"/>
+             select="/*/layout-master-set/simple-page-master[1]/@page-height"/>
        </span>
      </div>
      
