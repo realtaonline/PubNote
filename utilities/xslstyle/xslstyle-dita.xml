@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="xslstyle-docbook.xsl"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.CraneSoftwrights.com/ns/xslstyle"
+  exclude-result-prefixes="xs"
+  version="1.0">
+
+<!--diagnostic inclusion of the main stylesheet-->
+<xsl:import href="xslstyle-dita.xsl"/>
+
+<xs:doc info="$Id: xslstyle-dita.xml,v 1.1 2007/09/16 17:40:58 G. Ken Holman Exp $"
+        filename="xslstyle-dita.xml" vocabulary='DocBook'>
+  <xs:title>DITA shell for XSLStyle&#x2122; test harness</xs:title>
+  <para>
+    This XSLStyle&#x2122; test harness allows instantaneous review of the
+    processing in Internet Explorer without interfering with the check-in
+    process to the source code control system (because IE "locks" the file
+    being browsed).
+  </para>
+  <para>
+    In addition, there is a bug in Internet Explorer that prevents hyperlinks
+    in files with ".xsl" extension processed with XSL stylesheets from 
+    working.  The bug is avoided by using this test harness in a browser.
+  </para>
+  <para>
+    There is no logic in this stylesheet and it adds nothing to the
+    interpretation of the embedded markup in stylesheets; it is only a wrapper
+    with a different filename extension.
+  </para>
+</xs:doc>
+</xsl:stylesheet>

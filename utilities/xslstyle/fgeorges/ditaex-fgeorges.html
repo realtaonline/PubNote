@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Test shell to demonstrate &#34;fgeorges&#34; style formatting"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="d0"/>
+<link rel="stylesheet" type="text/css" href="commonltr.css"/>
+<link rel="stylesheet" type="text/css" href="fgeorges-xslstyle.css"/>
+<title>Test shell to demonstrate "fgeorges" style formatting</title>
+</head>
+<body>
+
+<div class="nested0" id="d0"><a name="d0"><!-- --></a><h1 class="topictitle1">Test shell to demonstrate "fgeorges" style formatting</h1>
+<div><p><strong>Table of contents</strong></p>
+<dl><dt class="dlterm">1. <a href="#d0__d1e2">Test shell to demonstrate "fgeorges" style formatting - <samp class="codeph">ditaex-fgeorges.xsl</samp></a></dt>
+<dt class="dlterm">2. <a href="#d0__d3e2">XSLStyle&#8482; illustration for the DITA vocabulary - <samp class="codeph">ditaex.xsl</samp></a></dt>
+<dt class="dlterm">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2.1. <a href="#d0__d3e27">How to use XSLStyle&#8482;</a></dt>
+<dt class="dlterm">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2.2. <a href="#d0__d3e305">Global properties</a></dt>
+<dt class="dlterm">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2.3. <a href="#d0__d3e330">One of everything else</a></dt>
+<dt class="dlterm">3. <a href="#d0__d4e1">XSLStyle&#8482; imported fragment two - <samp class="codeph">ditaex2.xsl</samp></a></dt>
+<dt class="dlterm">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;3.1. <a href="#d0__d4e17">A section of templates</a></dt>
+<dt class="dlterm">4. <a href="#d0__d5e1">XSLStyle&#8482; imported fragment one - <samp class="codeph">ditaex1.xsl</samp></a></dt>
+<dt class="dlterm">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;4.1. <a href="#d0__d5e17">A section of alternative templates</a></dt>
+<dt class="dlterm">5. <a href="#d0__d7">Index</a></dt>
+</dl>
+<div class="xsl-subtitle-import-include"><strong>
+        Import/include tree (in order of importance; reverse import order)
+      </strong><br/><ul class="xsl-list-import-include"><li><span class="xsl-list-import-include-item"><a href="#d0__d1e2" class="xsl-file-reference-link"><span class="xsl-file-reference-title">Test shell to demonstrate "fgeorges" style formatting</span> - <samp class="xsl-file-reference-name">ditaex-fgeorges.xsl</samp></a></span><br/><ul><li><a href="#d3"><span class="xsl-list-import-include-item"><a href="#d0__d3e2" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; illustration for the DITA vocabulary</span> - <samp class="xsl-file-reference-name">ditaex.xsl</samp></a></span></a><br/><ul><li><a href="#d4"><span class="xsl-list-import-include-item"><a href="#d0__d4e1" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; imported fragment two</span> - <samp class="xsl-file-reference-name">ditaex2.xsl</samp></a></span></a></li>
+<li><a href="#d5"><span class="xsl-list-import-include-item"><a href="#d0__d5e1" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; imported fragment one</span> - <samp class="xsl-file-reference-name">ditaex1.xsl</samp></a></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="xsl-subtitle-invocation"><strong>
+      Available invocation parameter</strong><br/><ul class="xsl-list-invocation"><li><a href="#d0__d3e320" class="xsl-input-parameter-link"><samp class="xsl-input-parameter-name">this</samp> (<span class="xsl-input-parameter-module-title">XSLStyle&#8482; illustration for the DITA vocabulary</span> - <samp class="xsl-input-parameter-module-name">ditaex.xsl</samp>)</a></li>
+</ul>
+</div>
+<div class="xsl-section" id="d0__d1e2"><a name="d0__d1e2"><!-- --></a><h2 class="topictitle2">1. Test shell to demonstrate "fgeorges" style formatting - <samp class="codeph">ditaex-fgeorges.xsl</samp></h2>
+<div><p class="xsl-subtitle-filename">
+              Filename: <samp class="xsl-subtitle-filename-name">ditaex-fgeorges.xsl</samp></p>
+<div class="xsl-subtitle-import">Import statement:<br/><ul class="xsl-list-section-imports"><li class="xsl-list-section-imports-item"><a href="#d0__d3e2" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; illustration for the DITA vocabulary</span> - <samp class="xsl-file-reference-name">ditaex.xsl</samp></a></li>
+</ul>
+</div>
+<pre>$Id: ditaex-fgeorges.xsl,v 1.3 2010/03/02 15:46:08 gkholman Exp $</pre>
+
+    This stylesheet adds nothing to the logic of the 
+    ditaex.xsl stylesheet but does invoke a different
+    XSLStyle rendering stylesheet due to being at the top level.
+  </div>
+</div>
+<div class="xsl-section" id="d0__d3e2"><a name="d0__d3e2"><!-- --></a><h2 class="topictitle2">2. XSLStyle&#8482; illustration for the DITA vocabulary - <samp class="codeph">ditaex.xsl</samp></h2>
+<div><p>
+              Path: <samp class="codeph">../ditaex.xsl</samp></p>
+<p class="xsl-subtitle-filename">
+              Filename: <samp class="xsl-subtitle-filename-name">ditaex.xsl</samp></p>
+<div class="xsl-subtitle-import">Import statements:<br/><ul class="xsl-list-section-imports"><li class="xsl-list-section-imports-item"><a href="#d0__d5e1" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; imported fragment one</span> - <samp class="xsl-file-reference-name">ditaex1.xsl</samp></a></li>
+<li class="xsl-list-section-imports-item"><a href="#d0__d4e1" class="xsl-file-reference-link"><span class="xsl-file-reference-title">XSLStyle&#8482; imported fragment two</span> - <samp class="xsl-file-reference-name">ditaex2.xsl</samp></a></li>
+</ul>
+</div>
+<pre>$Id: ditaex.xsl,v 1.5 2010/03/02 17:05:43 gkholman Exp $</pre>
+<p>
+    This stylesheet embeds the DITA vocabulary into the XSLStyle
+    scaffolding used to document the constructs in an XSLT stylesheet.
+    For ease of use, any namespace that may be attached to the documentation
+    constructs found inside of the XSLStyle constructs is stripped before
+    the rendering stylesheets are invoked, thus keeping the XSLT author from
+    having to worry about default namespace declarations and such simply
+    for the documentation.
+  </p>
+<p>
+    XSLStyle&#8482; implements a methodology for styling stylesheets
+    using a documentation vocabulary into formatted documentation and
+    rigourous completeness reports.
+    Note that the use of "&#8482;" is only to protect using this name for
+    this set of stylesheets.  The use of these stylesheets is subject to
+    the following license:
+  </p>
+<pre>
+Copyright (C) - Crane Softwrights Ltd. 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, 
+  this list of conditions and the following disclaimer. 
+- Redistributions in binary form must reproduce the above copyright notice, 
+  this list of conditions and the following disclaimer in the documentation 
+  and/or other materials provided with the distribution. 
+- The name of the author may not be used to endorse or promote products 
+  derived from this software without specific prior written permission. 
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR 
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN 
+NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Note: for your reference, the above is the "Modified BSD license", this text
+      was obtained 2002-12-16 at http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5
+</pre>
+<div class="xsl-subsection" id="d0__d3e27"><a name="d0__d3e27"><!-- --></a><h3 class="topictitle3">2.1. How to use XSLStyle&#8482;</h3>
+<div><p>
+  See the "XSLT Resources" section linked from the top of the
+  <a href="http://www.CraneSoftwrights.com/links/res-xs.htm">
+    <samp class="codeph">http://www.CraneSoftwrights.com</samp></a>
+  "Free resources" web page for up-to-date information on invocation.
+</p>
+<div class="nested3" id="d0__xslstyle-toc-2.1.1."><a name="d0__xslstyle-toc-2.1.1."><!-- --></a>
+    <h4 class="topictitle4">2.1.1. Basic mechanisms</h4>
+
+    <p>
+      The W3C stylesheet association specification
+      <a href="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629"><samp class="codeph">http://www.w3.org/1999/06/REC-xml-stylesheet-19990629</samp></a>
+      provides for indicating a stylesheet with which to render an XML
+      document.  
+      This indication is done by way of an XML processing instruction.
+    </p>
+
+    <p>
+      XSLT stylesheets are XML documents so the stylesheet association
+      processing instruction can be added to XSLT documents, suggesting a
+      stylesheet with which to render the stylesheet.
+    </p>
+
+    <p>
+      The XSLTStyle&#8482; stylesheet and stylesheet library provides an
+      environment in which any documentation vocabulary can be used to
+      annotate and XSLT stylesheet with documentation.  Furthermore, the
+      stylesheet can enforce "business rules" regarding the stylesheets,
+      thus being a tool in development for measuring the compliance or
+      completeness of an XSLT stylesheet according to those rules.
+    </p>
+
+    <p>
+      XSLT allows non-XSLT-namespace constructs at the top-level of an XSLT
+      stylesheet (except in advance of <samp class="codeph">&lt;xsl:import&gt;</samp>
+      instructions).  The embedded documentation, using any vocabulary, is
+      wrapped by top-level elements in the XSLT stylesheet using the 
+      XSLStyle&#8482; vocabulary.  The XSLStyle&#8482; vocabulary is
+      detected by these stylesheets and the wrapped content is fed to the
+      rendering stylesheets, which then render the result as HTML to the
+      output (typically a web browser screen).
+    </p>
+
+  <div class="nested4" id="d0__xslstyle-toc-2.1.1.1."><a name="d0__xslstyle-toc-2.1.1.1."><!-- --></a>
+    <h5 class="topictitle5">2.1.1.1. For documentation</h5>
+
+    <p>
+      XSLStyle&#8482; does not, itself, define a documentation vocabulary.
+      It is merely a structural vocabulary for decorating an XSLT stylesheet,
+      within which a documentation vocabulary is used for the actual prose
+      of the documentation.
+    </p>
+
+    <p>
+      These example stylesheets themselves are documented using
+      DITA,
+      though there is no obligation with which to do so.  
+      The XSLStyle&#8482; stylesheet fragments (including that for DITA) are documented in
+      <a href="http://www.DocBook.org">DocBook</a>
+      The author has also utilized the
+      <a href="https://www.icmwg.org/">Intelligence Community 
+      Metadata Standard for Publications - ICMSP</a> vocabulary in a 
+      similar embedding mechanism with which a set of ICMSP stylesheets
+      are documented (in that they document themselves).
+    </p>
+
+    <p>
+      Thus, the mechanism is independent of the documentation vocabulary, and
+      all documentation vocabulary handling is localized at the top stylesheet
+      of a stylesheet import tree, where the top documentation-specific
+      stylesheet imports the XSLStyle&#8482; stylesheet.  This top stylesheet
+      implements interpetation of the embedded vocabulary, either directly
+      within the fragment or by importing the stylesheets required.
+    </p>
+
+ </div>
+
+  <div class="nested4" id="d0__xslstyle-toc-2.1.1.2."><a name="d0__xslstyle-toc-2.1.1.2."><!-- --></a>
+    <h5 class="topictitle5">2.1.1.2. For completeness</h5>
+
+    <p>
+      The power of XSLT allows arbitrary business rules to be coded, using
+      XPath addresses to find content in an XML document, and stylesheet
+      logic to establish if the content meets the constraints of the rules.
+    </p>
+
+    <p>
+      A stylesheet writing team can choose the business rules for writing
+      stylesheets, encode the detection and confirmation of meeting these
+      rules in XSLT, and list any detectable incompleteness as a section of 
+      the final report.
+    </p>
+
+    <p>
+      A stylesheet writer's manager, then, could choose not to accept a
+      stylesheet as being completely finished until the embedded documentation
+      report is free of all business rule inconsistencies.
+    </p>
+
+    <p>
+      For a quick demonstration of this, remove any XSLStyle&#8482;
+      documentation construct from the stylesheet producing this report
+      and refresh the report to see the inconsistencies section.  You can
+      remove any top-level element's documentation construct, or a template
+      rule parameter's documentation construct in order to trigger the display
+      of this business rule violation section.  Restoring the documentation
+      will restore the report not to have any inconsistencies section.
+    </p>
+
+    <p>
+      The inconsistency report can be suppressed by setting the invocation
+      parameter <samp class="codeph">suppress-inconsistencies</samp> to true.
+    </p>
+
+  </div>
+
+  </div>
+<div class="nested3" id="d0__xslstyle-toc-2.1.2."><a name="d0__xslstyle-toc-2.1.2."><!-- --></a>
+    <h4 class="topictitle4">2.1.2. Using the vocabulary</h4>
+
+    <div class="nested4" id="d0__xslstyle-toc-2.1.2.1."><a name="d0__xslstyle-toc-2.1.2.1."><!-- --></a>
+      <h5 class="topictitle5">2.1.2.1. Stylesheet fragment stylesheet engagement</h5>
+
+      <p>
+        Each stylesheet with XSLStyle&#8482; documentation, or at the least
+        those that are at the top of an XSLT import tree, needs a processing
+        instruction to automatically engage the stylesheet fragment when
+        processed with XSLT.  For example, the invocation of the DITA
+        shell around XSLStyle&#8482; at the top of this stylesheet reads as:
+      </p>
+
+      <pre>
+&lt;?xml-stylesheet type="text/xsl" href="xslstyle-dita.xsl"?&gt;
+</pre>
+
+      <p>
+        Note this processing instruction is not mandatory as the stylesheet
+        could of course be invoked explicitly in a command line shell that
+        knows which XSLStyle&#8482; stylesheet shell to use, but by embedding the
+        processing instruction one could invoke the XSLT processor in the 
+        command line shell to just use the <samp class="codeph">xml-stylesheet</samp>
+        processing instruction.
+      </p>
+
+    </div>
+
+    <div class="nested4" id="d0__xslstyle-toc-2.1.2.2."><a name="d0__xslstyle-toc-2.1.2.2."><!-- --></a>
+      <h5 class="topictitle5">2.1.2.2. Stylesheet fragment documentation</h5>
+
+      <p>
+        Any stylesheet with XSLStyle&#8482; documentation must have an
+        <samp class="codeph">&lt;xs:doc&gt;</samp> element with an <samp class="codeph">info=</samp>
+        attribute showing metadata information, a 
+        <samp class="codeph">filename=</samp>
+        attribute having some unique filename information identifying the file
+        (so as to be unambiguous with any other stylesheet), and a
+        <samp class="codeph">vocabulary=</samp>
+        attribute indicating the vocabulary being embedded.
+        These attributes
+        must be attached to the first <samp class="codeph">&lt;xs:doc&gt;</samp> in the
+        document.
+        This first <samp class="codeph">&lt;xs:doc&gt;</samp> must also have an
+        <samp class="codeph">&lt;xs:title&gt;</samp> child as the overall title of the
+        documentation.
+      </p>
+
+      <p>
+        You can choose to use any level of detail in either the
+        <samp class="codeph">info=</samp> or <samp class="codeph">filename=</samp> attributes
+        as there are no restrictions to the content. Use whatever you
+        will find helpful in the final report to identify the fragment 
+        and understand the metadata.
+        These stylesheets happen to use CVS source code control metadata
+        in the information attribute.  The following is an example from an
+        earlier edition of this stylesheet:
+      </p>
+
+        <pre>
+&lt;xs:doc info="$Id: xslstyle.xsl,v 1.17 2005/10/17 04:58:43 G. Ken Holman Exp $"
+        filename="xslstyle.xsl" global-ns="xs" vocabulary="DITA"&gt;
+  &lt;xs:title&gt;XSLStyle&#8482; illustration for the DITA vocabulary&lt;/xs:title&gt;
+  &lt;p&gt;
+    XSLStyle&amp;#x2122; implements a methodology for styling stylesheets
+    using a documentation vocabulary into formatted documentation and
+    rigourous completeness reports.
+    Note that the use of "&amp;#x2122;" is only to protect using this name for
+    this set of stylesheets.  The use of these stylesheets is subject to
+    the following license:
+  &lt;/p&gt;
+  &lt;codeblock&gt;
+Copyright (C) - Crane Softwrights Ltd.
+...
+&lt;/xs:doc&gt; 
+</pre>
+
+      <p>
+        There are a number of other top-level <samp class="codeph">&lt;xs:doc&gt;</samp>
+        attributes corresponding to external and internal stylesheets,
+        and suppressing or expanding portions of the final report.  Please
+        see the corresponding shell stylesheet that wraps the core stylesheet
+        supporting this vocabulary.
+      </p>
+
+      <div class="p">
+        All other <samp class="codeph">&lt;xs:doc&gt;</samp> elements in the stylesheet
+        must not have these attributes, but may be present in order to
+        indicate major sections of the stylesheet that group the top level
+        elements for some reason, typically promoting good stylesheet
+        maintenance.  These have an <samp class="codeph">&lt;xs:title&gt;</samp> element
+        child used for indexing.  For example, again from this stylesheet, the
+        documentation for the next section of this report:
+      <pre>
+&lt;xs:doc&gt;
+  &lt;xs:title&gt;Global properties&lt;/xs:title&gt;
+  &lt;p&gt;
+    These are the invocation and/or importation properties that can be set
+    when either invoking the stylesheet from the command line, or using an
+    importing stylesheet to import this while overriding these properties.
+  &lt;/p&gt;
+&lt;/xs:doc&gt;
+</pre>
+
+      </div>
+
+
+      <p>
+        If you look inside this example stylesheet you will note that
+        sections are embedded in the documentation using
+        <samp class="codeph">&lt;topic&gt;</samp> elements.  This environment will supply
+        defaulted <samp class="codeph">id=</samp> and <samp class="codeph">class=</samp> attributes
+        where required, so the embedded documentation need not have them
+        unless you feel you need them.
+      </p>
+
+<pre>
+  &lt;topic&gt;
+    &lt;title&gt;Using the vocabulary&lt;/title&gt;
+    &lt;topic&gt;
+      &lt;title&gt;Stylesheet fragment stylesheet engagement&lt;/title&gt;
+      &lt;p&gt;
+        Each stylesheet with XSLStyle&#8482; documentation, or at the least
+        ...
+</pre>
+
+      <p>
+        Note that the <samp class="codeph">global-ns=</samp> and 
+        <samp class="codeph">internal-ns=</samp> attributes support a
+        business rule created for these particular stylesheets:  the
+        attributes enumerate in a space-separated list all of the 
+        namespace prefixes allowed for names of top-level constructs
+        and modes for template matching rules.  Internal variables are
+        summarized separately from global variables.
+        An inconsistency is reported for
+        any top-level element violating this rule, unless the element uses
+        <samp class="codeph">ignore-ns="yes"</samp> to explicitly state that
+        it does not belong in the namespace of the
+        stylesheet's global constructs, as this stylesheet does for
+        command-line invocation parameters:
+      </p>
+
+      <pre>
+&lt;xs:param ignore-ns='yes'&gt;
+  &lt;p&gt;
+    Invocation/importation parameter set to true to expose the entire import
+    tree instead of just the portion of the import tree that is documented
+    with XSLStyle&amp;#x2122; constructs (stopping at the point where there are
+    no such constructs).
+  &lt;/p&gt;
+&lt;/xs:param&gt;
+&lt;xsl:param name="force-full-import-tree" select="false()"/&gt;
+</pre>
+
+    <p>
+      The inconsistency report for global namespace naming violations
+      can be suppressed by setting the invocation
+      parameter <samp class="codeph">suppress-non-ns-global-reports</samp> to true.
+    </p>
+
+    <p>
+      The content of the XSLStyle&#8482; construct is any content that
+      is recognized by the documentation vocabulary stylesheets rendering
+      the report.  This is the content gleaned from the stylesheet to
+      make up the final report.
+    </p>
+
+    </div>
+
+    <div class="nested4" id="d0__xslstyle-toc-2.1.2.3."><a name="d0__xslstyle-toc-2.1.2.3."><!-- --></a>
+      <h5 class="topictitle5">2.1.2.3. Stylsheet top-level element documentation</h5>
+
+      <p>
+        These stylesheets implement the business rule that each and every
+        top-level XSLT element must be documented using an XSLStyle&#8482;
+        construct.  This construct must have the same local name as the
+        top-level XSLT element.  It must be the immediately-preceding element
+        (see the <samp class="codeph">&lt;xs:param&gt;</samp> example in the previous
+        section), or it can reside anywhere in the top-level of the 
+        stylesheet if both the XSLT element and the XSLStyle&#8482; 
+        element have the same <samp class="codeph">name=</samp> attribute value.
+      </p>
+
+      <p>
+        Furthermore, every <samp class="codeph">&lt;xs:template&gt;</samp> element
+        documenting an <samp class="codeph">&lt;xst:template&gt;</samp> element
+        must have an <samp class="codeph">&lt;xs:param&gt;</samp> child element, with
+        a <samp class="codeph">name=</samp> attribute, for each of the template's
+        invocation parameters.  The following is an example:
+      </p>
+
+      <pre>
+&lt;xs:template&gt;
+  &lt;p&gt;
+    This adds a reference to the in-memory reference tree, maintaining the
+    path of the module referenced.
+  &lt;/p&gt;
+  &lt;xs:param name="path"&gt;
+    &lt;p&gt;This is the parent's path so far, on which to build this path.&lt;/p&gt;
+  &lt;/xs:param&gt;
+  &lt;xs:param name="href"&gt;
+    &lt;p&gt;
+      This is the &lt;codeph&gt;href=&lt;/codeph&gt; attribute used by the parent to
+      call this module.
+    &lt;/p&gt;
+  &lt;/xs:param&gt;
+&lt;/xs:template&gt;
+&lt;xsl:template match="*" mode="xs:collect-module-hrefs"&gt;
+  &lt;xsl:param name="path"/&gt;
+  &lt;xsl:param name="href"/&gt;
+...
+</pre>
+
+    <p>
+      Top-level elements without names can be suppressed from the report
+      by setting the invocation parameter
+      <samp class="codeph">suppress-unamed-construct-documentation</samp> to true.
+    </p>
+
+    </div>
+
+  </div>
+<div class="nested3" id="d0__xslstyle-toc-2.1.3."><a name="d0__xslstyle-toc-2.1.3."><!-- --></a>
+    <h4 class="topictitle4">2.1.3. Using the import/include tree</h4>
+
+    <p>
+      After the table of contents, the import/include tree is shown for
+      the set of stylesheets imported and included from the stylesheet
+      being documented.  The report will stop a particular branch of the
+      import tree when it encounters a fragment without XSLStyle&#8482;
+      embedded documentation, or whose embedded documentation is using a
+      different vocabulary.  A complete report of the full import tree
+      can be engaged by setting the invocation parameter
+      <samp class="codeph">force-full-import-tree</samp> to true.
+    </p>
+
+    <p>
+      Each entry in the import tree is hyperlinked to the report's
+      documentation for that stylesheet fragment, thus, it is only necessary
+      to browse the "top" fragment in the import tree to see all of the
+      documentation for all of the fragments in the entire import tree.
+    </p>
+
+  </div>
+<div class="nested3" id="d0__xslstyle-toc-2.1.4."><a name="d0__xslstyle-toc-2.1.4."><!-- --></a>
+    <h4 class="topictitle4">2.1.4. Using the index of named XSLT top-level elements</h4>
+
+    <p>
+      At the bottom of the report, before any inconsistencies, is a
+      generated index of all of the named XSLT top-level elements in
+      the entire import tree.  This is alphabetized by the local name
+      of the construct, and sub-indexed by the first letter of the
+      local name.
+    </p>
+
+    <p>
+      Each entry is hyperlinked three ways: to the construct's entry
+      in the report, to the construct's group heading in the report,
+      and to the construct's stylesheet fragment documentation in the report.
+    </p>
+
+  </div>
+</div>
+</div>
+<div class="xsl-subsection" id="d0__d3e305"><a name="d0__d3e305"><!-- --></a><h3 class="topictitle3">2.2. Global properties</h3>
+<div><p>
+    These are the invocation and/or importation properties that can be set
+    when either invoking the stylesheet from the command line, or using an
+    importing stylesheet to import this while overriding these properties.
+  </p>
+<div class="xsl-param xsl-top-level" id="d0__d3e320"><a name="d0__d3e320"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">this</strong> <strong class="xsl-block-other">select="false()"</strong><em class="xsl-block-type"> (xsl:param)</em></samp><dl><dd class="xsl-detail-param">
+  <p>
+    This is an example
+  </p>
+
+</dd>
+</dl>
+</div>
+<div class="xsl-variable xsl-top-level" id="d0__d3e328"><a name="d0__d3e328"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">that</strong> <strong class="xsl-block-other">select="false()"</strong><em class="xsl-block-type"> (xsl:variable)</em></samp><dl><dd class="xsl-detail-variable">
+  <p>
+    That is an example
+  </p>
+
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="xsl-subsection" id="d0__d3e330"><a name="d0__d3e330"><!-- --></a><h3 class="topictitle3">2.3. One of everything else</h3>
+<div><p>
+    These are the invocation and/or importation properties that can be set
+    when either invoking the stylesheet from the command line, or using an
+    importing stylesheet to import this while overriding these properties.
+  </p>
+<div class="xsl-template xsl-top-level" id="d0__d3e345"><a name="d0__d3e345"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:sample</strong><em class="xsl-block-type"> (xsl:template)</em></samp><dl><dd class="xsl-detail-template">
+  <p>A sample template</p>
+
+</dd>
+</dl>
+</div>
+<div class="xsl-attribute-set xsl-top-level" id="d0__d3e353"><a name="d0__d3e353"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:attribute-set</strong><em class="xsl-block-type"> (xsl:attribute-set)</em></samp><dl><dd class="xsl-detail-attribute-set">
+  <p>A sample attribute set</p>
+
+</dd>
+</dl>
+</div>
+<div class="xsl-key xsl-top-level" id="d0__d3e361"><a name="d0__d3e361"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:key</strong> <strong class="xsl-block-match">match="abc"</strong> <strong class="xsl-block-other">use="def"</strong><em class="xsl-block-type"> (xsl:key)</em></samp><dl><dd class="xsl-detail-key">
+  <p>A sample key</p>
+
+</dd>
+</dl>
+</div>
+<div class="xsl-character-map xsl-top-level" id="d0__d3e369"><a name="d0__d3e369"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:character-map</strong><em class="xsl-block-type"> (xsl:character-map)</em></samp><dl><dd class="xsl-detail-character-map">
+  <p>A sample character map</p>
+
+</dd>
+</dl>
+</div>
+<div class="xsl-function xsl-top-level" id="d0__d3e377"><a name="d0__d3e377"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:sample</strong><em class="xsl-block-function-param">(0)</em> <strong class="xsl-block-other">as="xs:string"</strong><em class="xsl-block-type"> (xsl:function)</em></samp><dl><dd class="xsl-detail-function">
+  <p>A sample function</p>
+
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xsl-section" id="d0__d4e1"><a name="d0__d4e1"><!-- --></a><h2 class="topictitle2">3. XSLStyle&#8482; imported fragment two - <samp class="codeph">ditaex2.xsl</samp></h2>
+<div><p>
+              Path: <samp class="codeph">../ditaex2.xsl</samp></p>
+<p class="xsl-subtitle-filename">
+              Filename: <samp class="xsl-subtitle-filename-name">ditaex2.xsl</samp></p>
+<pre>$Id: ditaex2.xsl,v 1.3 2010/02/20 14:21:00 gkholman Exp $</pre>
+<p>
+    This is a sample imported fragment.
+  </p>
+<pre>
+Copyright (C) - Crane Softwrights Ltd. 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, 
+  this list of conditions and the following disclaimer. 
+- Redistributions in binary form must reproduce the above copyright notice, 
+  this list of conditions and the following disclaimer in the documentation 
+  and/or other materials provided with the distribution. 
+- The name of the author may not be used to endorse or promote products 
+  derived from this software without specific prior written permission. 
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR 
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN 
+NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Note: for your reference, the above is the "Modified BSD license", this text
+      was obtained 2002-12-16 at http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5
+</pre>
+<div class="xsl-subsection" id="d0__d4e17"><a name="d0__d4e17"><!-- --></a><h3 class="topictitle3">3.1. A section of templates</h3>
+<div><div class="xsl-template xsl-top-level" id="d0__d4e41"><a name="d0__d4e41"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:path-stem</strong><em class="xsl-block-type"> (xsl:template)</em></samp><dl><dd class="xsl-detail-template">
+  <p>
+    This recursive template rule determines the stem portion of the path to
+    a filename by extracting all content up to and including the last '/'.
+  </p>
+
+  
+  
+<div class="xsl-template-parameter">Parameter <samp class="codeph"><strong class="xsl-template-parameter-name">path</strong></samp><dl><dd class="xsl-template-detail-parameter"><p>The decimated path information as the stem is built.</p>
+</dd>
+</dl>
+</div>
+<div class="xsl-template-parameter">Parameter <samp class="codeph"><strong class="xsl-template-parameter-name">stem</strong></samp><dl><dd class="xsl-template-detail-parameter"><p>The accumulated stem information as the path is eaten.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xsl-section" id="d0__d5e1"><a name="d0__d5e1"><!-- --></a><h2 class="topictitle2">4. XSLStyle&#8482; imported fragment one - <samp class="codeph">ditaex1.xsl</samp></h2>
+<div><p>
+              Path: <samp class="codeph">../ditaex1.xsl</samp></p>
+<p class="xsl-subtitle-filename">
+              Filename: <samp class="xsl-subtitle-filename-name">ditaex1.xsl</samp></p>
+<pre>$Id: ditaex1.xsl,v 1.3 2010/02/20 14:21:00 gkholman Exp $</pre>
+<p>
+    This is a sample imported fragment.
+  </p>
+<pre>
+Copyright (C) - Crane Softwrights Ltd. 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, 
+  this list of conditions and the following disclaimer. 
+- Redistributions in binary form must reproduce the above copyright notice, 
+  this list of conditions and the following disclaimer in the documentation 
+  and/or other materials provided with the distribution. 
+- The name of the author may not be used to endorse or promote products 
+  derived from this software without specific prior written permission. 
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR 
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN 
+NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Note: for your reference, the above is the "Modified BSD license", this text
+      was obtained 2002-12-16 at http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5
+</pre>
+<div class="xsl-subsection" id="d0__d5e17"><a name="d0__d5e17"><!-- --></a><h3 class="topictitle3">4.1. A section of alternative templates</h3>
+<div><p>This is really just a copy of the other example.</p>
+<div class="nested3" id="d0__xslstyle-toc-4.1.1."><a name="d0__xslstyle-toc-4.1.1."><!-- --></a>
+    <h4 class="topictitle4">4.1.1. An embedded section</h4>
+
+    <p>Here is an embedded section of documentation.</p>
+
+  </div>
+<div class="xsl-template xsl-top-level" id="d0__d5e53"><a name="d0__d5e53"><!-- --></a><samp class="codeph"><strong class="xsl-block-name">xs:path-stem-alternate</strong><em class="xsl-block-type"> (xsl:template)</em></samp><dl><dd class="xsl-detail-template">
+  <p>
+    This recursive template rule determines the stem portion of the path to
+    a filename by extracting all content up to and including the last '/'.
+  </p>
+
+  
+  
+<div class="xsl-template-parameter">Parameter <samp class="codeph"><strong class="xsl-template-parameter-name">path</strong></samp><dl><dd class="xsl-template-detail-parameter"><p>The decimated path information as the stem is built.</p>
+</dd>
+</dl>
+</div>
+<div class="xsl-template-parameter">Parameter <samp class="codeph"><strong class="xsl-template-parameter-name">stem</strong></samp><dl><dd class="xsl-template-detail-parameter"><p>The accumulated stem information as the path is eaten.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xsl-index" id="d0__d7"><a name="d0__d7"><!-- --></a><h2 class="topictitle2">5. Index</h2>
+<div><p><strong class="xsl-index-letter-title"><a href="#index-A">A</a></strong> <strong class="xsl-index-letter-title"><a href="#index-C">C</a></strong> <strong class="xsl-index-letter-title"><a href="#index-K">K</a></strong> <strong class="xsl-index-letter-title"><a href="#index-P">P</a></strong> <strong class="xsl-index-letter-title"><a href="#index-S">S</a></strong> <strong class="xsl-index-letter-title"><a href="#index-T">T</a></strong> </p>
+<div class="p" id="d0__index-A"><a name="d0__index-A"><!-- --></a><strong class="xsl-index-letter-section">A</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d3e353" class="xsl-index-top-level xsl-attribute-set"><samp class="xsl-index-entry-name">xs:attribute-set</samp></a> (<a href="#d0__d3e330" class="xsl-index-entry-module-title">One of everything else</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+</ul>
+</div>
+<div class="p" id="d0__index-C"><a name="d0__index-C"><!-- --></a><strong class="xsl-index-letter-section">C</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d3e369" class="xsl-index-top-level xsl-character-map"><samp class="xsl-index-entry-name">xs:character-map</samp></a> (<a href="#d0__d3e330" class="xsl-index-entry-module-title">One of everything else</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+</ul>
+</div>
+<div class="p" id="d0__index-K"><a name="d0__index-K"><!-- --></a><strong class="xsl-index-letter-section">K</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d3e361" class="xsl-index-top-level xsl-key"><samp class="xsl-index-entry-name">xs:key</samp></a> (<a href="#d0__d3e330" class="xsl-index-entry-module-title">One of everything else</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+</ul>
+</div>
+<div class="p" id="d0__index-P"><a name="d0__index-P"><!-- --></a><strong class="xsl-index-letter-section">P</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d4e41" class="xsl-index-top-level xsl-template"><samp class="xsl-index-entry-name">xs:path-stem</samp></a> (<a href="#d0__d4e17" class="xsl-index-entry-module-title">A section of templates</a> - <a href="#d0__d4e1" class="xsl-index-entry-module-name"><samp class="codeph">ditaex2.xsl</samp></a>)</span></li>
+<li><span class="xsl-index-entry-link"><a href="#d0__d5e53" class="xsl-index-top-level xsl-template"><samp class="xsl-index-entry-name">xs:path-stem-alternate</samp></a> (<a href="#d0__d5e17" class="xsl-index-entry-module-title">A section of alternative templates</a> - <a href="#d0__d5e1" class="xsl-index-entry-module-name"><samp class="codeph">ditaex1.xsl</samp></a>)</span></li>
+</ul>
+</div>
+<div class="p" id="d0__index-S"><a name="d0__index-S"><!-- --></a><strong class="xsl-index-letter-section">S</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d3e345" class="xsl-index-top-level xsl-template"><samp class="xsl-index-entry-name">xs:sample</samp></a> (<a href="#d0__d3e330" class="xsl-index-entry-module-title">One of everything else</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+<li><span class="xsl-index-entry-link"><a href="#d0__d3e377" class="xsl-index-top-level xsl-function"><samp class="xsl-index-entry-name">xs:sample<em>(0)</em></samp></a> (<a href="#d0__d3e330" class="xsl-index-entry-module-title">One of everything else</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+</ul>
+</div>
+<div class="p" id="d0__index-T"><a name="d0__index-T"><!-- --></a><strong class="xsl-index-letter-section">T</strong><br/><ul><li><span class="xsl-index-entry-link"><a href="#d0__d3e328" class="xsl-index-top-level xsl-variable"><samp class="xsl-index-entry-name">that</samp></a> (<a href="#d0__d3e305" class="xsl-index-entry-module-title">Global properties</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+<li><span class="xsl-index-entry-link"><a href="#d0__d3e320" class="xsl-index-top-level xsl-param"><samp class="xsl-index-entry-name">this</samp></a> (<a href="#d0__d3e305" class="xsl-index-entry-module-title">Global properties</a> - <a href="#d0__d3e2" class="xsl-index-entry-module-name"><samp class="codeph">ditaex.xsl</samp></a>)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

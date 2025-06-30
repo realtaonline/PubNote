@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ArticleSet PUBLIC
+  "-//NLM//DTD PubMed 2.8//EN" 
+  "https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd">
+<ArticleSet>
+  <Article>
+    <Journal>
+      <PublisherName>DOVE Medical Press</PublisherName>
+      <JournalTitle>Journal of Placeholder Studies</JournalTitle>
+      <Issn>0000-0000</Issn>
+      <Volume>12</Volume>
+      <Issue>3</Issue>
+      <PubDate PubStatus="ppublish">
+        <Year>2000</Year>
+        <Month>01</Month>
+        </PubDate>
+      </Journal>
+    <ArticleTitle>A Study on Placeholder Data</ArticleTitle>
+    <FirstPage>2955</FirstPage>
+    <LastPage>2967</LastPage>
+    <ELocationID EIdType="doi">10.9999/fake.doi.00001</ELocationID>
+    <Language>EN</Language>
+    <AuthorList>
+      <Author>
+        <FirstName>Emma</FirstName>
+        <LastName>Crusoe</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Dorothy</FirstName>
+        <MiddleName>Finn</MiddleName>
+        <LastName>Linton</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Lewis</FirstName>
+        <LastName>Pickwick</LastName>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        <Identifier Source="ORCID">FAKEID00001</Identifier>
+        </Author>
+      <Author>
+        <FirstName>Oliver</FirstName>
+        <LastName>Holmes</LastName>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          <Identifier Source="ROR">FAKEID00001</Identifier>
+          </AffiliationInfo>
+        </Author>
+      <Author>
+        <FirstName>Yvonne</FirstName>
+        <LastName>Watson</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      </AuthorList>
+    <PublicationType>Journal Article</PublicationType>
+    <ArticleIdList>
+      <ArticleId IdType="pii">FAKEID00001</ArticleId>
+      <ArticleId IdType="doi">10.9999/fake.doi.00001</ArticleId>
+      </ArticleIdList>
+    <History>
+      <PubDate PubStatus="received">
+        <Year>2000</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+        </PubDate>
+      <PubDate PubStatus="accepted">
+        <Year>2000</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+        </PubDate>
+      <PubDate PubStatus="aheadofprint">
+        <Year>2000</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+        </PubDate>
+      </History>
+    <Abstract>This is a placeholder abstract. <AbstractText Label="BACKGROUND">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, c</AbstractText>
+      <AbstractText Label="METHODS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscin</AbstractText>
+      <AbstractText Label="RESULTS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet</AbstractText>
+      <AbstractText Label="DISCUSSION">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendis</AbstractText>
+      </Abstract>
+    <OtherAbstract Language="eng" Type="plain-language-summary">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, u</OtherAbstract>
+    <CopyrightInformation>© 2000 Fictional Publisher. All rights reserved.</CopyrightInformation>
+    <CoiStatement>The authors report no conflicts of interest in this 
+     work.</CoiStatement>
+    <ObjectList>
+      <Object Type="keyword">
+        <Param Name="value">COPD</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">Internet</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">coaching</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">patient activation</Param>
+        </Object>
+      <Object Type="grant">
+        <Param Name="id">FAKEGRANT</Param>
+        <Param Name="grantor">FAKEGRANT</Param>
+        </Object>
+      <Object Type="grant">
+        <Param Name="id">FAKEGRANT</Param>
+        <Param Name="grantor">FAKEGRANT</Param>
+        <Param Name="acronym">FAKEGRANT</Param>
+        <Param Name="country">FAKEGRANT</Param>
+        </Object>
+      </ObjectList>
+    <ReferenceList>
+      <Reference>
+        <Citation>Doe J. Fictional Study on Placeholder Data. Journal of Placeholder Studies. 2000;1(1):100‑104.</Citation>
+        <ArticleIdList>
+          <ArticleId IdType="pmcid">FAKEID00001</ArticleId>
+          <ArticleId IdType="pubmed">FAKEID00001</ArticleId>
+          </ArticleIdList>
+        </Reference>
+      <Reference>
+        <Citation>Doe J. Fictional Study on Placeholder Data. Journal of Placeholder Studies. 2000;1(1):100‑104.</Citation>
+        <ArticleIdList>
+          <ArticleId IdType="pmcid">FAKEID00001</ArticleId>
+          <ArticleId IdType="pubmed">FAKEID00001</ArticleId>
+          </ArticleIdList>
+        </Reference>
+      </ReferenceList>
+    </Article>
+  </ArticleSet>

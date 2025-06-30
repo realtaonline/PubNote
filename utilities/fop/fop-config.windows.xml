@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fop version="1.0">
+  <renderers>
+    <renderer mime="application/pdf">
+      <fonts>
+
+        <!-- Noto Serif Regular -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSerif-Regular.ttf">
+          <font-triplet name="Noto Serif" style="normal" weight="normal"/>
+          <font-triplet name="Noto Serif" style="normal" weight="400"/>
+        </font>
+
+        <!-- Noto Serif Bold -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSerif-Bold.ttf">
+          <font-triplet name="Noto Serif" style="normal" weight="bold"/>
+          <font-triplet name="Noto Serif" style="normal" weight="700"/>
+        </font>
+
+        <!-- Noto Serif Italic -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSerif-Italic.ttf">
+          <font-triplet name="Noto Serif" style="italic" weight="normal"/>
+          <font-triplet name="Noto Serif" style="italic" weight="400"/>
+        </font>
+
+        <!-- Noto Serif Bold Italic -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSerif-BoldItalic.ttf">
+          <font-triplet name="Noto Serif" style="italic" weight="bold"/>
+          <font-triplet name="Noto Serif" style="italic" weight="700"/>
+        </font>
+
+        <!-- Noto Sans Regular -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSans-Regular.ttf">
+          <font-triplet name="Noto Sans" style="normal" weight="normal"/>
+          <font-triplet name="Noto Sans" style="normal" weight="400"/>
+        </font>
+
+        <!-- Noto Sans Bold -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSans-Bold.ttf">
+          <font-triplet name="Noto Sans" style="normal" weight="bold"/>
+          <font-triplet name="Noto Sans" style="normal" weight="700"/>
+        </font>
+
+        <!-- Noto Sans Italic -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSans-Italic.ttf">
+          <font-triplet name="Noto Sans" style="italic" weight="normal"/>
+          <font-triplet name="Noto Sans" style="italic" weight="400"/>
+        </font>
+
+        <!-- Noto Sans Bold Italic -->
+        <font embed-url="file:///u:/git/crane/PubNote/utilities/fop/../fonts/NotoSans-BoldItalic.ttf">
+          <font-triplet name="Noto Sans" style="italic" weight="bold"/>
+          <font-triplet name="Noto Sans" style="italic" weight="700"/>
+        </font>
+
+      </fonts>
+    </renderer>
+  </renderers>
+</fop>

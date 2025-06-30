@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.thaiopensource.datatype.xsd.regex"},{"l":"com.thaiopensource.datatype.xsd.regex.java"},{"l":"com.thaiopensource.datatype.xsd.regex.xerces2"}];updateSearchResults();

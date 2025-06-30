@@ -1,0 +1,20 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii"><title>Scrub PubNote markup from the input</title><link rel="stylesheet" href="xslstyle.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.74.0"><style type="text/css">
+  /* put internal CSS styles here */
+
+</style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="d75e1"></a>Scrub PubNote markup from the input</h2></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d0e2">1. Scrub PubNote markup from the input - scrubPubNote.xsl</a></span></dt><dd><dl><dt><span class="section"><a href="#d0e13">1.1. Straightforward exclusion from identity model</a></span></dt></dl></dd></dl></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e2"></a>1.&nbsp;Scrub PubNote markup from the input - <code class="literal">scrubPubNote.xsl</code></h2></div></div></div><p class="xsl-subtitle-filename">
+              Filename: <code class="literal">scrubPubNote.xsl</code></p><div class="literallayout"><p><code class="literal">BSD-3&nbsp;License&nbsp;-&nbsp;Copyright&nbsp;&#xa9;&nbsp;https://RealtaOnline.com</code></p></div><p>
+    A conforming processor is tolerant of foreign namespaces in XSL-FO XML
+    instances. FOP is not tolerant, and so requires all non-XSL-FO constructs
+    from the instance to be removed. This scrubs the PubNote constructs.
+  </p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e13"></a>1.1.&nbsp;Straightforward exclusion from identity model</h3></div></div></div><p>
+    Scrub undesirables and keep everything else.
+  </p><p>
+    This is better than keeping only XSL-FO because sometimes XSL-FO has
+    MathML, SVG, or other vocabularies recognized by a conforming processor.
+  </p><p class="xsl-template xsl-top-level"><a name="d0e27"></a><code class="literal"> <span class="bold xsl-block-match">match="pn:* | @pn:*"</span> <span class="bold xsl-block-other">mode="#all"</span><span class="emphasis"><em><span class="xsl-block-type"> (xsl:template)</span></em></span></code><div class="blockquote"><blockquote class="blockquote"><span class="xsl-detail-template"><p>
+    The identity template is used to copy all nodes not already being handled
+    by other template rules.
+  </p></span></blockquote></div></p><p class="xsl-template xsl-top-level"><a name="d0e38"></a><code class="literal"> <span class="bold xsl-block-match">match="@*|node()"</span> <span class="bold xsl-block-other">mode="#all"</span><span class="emphasis"><em><span class="xsl-block-type"> (xsl:template)</span></em></span></code><div class="blockquote"><blockquote class="blockquote"><span class="xsl-detail-template"><p>
+    The identity template is used to copy all nodes not already being handled
+    by other template rules.
+  </p></span></blockquote></div></p></div></div></div></body></html>
