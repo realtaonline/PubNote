@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ArticleSet PUBLIC "-//NLM//DTD PubMed 2.8//EN"
+"https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd">
+<ArticleSet>
+  <Article>
+    <Journal>
+      <PublisherName>Lancet Publishing Group</PublisherName>
+      <JournalTitle>Journal of Placeholder Studies</JournalTitle>
+      <Issn>0000-0000</Issn>
+      <Volume />
+      <Issue />
+      <PubDate PubStatus="aheadofprint">
+        <Year>2000</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+        </PubDate>
+      </Journal>
+    <ArticleTitle>A Study on Placeholder Data</ArticleTitle>
+    <FirstPage />
+    <LastPage />
+    <ELocationID EIdType="doi">10.9999/fake.doi.00001</ELocationID>
+    <ELocationID EIdType="pii">FAKEID00001</ELocationID>
+    <Language>EN</Language>
+    <AuthorList>
+      <Author>
+        <FirstName>Jack</FirstName>
+        <LastName>Linton</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Polly</FirstName>
+        <MiddleName>Bennet</MiddleName>
+        <LastName>March</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Emma</FirstName>
+        <LastName>Wilkins</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      </AuthorList>
+    <PublicationType>REVIEW</PublicationType>
+    <ArticleIdList>
+      <ArticleId IdType="pii">FAKEID00001</ArticleId>
+      <ArticleId IdType="doi">10.9999/fake.doi.00001</ArticleId>
+      </ArticleIdList>
+    <Abstract>This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus</Abstract>
+    </Article>
+  </ArticleSet>

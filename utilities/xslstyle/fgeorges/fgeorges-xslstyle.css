@@ -1,0 +1,185 @@
+/*
+  fgeorges-xslstyle.css
+
+  This is a CSS stylesheet of rendering properties for an instance of an
+  XSLStyle(TM) HTML report.  See the xslstyle-def-fgeorges.xsl XSLT
+  stylesheet for more information regarding engaging this stylesheet with
+  HTML files.
+
+  XSLStyle(TM) by Crane Softwrights Ltd:
+
+    http://www.CraneSoftwrights.com/resources/#xslstyle
+
+  $Id: fgeorges-xslstyle.css,v 1.6 2010/02/20 20:36:03 gkholman Exp $  
+*/
+
+.xsl-attribute-set {
+  padding-left: 20px;
+  background: transparent url(./XSLAttributeSet12.gif) no-repeat center left;
+}
+.xsl-character-map {
+  padding-left: 20px;
+  background: transparent url(./XSLCharacterMap12.gif) no-repeat center left;
+}
+.xsl-function {
+  padding-left: 20px;
+  background: transparent url(./XSLFunction12.gif) no-repeat center left;
+}
+.xsl-key {
+  padding-left: 20px;
+  background: transparent url(./XSLkey12.gif) no-repeat center left;
+}
+.xsl-param {
+  padding-left: 20px;
+  background: transparent url(./XSLParam12.gif) no-repeat center left;
+}
+.xsl-template {
+  padding-left: 20px;
+  background: transparent url(./XSLTemplate12.gif) no-repeat center left;
+}
+.xsl-variable {
+  padding-left: 20px;
+  background: transparent url(./XSLVariable12.gif) no-repeat center left;
+}
+
+.index ul {
+  list-style: none;
+}
+
+.type-label { 
+  display:none 
+}
+
+body {
+    font: Verdana;
+    //font: 80% Verdana;
+}
+table {
+    font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    float: none;
+}
+h1, h2 {
+    font-size: 140%;
+    background-color: #ccf;
+    border-bottom: 1px solid #99f;
+    width: 100%;
+    //font-size: 140%;
+    //margin: 0em;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    //padding-left: 1ex;
+}
+a {
+    //color: #44e;
+}
+h3 {
+    font-size: 130%;
+    background-color: #eef;
+    border-bottom: 1px solid #99f;
+    width: 100%;
+    //font-size: 140%;
+    //margin: 0em;
+    //padding-left: 1ex;
+}
+#variables, #methods, #methoddetail {
+    padding-left: 3em;
+    margin-bottom: 1.4em;
+    clear: both;
+    float: none;
+}
+#methods ul.method, #variables ul.method {
+    margin: 1em 0em 0em;
+}
+#methoddetail ul.method {
+    margin: 0em;
+}
+div.inexternal {
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+div.methoddetail p {
+    float: none;
+    clear: both;
+    padding-left: 2em;
+    margin-bottom: 1em;
+}
+div.methoddetail{
+    padding-bottom: 1em;
+}
+div.methoddetail li {
+    list-style-type: none;
+    font-weight: bold;
+}
+div.methoddetail li li {
+    list-style-type: circle;
+    font-weight: normal;
+}
+div.methoddetail li ul {
+    padding-bottom: 0.5em;
+    font-weight: normal;
+}
+table.inexternal {
+    clear: both;
+    float: none;
+    width: 80%;
+    margin-left: 3em;
+    padding: 0em;
+}
+table.inexternal th {
+    background-color:#dedede;
+    width: 50%;
+}			
+td {
+    vertical-align: top;
+}
+div.description {
+    margin-top: .5em;
+    font-weight: normal;
+    padding-left: 1em;
+}
+ul.method {
+    clear: both;
+    float: none;
+    width: 90%;
+    list-style-type: none;
+    border-top: 1px solid #ccc;
+}
+ul.method li.left {
+    float: left;
+    clear: none;
+    width: 50%;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+ul.method li.right {
+    position: relative;
+    top: 0em;
+    float: left;
+    width: 45%;
+    margin-bottom: 2em;
+    padding-left: 2em;
+}
+div.home {
+    width: 60%;
+    float: left;
+    margin-right: 1%;
+    border: 1px
+}
+div.home h4 {
+    font-size: 120%;
+    background-color: #fff;
+    border-bottom: 1px solid #99f;
+    width: 100%;
+    margin-bottom: -1em;
+}
+div.overview p {
+    width: 60%;
+}
+
+/* end of stylesheet */

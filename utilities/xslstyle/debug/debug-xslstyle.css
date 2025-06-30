@@ -1,0 +1,325 @@
+/*
+Diagnostic CSS stylesheet that wraps every identified style with
+start and end markers as in:
+
+  [style-name]......content.....[/style-name]
+
+Use this stylesheet to determine where XSLStyle(TM) styles are being
+used in the final report.
+
+Note that not all outputs support all styles.
+
+$Id: debug-xslstyle.css,v 1.1 2010/02/21 01:53:05 gkholman Exp $
+*/
+
+.xsl-subtitle-import-include:before,
+.xsl-list-import-include-item:before,
+.xsl-subtitle-invocation:before,
+.xsl-list-invocation:before,
+.xsl-subtitle-specialization:before,
+.xsl-list-specialization:before,
+.xsl-subtitle-filename:before,
+.xsl-subtitle-filename-name:before,
+.xsl-section:before,
+.xsl-list-section-imports-item:before,
+.xsl-input-parameter-link:before,
+.xsl-input-parameter-name:before,
+.xsl-input-parameter-module-title:before,
+.xsl-input-parameter-module-name:before,
+.xsl-file-reference-link:before,
+.xsl-file-reference-title:before,
+.xsl-file-reference-name:before,
+.xsl-index:before,
+.xsl-index-letter-title:before,
+.xsl-index-letter-section:before,
+.xsl-index-entry-name:before,
+.xsl-index-entry-module-title:before,
+.xsl-index-entry-module-name:before,
+.xsl-top-level:before,
+.xsl-attribute-set:before,
+.xsl-character-map:before,
+.xsl-decimal-format:before,
+.xsl-function:before,
+.xsl-import-schema:before,
+.xsl-key:before,
+.xsl-namespace-alias:before,
+.xsl-output:before,
+.xsl-preserve-space:before,
+.xsl-strip-space:before,
+.xsl-template:before,
+.xsl-param:before,
+.xsl-variable:before,
+.xsl-detail-top-level:before,
+.xsl-detail-attribute-set:before,
+.xsl-detail-character-map:before,
+.xsl-detail-decimal-format:before,
+.xsl-detail-function:before,
+.xsl-detail-import-schema:before,
+.xsl-detail-key:before,
+.xsl-detail-namespace-alias:before,
+.xsl-detail-output:before,
+.xsl-detail-preserve-space:before,
+.xsl-detail-strip-space:before,
+.xsl-detail-template:before,
+.xsl-detail-param:before,
+.xsl-detail-variable:before,
+.xsl-index-top-level:before,
+.xsl-index-attribute-set:before,
+.xsl-index-character-map:before,
+.xsl-index-decimal-format:before,
+.xsl-index-function:before,
+.xsl-index-import-schema:before,
+.xsl-index-key:before,
+.xsl-index-namespace-alias:before,
+.xsl-index-output:before,
+.xsl-index-preserve-space:before,
+.xsl-index-strip-space:before,
+.xsl-index-template:before,
+.xsl-index-param:before,
+.xsl-index-variable:before,
+.xsl-block-name:before,
+.xsl-block-function-param:before,
+.xsl-block-match:before,
+.xsl-block-other:before,
+.xsl-block-type:before,
+.xsl-template-parameter:before,
+.xsl-template-parameter-name:before
+ { display:inline; color:green; font-style:italic;}
+.xsl-list-import-include:before,
+.xsl-list-section-imports:before,
+.xsl-template-detail-parameter:before
+ { display:block; color:green; font-style:italic;}
+
+.xsl-subtitle-import-include:before { content: "[subtitle-import-include]"; }
+.xsl-list-import-include-item:before { content: "[list-import-include-item]"; }
+.xsl-subtitle-invocation:before { content: "[subtitle-invocation]"; }
+.xsl-list-invocation:before { content: "[list-invocation]"; }
+.xsl-subtitle-specialization:before { content: "[subtitle-specialization]"; }
+.xsl-list-specialization:before { content: "[list-specialization]"; }
+.xsl-subtitle-filename:before { content: "[subtitle-filename]"; }
+.xsl-subtitle-filename-name:before { content: "[subtitle-filename-name]"; }
+.xsl-section:before { content: "[section]"; }
+.xsl-list-section-imports-item:before { content: "[list-section-imports-item]"; }
+.xsl-input-parameter-link:before { content: "[input-parameter-link]"; }
+.xsl-input-parameter-name:before { content: "[input-parameter-name]"; }
+.xsl-input-parameter-module-title:before { content: "[input-parameter-module-title]"; }
+.xsl-input-parameter-module-name:before { content: "[input-parameter-module-name]"; }
+.xsl-file-reference-link:before { content: "[file-reference-link]"; }
+.xsl-file-reference-title:before { content: "[file-reference-title]"; }
+.xsl-file-reference-name:before { content: "[file-reference-name]"; }
+.xsl-index:before { content: "[index]"; }
+.xsl-index-letter-title:before { content: "[index-letter-title]"; }
+.xsl-index-letter-section:before { content: "[index-letter-section]"; }
+.xsl-index-entry-name:before { content: "[index-entry-name]"; }
+.xsl-index-entry-module-title:before { content: "[index-entry-module-title]"; }
+.xsl-index-entry-module-name:before { content: "[index-entry-module-name]"; }
+.xsl-top-level:before { content: "[top-level]"; }
+.xsl-attribute-set:before { content: "[attribute-set]"; }
+.xsl-character-map:before { content: "[character-map]"; }
+.xsl-decimal-format:before { content: "[decimal-format]"; }
+.xsl-function:before { content: "[function]"; }
+.xsl-import-schema:before { content: "[import-schema]"; }
+.xsl-key:before { content: "[key]"; }
+.xsl-namespace-alias:before { content: "[namespace-alias]"; }
+.xsl-output:before { content: "[output]"; }
+.xsl-preserve-space:before { content: "[preserve-space]"; }
+.xsl-strip-space:before { content: "[strip-space]"; }
+.xsl-template:before { content: "[template]"; }
+.xsl-param:before { content: "[param]"; }
+.xsl-variable:before { content: "[variable]"; }
+.xsl-detail-top-level:before { content: "[detail-top-level]"; }
+.xsl-detail-attribute-set:before { content: "[detail-attribute-set]"; }
+.xsl-detail-character-map:before { content: "[detail-character-map]"; }
+.xsl-detail-decimal-format:before { content: "[detail-decimal-format]"; }
+.xsl-detail-function:before { content: "[detail-function]"; }
+.xsl-detail-import-schema:before { content: "[detail-import-schema]"; }
+.xsl-detail-key:before { content: "[detail-key]"; }
+.xsl-detail-namespace-alias:before { content: "[detail-namespace-alias]"; }
+.xsl-detail-output:before { content: "[detail-output]"; }
+.xsl-detail-preserve-space:before { content: "[detail-preserve-space]"; }
+.xsl-detail-strip-space:before { content: "[detail-strip-space]"; }
+.xsl-detail-template:before { content: "[detail-template]"; }
+.xsl-detail-param:before { content: "[detail-param]"; }
+.xsl-detail-variable:before { content: "[detail-variable]"; }
+.xsl-index-top-level:before { content: "[index-top-level]"; }
+.xsl-index-attribute-set:before { content: "[index-attribute-set]"; }
+.xsl-index-character-map:before { content: "[index-character-map]"; }
+.xsl-index-decimal-format:before { content: "[index-decimal-format]"; }
+.xsl-index-function:before { content: "[index-function]"; }
+.xsl-index-import-schema:before { content: "[index-import-schema]"; }
+.xsl-index-key:before { content: "[index-key]"; }
+.xsl-index-namespace-alias:before { content: "[index-namespace-alias]"; }
+.xsl-index-output:before { content: "[index-output]"; }
+.xsl-index-preserve-space:before { content: "[index-preserve-space]"; }
+.xsl-index-strip-space:before { content: "[index-strip-space]"; }
+.xsl-index-template:before { content: "[index-template]"; }
+.xsl-index-param:before { content: "[index-param]"; }
+.xsl-index-variable:before { content: "[index-variable]"; }
+.xsl-block-name:before { content: "[block-name]"; }
+.xsl-block-function-param:before { content: "[block-function-param]"; }
+.xsl-block-match:before { content: "[block-match]"; }
+.xsl-block-other:before { content: "[block-other]"; }
+.xsl-block-type:before { content: "[block-type]"; }
+.xsl-template-parameter:before { content: "[template-parameter]"; }
+.xsl-template-parameter-name:before { content: "[template-parameter-name]"; }
+.xsl-list-import-include:before { content: "[list-import-include]"; }
+.xsl-list-section-imports:before { content: "[list-section-imports]"; }
+.xsl-template-detail-parameter:before { content: "[template-detail-parameter]"; }
+
+
+.xsl-subtitle-import-include:after,
+.xsl-list-import-include-item:after,
+.xsl-subtitle-invocation:after,
+.xsl-list-invocation:after,
+.xsl-subtitle-specialization:after,
+.xsl-list-specialization:after,
+.xsl-subtitle-filename:after,
+.xsl-subtitle-filename-name:after,
+.xsl-section:after,
+.xsl-list-section-imports-item:after,
+.xsl-input-parameter-link:after,
+.xsl-input-parameter-name:after,
+.xsl-input-parameter-module-title:after,
+.xsl-input-parameter-module-name:after,
+.xsl-file-reference-link:after,
+.xsl-file-reference-title:after,
+.xsl-file-reference-name:after,
+.xsl-index:after,
+.xsl-index-letter-title:after,
+.xsl-index-letter-section:after,
+.xsl-index-entry-name:after,
+.xsl-index-entry-module-title:after,
+.xsl-index-entry-module-name:after,
+.xsl-top-level:after,
+.xsl-attribute-set:after,
+.xsl-character-map:after,
+.xsl-decimal-format:after,
+.xsl-function:after,
+.xsl-import-schema:after,
+.xsl-key:after,
+.xsl-namespace-alias:after,
+.xsl-output:after,
+.xsl-preserve-space:after,
+.xsl-strip-space:after,
+.xsl-template:after,
+.xsl-param:after,
+.xsl-variable:after,
+.xsl-detail-top-level:after,
+.xsl-detail-attribute-set:after,
+.xsl-detail-character-map:after,
+.xsl-detail-decimal-format:after,
+.xsl-detail-function:after,
+.xsl-detail-import-schema:after,
+.xsl-detail-key:after,
+.xsl-detail-namespace-alias:after,
+.xsl-detail-output:after,
+.xsl-detail-preserve-space:after,
+.xsl-detail-strip-space:after,
+.xsl-detail-template:after,
+.xsl-detail-param:after,
+.xsl-detail-variable:after,
+.xsl-index-top-level:after,
+.xsl-index-attribute-set:after,
+.xsl-index-character-map:after,
+.xsl-index-decimal-format:after,
+.xsl-index-function:after,
+.xsl-index-import-schema:after,
+.xsl-index-key:after,
+.xsl-index-namespace-alias:after,
+.xsl-index-output:after,
+.xsl-index-preserve-space:after,
+.xsl-index-strip-space:after,
+.xsl-index-template:after,
+.xsl-index-param:after,
+.xsl-index-variable:after,
+.xsl-block-name:after,
+.xsl-block-function-param:after,
+.xsl-block-match:after,
+.xsl-block-other:after,
+.xsl-block-type:after,
+.xsl-template-parameter:after,
+.xsl-template-parameter-name:after
+ { display:inline; color:green; font-style:italic;}
+.xsl-list-import-include:after,
+.xsl-list-section-imports:after,
+.xsl-template-detail-parameter:after
+ { display:block; color:green; font-style:italic;}
+
+.xsl-subtitle-import-include:after { content: "[/subtitle-import-include]"; }
+.xsl-list-import-include-item:after { content: "[/list-import-include-item]"; }
+.xsl-subtitle-invocation:after { content: "[/subtitle-invocation]"; }
+.xsl-list-invocation:after { content: "[/list-invocation]"; }
+.xsl-subtitle-specialization:after { content: "[/subtitle-specialization]"; }
+.xsl-list-specialization:after { content: "[/list-specialization]"; }
+.xsl-subtitle-filename:after { content: "[/subtitle-filename]"; }
+.xsl-subtitle-filename-name:after { content: "[/subtitle-filename-name]"; }
+.xsl-section:after { content: "[/section]"; }
+.xsl-list-section-imports-item:after { content: "[/list-section-imports-item]"; }
+.xsl-input-parameter-link:after { content: "[/input-parameter-link]"; }
+.xsl-input-parameter-name:after { content: "[/input-parameter-name]"; }
+.xsl-input-parameter-module-title:after { content: "[/input-parameter-module-title]"; }
+.xsl-input-parameter-module-name:after { content: "[/input-parameter-module-name]"; }
+.xsl-file-reference-link:after { content: "[/file-reference-link]"; }
+.xsl-file-reference-title:after { content: "[/file-reference-title]"; }
+.xsl-file-reference-name:after { content: "[/file-reference-name]"; }
+.xsl-index:after { content: "[/index]"; }
+.xsl-index-letter-title:after { content: "[/index-letter-title]"; }
+.xsl-index-letter-section:after { content: "[/index-letter-section]"; }
+.xsl-index-entry-name:after { content: "[/index-entry-name]"; }
+.xsl-index-entry-module-title:after { content: "[/index-entry-module-title]"; }
+.xsl-index-entry-module-name:after { content: "[/index-entry-module-name]"; }
+.xsl-top-level:after { content: "[/top-level]"; }
+.xsl-attribute-set:after { content: "[/attribute-set]"; }
+.xsl-character-map:after { content: "[/character-map]"; }
+.xsl-decimal-format:after { content: "[/decimal-format]"; }
+.xsl-function:after { content: "[/function]"; }
+.xsl-import-schema:after { content: "[/import-schema]"; }
+.xsl-key:after { content: "[/key]"; }
+.xsl-namespace-alias:after { content: "[/namespace-alias]"; }
+.xsl-output:after { content: "[/output]"; }
+.xsl-preserve-space:after { content: "[/preserve-space]"; }
+.xsl-strip-space:after { content: "[/strip-space]"; }
+.xsl-template:after { content: "[/template]"; }
+.xsl-param:after { content: "[/param]"; }
+.xsl-variable:after { content: "[/variable]"; }
+.xsl-detail-top-level:after { content: "[/detail-top-level]"; }
+.xsl-detail-attribute-set:after { content: "[/detail-attribute-set]"; }
+.xsl-detail-character-map:after { content: "[/detail-character-map]"; }
+.xsl-detail-decimal-format:after { content: "[/detail-decimal-format]"; }
+.xsl-detail-function:after { content: "[/detail-function]"; }
+.xsl-detail-import-schema:after { content: "[/detail-import-schema]"; }
+.xsl-detail-key:after { content: "[/detail-key]"; }
+.xsl-detail-namespace-alias:after { content: "[/detail-namespace-alias]"; }
+.xsl-detail-output:after { content: "[/detail-output]"; }
+.xsl-detail-preserve-space:after { content: "[/detail-preserve-space]"; }
+.xsl-detail-strip-space:after { content: "[/detail-strip-space]"; }
+.xsl-detail-template:after { content: "[/detail-template]"; }
+.xsl-detail-param:after { content: "[/detail-param]"; }
+.xsl-detail-variable:after { content: "[/detail-variable]"; }
+.xsl-index-top-level:after { content: "[/index-top-level]"; }
+.xsl-index-attribute-set:after { content: "[/index-attribute-set]"; }
+.xsl-index-character-map:after { content: "[/index-character-map]"; }
+.xsl-index-decimal-format:after { content: "[/index-decimal-format]"; }
+.xsl-index-function:after { content: "[/index-function]"; }
+.xsl-index-import-schema:after { content: "[/index-import-schema]"; }
+.xsl-index-key:after { content: "[/index-key]"; }
+.xsl-index-namespace-alias:after { content: "[/index-namespace-alias]"; }
+.xsl-index-output:after { content: "[/index-output]"; }
+.xsl-index-preserve-space:after { content: "[/index-preserve-space]"; }
+.xsl-index-strip-space:after { content: "[/index-strip-space]"; }
+.xsl-index-template:after { content: "[/index-template]"; }
+.xsl-index-param:after { content: "[/index-param]"; }
+.xsl-index-variable:after { content: "[/index-variable]"; }
+.xsl-block-name:after { content: "[/block-name]"; }
+.xsl-block-function-param:after { content: "[/block-function-param]"; }
+.xsl-block-match:after { content: "[/block-match]"; }
+.xsl-block-other:after { content: "[/block-other]"; }
+.xsl-block-type:after { content: "[/block-type]"; }
+.xsl-template-parameter:after { content: "[/template-parameter]"; }
+.xsl-template-parameter-name:after { content: "[/template-parameter-name]"; }
+.xsl-list-import-include:after { content: "[/list-import-include]"; }
+.xsl-list-section-imports:after { content: "[/list-section-imports]"; }
+.xsl-template-detail-parameter:after { content: "[/template-detail-parameter]"; }
+
+
+/* end of file */
