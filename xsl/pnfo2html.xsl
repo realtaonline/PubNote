@@ -44,11 +44,12 @@
   font-size: .7em;
   color: red;
 }
-
+.b {
+  font-weight: bold
+}
 .body {
   font-family: sans-serif;
 }
-
 .depth0 { margin-left: 0em }
 .depth1 { margin-left: 2em }
 .depth2 { margin-left: 4em }
@@ -59,29 +60,40 @@
 .depth7 { margin-left: 14em }
 .depth8 { margin-left: 16em }
 .depth9 { margin-left: 18em }
-
 .heading {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
 }
-
+.i {
+  font-style: italic;
+}
 .footer {
   margin-top: 1em;
   font-size: .8em;
 }
-
 .footerInformation {
   display: none;
 }
-
 .label {
   font-family: serif;
   font-weight:bold;
 }
-
 .pageInformation {
-  display: none
+  display: none;
+}
+.sub {
+  position: relative;
+  top: 0.25em;
+  font-size: 0.75em;
+}
+.sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 0.75em;
+}
+.u {
+  text-decoration: underline;
 }
      </style>
    </head>
