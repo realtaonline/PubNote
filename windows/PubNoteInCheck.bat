@@ -18,9 +18,10 @@ set "SCRIPT_DIR=%~dp0"
 set "REPO=%SCRIPT_DIR%.."
 
 :: Require input file
-if "%~1"=="" (
-    echo Usage: PubNoteCheckIn.bat submissionFile.xml
-    exit /b 1
+if "%~1"=="" goto :usage
+if not exist "%~1" (
+    echo ERROR: File "%~1" not found.
+    goto :usage
 )
 
 set "INPUT=%~nx1"
@@ -71,3 +72,7 @@ pause
 
 :end
 exit /b %RETVAL%
+
+:usage
+echo Usage: PubNoteCheckIn.bat submissionFile.xml
+exit /b 1
