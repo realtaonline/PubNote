@@ -67,7 +67,7 @@
     <xsl:for-each select="node()">
       <xsl:choose>
         <xsl:when test="self::text()[normalize-space(.)]">
-          <wp:run><xsl:copy-of select="."/></wp:run>
+          <wp:run><xsl:value-of select="replace( .,'\s+',' ')"/></wp:run>
         </xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select="."/>
