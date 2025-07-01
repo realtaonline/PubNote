@@ -27,9 +27,9 @@
 
 The [`test/`](test/) directory has anonymized sample PubMed in (submission) and out (distribution) XML files for testing.  _You can copy these XML files into a temporary directory outside of the git repository and use them for tests._
 
-The directory also includes the results of all invocations, found in subdirectories, so that you can see the reports without having to execute anything.
+This test directory also includes the results of all invocations, found in subdirectories, so that you can see all the completed reports without having to execute anything.
 
-To install \<PubNote> as a GitHub user, simply copy or clone the repository to a local repository on your system:
+To install \<PubNote> as a GitHub user, simply clone or fork the repository to a local repository on your system:
 
 `git clone https://github.com/realtaonline/PubNote.git`
 
@@ -52,6 +52,8 @@ This \<PubNote> project, conceived in the spirit of OLSPub for jurisdictional in
 The entire visualization code base for \<PubNote> is oriented around simple and shallow metadata XML documents, a contrasting nature to the rich and deep JATS document model. Whereas JATS describes elaborate prose-oriented nested structures intended for branded distribution, PubMed describes only flat metadata structures intended only for internal reviews, indexing, and search.
 
 Nevertheless, these simple PubMed metadata structures are in arcane XML syntax which can be discomfiting to some users who may be allergic to angle brackets. \<PubNote> seeks to make working with and reviewing the content of these structures easy for all users.
+
+In summary, \<PubNote> aligns with OLSPub's objectives by offering open-source tooling to validate and inspect the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
 
 ---
 
