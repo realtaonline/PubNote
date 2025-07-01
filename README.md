@@ -53,7 +53,7 @@ The entire visualization code base for \<PubNote> is oriented around simple and 
 
 Nevertheless, these simple PubMed metadata structures are in arcane XML syntax which can be discomfiting to some users who may be allergic to angle brackets. \<PubNote> seeks to make working with and reviewing the content of these structures easy for all users.
 
-\<PubNote> aligns with OLSPub's objectives by offering open-source tooling to validate and inspect the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
+In summary, \<PubNote> aligns with OLSPub's objectives by offering open-source tooling to validate and inspect the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
 
 ---
 
