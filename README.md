@@ -14,7 +14,7 @@
 - **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX with multiple rendering choices
   - "-en"=English (A4), "-us"=English (US-letter), "-de"=German, "-fr"=French _(others welcome!)_
 
-\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-2.xml` (copied from the repository to the directory named "T") is being validated using `PubNoteOutCheck` (found in the user's local copy of this git repository) _(click image to make larger)_: 
+\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository to a base directory named "test") is being rendered using `PubNoteRender-de` (found in the user's local copy of this git repository) _(click image to make larger)_: 
 
 <img src="images/interfaces.gif" width="100%"/>
 
