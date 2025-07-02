@@ -206,21 +206,21 @@
   <para>Boldface text</para>
 </xs:template>
 <xsl:template match="b">
-  <inline font-weight="bold"><xsl:apply-templates/></inline>
+  <inline font-weight="bold" pn:html="span*b"><xsl:apply-templates/></inline>
 </xsl:template>
 
 <xs:template>
   <para>Italicized text</para>
 </xs:template>
 <xsl:template match="i">
-  <inline font-style="italic"><xsl:apply-templates/></inline>
+  <inline font-style="italic" pn:html="span*i"><xsl:apply-templates/></inline>
 </xsl:template>
 
 <xs:template>
   <para>Subscripted text</para>
 </xs:template>
 <xsl:template match="sub">
-  <inline font-size=".7em" baseline-shift="sub">
+  <inline font-size=".7em" baseline-shift="sub" pn:html="span*sub">
     <xsl:apply-templates/>
   </inline>
 </xsl:template>
@@ -229,7 +229,7 @@
   <para>Superscripted text</para>
 </xs:template>
 <xsl:template match="sup">
-  <inline font-size=".7em" baseline-shift="super">
+  <inline font-size=".7em" baseline-shift="super" pn:html="span*sup">
     <xsl:apply-templates/>
   </inline>
 </xsl:template>
@@ -238,7 +238,9 @@
   <para>Underscored text</para>
 </xs:template>
 <xsl:template match="u">
-  <inline text-decoration="underline"><xsl:apply-templates/></inline>
+  <inline text-decoration="underline" pn:html="span*u">
+    <xsl:apply-templates/>
+  </inline>
 </xsl:template>
 
 <xs:template>

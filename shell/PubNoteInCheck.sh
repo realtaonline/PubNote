@@ -16,7 +16,11 @@
 REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
 # Require input file
-if [[ -z "$1" ]]; then
+if [[ -z "$1" || ! -f "$1" ]]; then
+  if [[ ! -f "$1" ]]; then
+    echo File "$1" not found.
+    echo
+  fi
   echo "Usage: PubNoteCheckIn.sh submissionFile.xml"
   exit 1
 fi

@@ -21,9 +21,10 @@ set "THIS=%~dp0"
 set "REPO=%THIS%.."
 
 :: Require input file
-if "%~1"=="" (
-    echo Usage: PubNoteOutIndent.bat distributionFile.xml
-    exit /b 1
+if "%~1"=="" goto :usage
+if not exist "%~1" (
+    echo ERROR: File "%~1" not found.
+    goto :usage
 )
 
 :: Input details
@@ -66,3 +67,7 @@ pause
 
 :end
 exit /b %RETVAL%
+
+:usage
+echo Usage: PubNoteOutIndent.bat distributionFile.xml
+exit /b 1

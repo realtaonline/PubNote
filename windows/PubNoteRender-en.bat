@@ -38,9 +38,10 @@ if %errorlevel%==0 (
 )
 
 :: Require input file
-if "%~1"=="" (
-  echo Usage: PubNoteRender.bat [-suffix] file.xml
-  exit /b 1
+if "%~1"=="" goto :usage
+if not exist "%~1" (
+    echo ERROR: File "%~1" not found.
+    goto :usage
 )
 
 :: Input info
@@ -175,3 +176,7 @@ pause
 
 :skipPause
 exit /b %RETVAL%
+
+:usage
+echo Usage: PubNoteRender%SUFFIX%.bat file.xml
+exit /b 1
