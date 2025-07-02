@@ -95,7 +95,7 @@ The visualization process then takes the **XSL-FO output** from **PubNoteRender*
 
 ## Maintenance, feedback, and the future
 
-For questions, suggestions, comments, and contributions we invite you to create issues and pull requests, both of which are accessible in tabs in the GitHub web page header.
+For questions, suggestions, comments, and contributions we invite you to create issues and pull requests, both of which are accessible in tabs in the GitHub web page header. Eager qualified contributors are invited to introduce themselves for consideration in joining the team.
 
 In particular, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome.
 
