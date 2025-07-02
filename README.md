@@ -18,8 +18,8 @@
 
 <img src="images/interfaces.gif" width="100%"/>
 
-- illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutCheck.bat PubMedOut-2.xml`  
-- illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutCheck.sh PubMedOut-2.xml`  
+- illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutRender-de.bat PubMedOut-4.xml`  
+- illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutRender-de.sh PubMedOut-4.xml`  
 
 \<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
 
