@@ -16,7 +16,7 @@
 
 \<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-2.xml` (copied from the repository to the directory named "T") is being validated using `PubNoteOutCheck` (found in the user's local copy of this git repository) _(click image to make larger)_: 
 
-<img src="images/interfaces.png" width="100%"/>
+<img src="images/interfaces.gif" width="100%"/>
 
 - illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutCheck.bat PubMedOut-2.xml`  
 - illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutCheck.sh PubMedOut-2.xml`  
