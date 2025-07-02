@@ -14,14 +14,14 @@
 - **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX with multiple rendering choices
   - "-en"=English (A4), "-us"=English (US-letter), "-de"=German, "-fr"=French _(others welcome!)_
 
-\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-2.xml` (copied from the repository to the directory named "T") is being validated using `PubNoteOutCheck` (found in the user's local copy of this git repository) _(click image to make larger)_: 
+\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(click image to make larger)_: 
 
-<img src="images/interfaces.png" width="100%"/>
+<img src="images/interfaces.gif" width="100%"/>
 
-- illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutCheck.bat PubMedOut-2.xml`  
-- illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutCheck.sh PubMedOut-2.xml`  
+- illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutRender-de.bat PubMedOut-4.xml`  
+- illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutRender-de.sh PubMedOut-4.xml`  
 
-\<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
+\<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels (shown here in English) in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
 
 <img src="images/formats.png" width="100%"/>
 
@@ -71,8 +71,9 @@ The basic flows interacting with OLSPub and PubMed are simple:
 The \<PubNote> visualization/validation environment wraps around these two "in/submission" and "out/distribution" XML documents, giving users tools to create, confirm, and consume the information.
 
 3. Presumably, there is some editing process for the user's **PubMedIn** submission document  
-4. The user may have a store of JATS XML documents from which to draft the **PubMedIn** submission  
-5. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
+4. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
+5a. e.g. from a distillation of multiple JATS XML documents into a draft, or  
+5b. e.g. from a simple text file with no angle brackets converted to XML using Invisible XML    
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
 7. Optionally, **PubNoteInCheck** can validate a **PubMedIn** document against the `PubMed.dtd`  
 8. Optionally, a **PubMedIn** document can be checked using the NIH online business rules validator  
