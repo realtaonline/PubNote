@@ -72,7 +72,7 @@ The \<PubNote> visualization/validation environment wraps around these two "in/s
 
 3. Presumably, there is some editing process for the user's **PubMedIn** submission document  
 4. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
-5. Inputs used to create draft are expected to include (among others):
+5. Inputs used to create draft are expected to include (among others):  
 5a. - a distillation of multiple JATS XML documents into a draft, or  
 5b. - a simple text file with no angle brackets converted to XML using Invisible XML    
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
