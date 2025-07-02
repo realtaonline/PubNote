@@ -73,7 +73,7 @@ The \<PubNote> visualization/validation environment wraps around these two "in/s
 3. Presumably, there is some editing process for the user's **PubMedIn** submission document  
 4. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
 5a. e.g. from a distillation of multiple JATS XML documents into a draft, or  
-5b. e.g. from a simple text file with no angle brackets converted to XML using iXML    
+5b. e.g. from a simple text file with no angle brackets converted to XML using Invisible XML    
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
 7. Optionally, **PubNoteInCheck** can validate a **PubMedIn** document against the `PubMed.dtd`  
 8. Optionally, a **PubMedIn** document can be checked using the NIH online business rules validator  
