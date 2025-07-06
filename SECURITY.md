@@ -8,7 +8,7 @@ All software in this repository is sourced from well-known open-source projects.
 
 ## Reporting Vulnerabilities
 
-If you discover a potential security issue, please report it privately via email to [github@RealtaOnline.com](mailtogithub@RealtaOnline.com) rather than opening a public issue. Responsible disclosure gives us the opportunity to assess and address the issue before public discussion.
+If you discover a potential security issue, please report it privately via email to [github@RealtaOnline.com](mailto:github@RealtaOnline.com) rather than opening a public issue. Responsible disclosure gives us the opportunity to assess and address the issue before public discussion.
 
 If warranted, we will acknowledge the issue, investigate promptly, and provide updates in the repository when resolved.
 
