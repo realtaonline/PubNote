@@ -37,6 +37,10 @@ You can then invoke the tools directly from the appropriate `shell/` or `windows
 
 If you are not a GitHub user and you can live without Mac drag-and-drop, you can also download \<PubNote> as a ZIP file by clicking the green **\<> Code** button on the [GitHub repository page](https://github.com/realtaonline/PubNote) and choosing **Download ZIP**. Again, no build step is required, though Mac drag-and-drop won't work. Windows drag-and-drop should work as expected, though some users report problems after installing the ZIP on a networked drive.
 
+Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and frequently-asked questions.
+
+Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked questions.
+
 ---
 
 ## Executive background
@@ -100,6 +104,15 @@ For questions, suggestions, comments, and contributions we invite you to create 
 
 In particular, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome.
 
-Phase 2 of the project development will proceed when end-user requirements are gathered, and when these Phase 1 visualization and validation resources get more visibility.
+Please review these repository governance documents to understand our expectations, processes, and support channels:
+ - [ROADMAP.md](ROADMAP.md) - looking ahead
+ - [CONTRIBUTING.md](CONTRIBUTING.md) – how to propose changes or fixes
+ - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) – expectations for respectful collaboration
+ - [SECURITY.md](SECURITY.md) – how to report vulnerabilities responsibly
+ - [SUPPORT.md](SUPPORT.md) – where and how to request help or ask questions
+
+Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for installation instructions, more information, and frequently-asked questions.
+
+Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked questions.
 
 At this time the project manager is [G. Ken Holman](mailto:gkholman@CraneSoftwrights.com), a [long-time XML community contributor](https://linkedin.com/in/gkholman) and the XML Technology Lead at [Réalta Online Publishing Services Ltd.](https://RealtaOnline.com) Ken's conference papers at [JATS-Con 2020/21](https://www.ncbi.nlm.nih.gov/books/NBK556169/) and [JATS-Con 2023](https://www.ncbi.nlm.nih.gov/books/NBK591971/) offer some insights into the implementation of this project using principles found in Réalta's JATS publishing service offering.
