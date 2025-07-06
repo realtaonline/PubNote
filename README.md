@@ -37,9 +37,9 @@ You can then invoke the tools directly from the appropriate `shell/` or `windows
 
 If you are not a GitHub user and you can live without Mac drag-and-drop, you can also download \<PubNote> as a ZIP file by clicking the green **\<> Code** button on the [GitHub repository page](https://github.com/realtaonline/PubNote) and choosing **Download ZIP**. Again, no build step is required, though Mac drag-and-drop won't work. Windows drag-and-drop should work as expected, though some users report problems after installing the ZIP on a networked drive.
 
-Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and FAQ.
+Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and frequently-asked questions.
 
-Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked-questions.
+Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked questions.
 
 ---
 
