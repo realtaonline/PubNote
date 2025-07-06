@@ -1,3 +1,5 @@
+# Contributions
+
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
 Contributions to \<PubNote> are welcome, but please remember that proposed additions may or may not be incorporated into the main branch based on a thorough review of their applicability and security.

@@ -1,3 +1,5 @@
+# Roadmap
+
 Phase 1 is considered completed and is presentation-oriented only, displaying the XML content in a way to make the user's job of reviewing it easier. Nevertheless, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome at any time. It would be good to support more natural languages in the metadata labels.
 
 Phase 2 of the project development will proceed when end-user requirements are gathered, and when the Phase 1 visualization and validation resources get more visibility.
