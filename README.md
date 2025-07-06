@@ -111,8 +111,8 @@ Please review these repository governance documents to understand our expectatio
  - [SECURITY.md](SECURITY.md) – how to report vulnerabilities responsibly
  - [SUPPORT.md](SUPPORT.md) – where and how to request help or ask questions
 
-Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for installation instructions, more information, and FAQ.
+Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for installation instructions, more information, and frequently-asked questions.
 
-Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked-questions.
+Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked questions.
 
 At this time the project manager is [G. Ken Holman](mailto:gkholman@CraneSoftwrights.com), a [long-time XML community contributor](https://linkedin.com/in/gkholman) and the XML Technology Lead at [Réalta Online Publishing Services Ltd.](https://RealtaOnline.com) Ken's conference papers at [JATS-Con 2020/21](https://www.ncbi.nlm.nih.gov/books/NBK556169/) and [JATS-Con 2023](https://www.ncbi.nlm.nih.gov/books/NBK591971/) offer some insights into the implementation of this project using principles found in Réalta's JATS publishing service offering.
