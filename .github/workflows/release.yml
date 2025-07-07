@@ -28,9 +28,6 @@ jobs:
           echo "INFO: Found version: $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Set up GitHub CLI
-        uses: actions/setup-gh@v1
-
       - name: Check release tag availability
         run: |
           VERSION="v${{ steps.check_version.outputs.VERSION }}"
