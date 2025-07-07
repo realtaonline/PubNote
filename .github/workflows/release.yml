@@ -28,7 +28,10 @@ jobs:
           echo "INFO: Found version: $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
 
-      - name: Check if GitHub release already exists
+      - name: Set up GitHub CLI
+        uses: cli/cli-action@v2
+
+      - name: Check release tag availability
         run: |
           VERSION="v${{ steps.check_version.outputs.VERSION }}"
           echo "INFO: Checking for existing GitHub release: $VERSION"
@@ -38,7 +41,6 @@ jobs:
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: cli/cli-action@v2
 
       - name: Prepare release directory
         run: |
