@@ -35,7 +35,7 @@ To install \<PubNote> as a GitHub user, simply clone or fork the repository to a
 
 You can then invoke the tools directly from the appropriate `shell/` or `windows\` subdirectories, or use drag-and-drop as shown above. No build step is required, however, you do need Java 11 or higher installed in your environment.
 
-If you are not a GitHub user and you can live without Mac drag-and-drop, you can also download \<PubNote> as a ZIP file by clicking the green **\<> Code** button on the [GitHub repository page](https://github.com/realtaonline/PubNote) and choosing **Download ZIP**. Again, no build step is required, though Mac drag-and-drop won't work. Windows drag-and-drop should work as expected, though some users report problems after installing the ZIP on a networked drive.
+If you are not a GitHub user, you can download the Windows .ZIP or non-Windows .tar.gz file from the [latest release](https://github.com/realtaonline/PubNote/releases).
 
 Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and frequently-asked questions.
 
