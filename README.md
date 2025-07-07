@@ -35,7 +35,12 @@ To install \<PubNote> as a GitHub user, simply clone or fork the repository to a
 
 You can then invoke the tools directly from the appropriate `shell/` or `windows\` subdirectories, or use drag-and-drop as shown above. No build step is required, however, you do need Java 11 or higher installed in your environment.
 
-If you are not a GitHub user, you can download the Windows .ZIP or non-Windows .tar.gz file from the [latest release](https://github.com/realtaonline/PubNote/releases) [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases).
+If you are not a GitHub user, from the [latest release package](https://github.com/realtaonline/PubNote/releases/latest) [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) you can:
+- download the ZIP file for the three non-Mac environments directly from the browser:
+  - [https://github.com/realtaonline/PubNote/releases/latest/download/PubNote-latest.zip](https://github.com/realtaonline/PubNote/releases/latest/download/PubNote-latest.zip)
+- use `wget` or `curl` to download the tarball for the Mac environment (a browser download will not permit the Mac apps from executing):
+  - ```wget https://github.com/realtaonline/PubNote/releases/latest/download/PubNote-mac-latest.tgz```
+  - ```curl -LO https://github.com/realtaonline/PubNote/releases/latest/download/PubNote-mac-latest.tgz```
 
 Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and frequently-asked questions.
 

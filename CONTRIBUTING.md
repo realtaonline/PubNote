@@ -43,6 +43,14 @@ Here are a few things you can do that will increase the likelihood of your pull 
 
 Work in Progress pull requests are also welcome to get feedback early on, or if there is something blocked you.
 
+## Release workflow
+
+Only the Réalta repository maintainer account can make a release. They determine the next version number to use for the release and update the submitter's branch with the revised `version-*.txt` file. 
+
+The YAML script `release.yml` prepares a release with the artefact needed for non-Mac users.
+
+The `dev/makeMac.sh` script then is run to create the DMG file that is manually added to the release.
+
 ## Resources
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
