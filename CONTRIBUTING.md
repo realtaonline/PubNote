@@ -1,3 +1,5 @@
+We welcome feedback and improvements to this project, especially from those engaging with OLSPub or PubMed metadata out of necessity rather than enthusiasm. \<PubNote> is here to make that journey smoother.
+
 # Contributions
 
 [code-of-conduct]: CODE_OF_CONDUCT.md
@@ -14,6 +16,8 @@ Please review and comment on the project [roadmap](ROADMAP.md) looking ahead at 
 
 Meanwhile, your input is most welcome. By participating in this project you agree to abide by the terms of the [Contributor Code of Conduct][code-of-conduct].
 
+If you’re not a developer but have suggestions about wording, documentation, or usability, feel free to [open a new issue](https://github.com/realtaonline/PubNote/issues/new) — those contributions are just as valued.
+
 ## Issues and PRs
 
 If you have suggestions for how this project could be improved, or want to report a bug, open an issue! We'd love all and any contributions. If you have questions, too, we'd love to hear them.
@@ -26,8 +30,10 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 1. Make sure the environment runs on your machine.
 1. Create a new branch: `git checkout -b my-branch-name`.
 1. Make your change, add tests, and make sure the original tests still pass.
+1. Please do not include a version-*.txt file in your pull request. Versioning and packaging are handled by the repository maintainer upon approval and merge.
 1. Push to your fork and [submit a pull request][pr].
-1. Pat your self on the back and wait for your pull request to be reviewed and merged.
+1. Pat yourself on the back.
+1. We’ll take it from there and be in touch after review.
 
 Here are a few things you can do that will increase the likelihood of your pull request being accepted:
 

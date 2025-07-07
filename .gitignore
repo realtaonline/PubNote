@@ -1,2 +1,6 @@
+# localized configuration files
 utilities/fop/fop-config.local.xml
 utilities/fop/fop-config.windows.xml
+
+# Ignore build directory used for release packaging
+build/

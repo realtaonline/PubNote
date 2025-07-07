@@ -1,0 +1,71 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Sanity check version file
+        id: check_version
+        run: |
+          FILES=(version-*.txt)
+          COUNT=${#FILES[@]}
+          if [[ $COUNT -ne 1 ]]; then
+            echo "ERROR: Expected exactly one version-*.txt file, found $COUNT"
+            exit 1
+          fi
+          VERSION_FILE="${FILES[0]}"
+          VERSION="${VERSION_FILE#version-}"
+          VERSION="${VERSION%.txt}"
+          echo "INFO: Found version: $VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if GitHub release already exists
+        run: |
+          VERSION="v${{ steps.check_version.outputs.VERSION }}"
+          echo "INFO: Checking for existing GitHub release: $VERSION"
+          if gh release view "$VERSION" > /dev/null 2>&1; then
+            echo "ERROR: Release tag $VERSION already exists"
+            exit 1
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: cli/cli-action@v2
+
+      - name: Prepare release directory
+        run: |
+          echo "INFO: Preparing release folder"
+          mkdir -p build/PubNote-${{ steps.check_version.outputs.VERSION }}
+          rsync -a --exclude='.*' ./ build/PubNote-${{ steps.check_version.outputs.VERSION }}/
+
+      - name: Create ZIP package
+        run: |
+          echo "INFO: Creating ZIP package"
+          cd build
+          zip -r PubNote-${{ steps.check_version.outputs.VERSION }}.zip PubNote-${{ steps.check_version.outputs.VERSION }}
+
+      - name: Create TAR.GZ package
+        run: |
+          echo "INFO: Creating TAR.GZ package"
+          tar -czf build/PubNote-${{ steps.check_version.outputs.VERSION }}.tar.gz \
+            -C build PubNote-${{ steps.check_version.outputs.VERSION }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.check_version.outputs.VERSION }}
+          name: PubNote v${{ steps.check_version.outputs.VERSION }}
+          files: |
+            build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip
+            build/PubNote-${{ steps.check_version.outputs.VERSION }}.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
