@@ -45,18 +45,18 @@ jobs:
           mkdir -p build/PubNote-${{ steps.check_version.outputs.VERSION }}
           rsync -a --exclude='.*' ./ build/PubNote-${{ steps.check_version.outputs.VERSION }}/
 
-      - name: Create ZIP and TAR.GZ packages
+      - name: Create ZIP package
         run: |
-          echo "INFO: Creating ZIP and TAR.GZ packages"
+          echo "INFO: Creating ZIP package"
           cd build
           zip -r PubNote-${{ steps.check_version.outputs.VERSION }}.zip PubNote-${{ steps.check_version.outputs.VERSION }}
-          tar -czf PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz PubNote-${{ steps.check_version.outputs.VERSION }}
+          # tar -czf PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz PubNote-${{ steps.check_version.outputs.VERSION }}
 
       - name: Duplicate with -latest filenames
         run: |
           echo "INFO: Duplicating artefacts with stable -latest filenames"
           cp build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip build/PubNote-latest.zip
-          cp build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz build/PubNote-latest--mac-use-wget-or-curl.tgz
+          # cp build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz build/PubNote-latest--mac-use-wget-or-curl.tgz
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
@@ -65,8 +65,8 @@ jobs:
           name: PubNote v${{ steps.check_version.outputs.VERSION }}
           files: |
             build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip
-            build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz
+            # build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz
             build/PubNote-latest.zip
-            build/PubNote-latest--mac-use-wget-or-curl.tgz
+            #build/PubNote-latest--mac-use-wget-or-curl.tgz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
