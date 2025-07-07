@@ -1,4 +1,4 @@
-# \<PubNote> - a project in support of OLSPub and PubMed users
+# \<PubNote> - a project in support of OLSPub and PubMed users [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases)
 
 \<PubNote> is an open-source resource for visualizing, preparing, and working between the angle brackets of XML metadata content that is submitted to and distributed from [OLSPub](https://www.zbmed.de/en/research/current-projects/olspub) in Europe and [PubMed](https://pubmed.ncbi.nlm.nih.gov/) in the US.
 
@@ -35,7 +35,7 @@ To install \<PubNote> as a GitHub user, simply clone or fork the repository to a
 
 You can then invoke the tools directly from the appropriate `shell/` or `windows\` subdirectories, or use drag-and-drop as shown above. No build step is required, however, you do need Java 11 or higher installed in your environment.
 
-If you are not a GitHub user, you can download the Windows .ZIP or non-Windows .tar.gz file from the [latest release](https://github.com/realtaonline/PubNote/releases).
+If you are not a GitHub user, you can download the Windows .ZIP or non-Windows .tar.gz file from the [latest release](https://github.com/realtaonline/PubNote/releases) [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases).
 
 Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for these instructions, more information, and frequently-asked questions.
 

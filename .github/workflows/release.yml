@@ -51,12 +51,6 @@ jobs:
           cd build
           zip -r PubNote-${{ steps.check_version.outputs.VERSION }}.zip PubNote-${{ steps.check_version.outputs.VERSION }}
 
-      - name: Create TAR.GZ package
-        run: |
-          echo "INFO: Creating TAR.GZ package"
-          tar -czf build/PubNote-${{ steps.check_version.outputs.VERSION }}.tar.gz \
-            -C build PubNote-${{ steps.check_version.outputs.VERSION }}
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -64,6 +58,5 @@ jobs:
           name: PubNote v${{ steps.check_version.outputs.VERSION }}
           files: |
             build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip
-            build/PubNote-${{ steps.check_version.outputs.VERSION }}.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
