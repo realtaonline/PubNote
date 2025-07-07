@@ -51,15 +51,6 @@ jobs:
           cd build
           zip -r PubNote-${{ steps.check_version.outputs.VERSION }}.zip PubNote-${{ steps.check_version.outputs.VERSION }}
 
-      - name: Tag this commit
-        run: |
-          VERSION="v${{ steps.check_version.outputs.VERSION }}"
-          echo "INFO: Tagging current commit as $VERSION"
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git tag -a "$VERSION" -m "PubNote $VERSION"
-          git push origin "$VERSION"
-          
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
