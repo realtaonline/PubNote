@@ -16,15 +16,15 @@ jobs:
       - name: Sanity check version file
         id: check_version
         run: |
-          FILES=(version-*.txt)
+          FILES=(version-*.md)
           COUNT=${#FILES[@]}
           if [[ $COUNT -ne 1 ]]; then
-            echo "ERROR: Expected exactly one version-*.txt file, found $COUNT"
+            echo "ERROR: Expected exactly one version-*.md file, found $COUNT"
             exit 1
           fi
           VERSION_FILE="${FILES[0]}"
           VERSION="${VERSION_FILE#version-}"
-          VERSION="${VERSION%.txt}"
+          VERSION="${VERSION%.md}"
           echo "INFO: Found version: $VERSION"
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
 
