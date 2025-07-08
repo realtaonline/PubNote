@@ -1,8 +1,8 @@
-# \<PubNote> - a project in support of OLSPub and PubMed users [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases)
+# \<PubNote> – a project in support of OLSPub and PubMed users [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases)
 
 \<PubNote> is an open-source resource for visualizing, preparing, and working between the angle brackets of XML metadata content that is submitted to and distributed from [OLSPub](https://www.zbmed.de/en/research/current-projects/olspub) in Europe and [PubMed](https://pubmed.ncbi.nlm.nih.gov/) in the US.
 
-\<PubNote> is conceived, initiated, and maintained by Ireland-based [Réalta Online Publishing Solutions Limited - https://RealtaOnline.com](https://RealtaOnline.com). Réalta is a purveyor of fast, accurate, and quality online and API publishing services for tailored single-source JATS XML publishing with high fidelity to PDF, HTML, and DOCX output formats. _[Contact us](mailto:support@RealtaOnline.com) for your off-site online JATS publishing needs without the maintenance of on-site publishing software._
+\<PubNote> is conceived, initiated, and maintained by Ireland-based [Réalta Online Publishing Solutions Limited – https://RealtaOnline.com](https://RealtaOnline.com). Réalta is a purveyor of fast, accurate, and quality online and API publishing services for tailored single-source JATS XML publishing with high fidelity to PDF, HTML, and DOCX output formats. _[Contact us](mailto:support@RealtaOnline.com) for your off-site online JATS publishing needs without the maintenance of on-site publishing software._
 
 \<PubNote> consists of these out-of-the-box XML metadata tools:
 
@@ -12,16 +12,16 @@
 - **PubNoteOutExtract** – extraction of PubMed distribution XML documents from a set XML document  
 - **PubNoteOutIndent** – indentation of PubMed distribution XML documents from a single or a set XML document  
 - **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX with multiple rendering choices
-  - "-en"=English (A4), "-us"=English (US-letter), "-de"=German, "-fr"=French _(others welcome!)_
+  - "**-en**"=English (A4), "**-us**"=English (US-letter), "**-de**"=German, "**-fr**"=French _(others welcome!)_
 
-\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(click image to make larger)_: 
+\<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(Click any image to enlarge.)_: 
 
 <img src="images/interfaces.gif" width="100%"/>
 
 - illustrated DOS invocation: `u:\git\crane\PubNote\windows\PubNoteOutRender-de.bat PubMedOut-4.xml`  
 - illustrated shell invocation: `sh ~/u/git/crane/PubNote/shell/PubNoteOutRender-de.sh PubMedOut-4.xml`  
 
-\<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels (shown here in English) in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(click image to make larger)_: 
+\<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels (shown here in English) in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(Click any image to enlarge.)_: 
 
 <img src="images/formats.png" width="100%"/>
 
@@ -49,7 +49,7 @@ Please see the [discussions tab above](https://github.com/realtaonline/PubNote/d
 
 ## Executive background
 
-For years the US-based [PubMed](https://pubmed.ncbi.nlm.nih.gov/) has grown to be a resource of over 38 million citations of published biomedical literature. Each abstract is available from PubMed as a summary XML document valid against a simple abstract-oriented [DTD for distribution](https://pubmed.ncbi.nlm.nih.gov/download/#documentation). The PubMed system itself only accepts summary XML documents valid to a different simple abstract-oriented [DTD for submission](https://www.ncbi.nlm.nih.gov/books/NBK3828/#publisherhelp.PubMed_XML_Tagged_Format).
+The US-based [PubMed](https://pubmed.ncbi.nlm.nih.gov/) has grown over the years into a resource of more than 38 million citations of published biomedical literature. Each abstract is available from PubMed as a summary XML document valid against a simple abstract-oriented [DTD for distribution](https://pubmed.ncbi.nlm.nih.gov/download/#documentation). The PubMed system itself only accepts summary XML documents valid to a different simple abstract-oriented [DTD for submission](https://www.ncbi.nlm.nih.gov/books/NBK3828/#publisherhelp.PubMed_XML_Tagged_Format).
 
 It is estimated that 8 million of these citations are to journal articles authored in JATS XML to satisfy the inclusion requirements in the PubMedCentral (PMC) and European PMC databases, to satisfy US National Institute of Health (NIH) public access policy for such inclusion, or already satisfying the use of JATS internally by publishers even when not publicly shared as an XML document.
 
@@ -81,8 +81,8 @@ The \<PubNote> visualization/validation environment wraps around these two "in/s
 3. Presumably, there is some editing process for the user's **PubMedIn** submission document  
 4. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
 5. Inputs used to create draft are expected to include (among others):  
-5a. - a distillation of multiple JATS XML documents into a draft, or  
-5b. - a simple text file with no angle brackets converted to XML using Invisible XML    
+5a. – a distillation of multiple JATS XML documents into a draft, or  
+5b. – a simple text file with no angle brackets converted to XML using Invisible XML    
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
 7. Optionally, **PubNoteInCheck** can validate a **PubMedIn** document against the `PubMed.dtd`  
 8. Optionally, a **PubMedIn** document can be checked using the NIH online business rules validator  
@@ -93,8 +93,8 @@ The visualization process then takes the **XSL-FO output** from **PubNoteRender*
 
 11. XSL-FO is created with all of the content to be presented downstream in PDF, HTML, and DOCX  
 12. XSL-FO is transformed into **PDF** for print purposes  
-12a. A conforming XSL-FO 1.1 processor directly produces the output _(not part of this repository)_  
-12b. A non-conforming XSL-FO 1.1 process requires a transformation to make a suitable subset XSL-FO  
+12a. – a conforming XSL-FO 1.1 processor directly produces the output _(not part of this repository)_  
+12b. – a non-conforming XSL-FO 1.1 process requires a transformation to make a suitable subset XSL-FO  
 13. XSL-FO is transformed into **XHTML** for browser display  
 14. XHTML is transformed into **SWPX** (Simple Word Processing XML) for word processing purposes  
 15. The **Wordinator** tool combines SWPX and a Microsoft **DOTX** template to produce a **DOCX** file
@@ -108,15 +108,28 @@ For questions, suggestions, comments, and contributions we invite you to create 
 
 In particular, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome.
 
-Please review these repository governance documents to understand our expectations, processes, and support channels:
- - [ROADMAP.md](ROADMAP.md) - looking ahead
- - [CONTRIBUTING.md](CONTRIBUTING.md) – how to propose changes or fixes
- - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) – expectations for respectful collaboration
- - [SECURITY.md](SECURITY.md) – how to report vulnerabilities responsibly
- - [SUPPORT.md](SUPPORT.md) – where and how to request help or ask questions
+The numeric versioning of this project [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) follows the `<major/>`.`<minor/>`.`<patch/>` pattern, inspired by [Semantic Versioning](https://semver.org/). While generally aligned with SemVer principles, major version changes may also signal significant expansions in the project's scope.
 
-Please see the [wiki tab above](https://github.com/realtaonline/PubNote/wiki) for installation instructions, more information, and frequently-asked questions.
+- `<major/>` — increased when existing usage may break due to changes, or when substantial new functionality is introduced that significantly broadens the project’s scope (i.e. new project phases).
+- `<minor/>` — increased when new features are added that extend functionality without disrupting existing use (i.e. backward-compatible additions).
+- `<patch/>` — increased when errors are corrected or documentation is improved, without changes to features or behaviour (i.e. bug fixes and cosmetic adjustments).
 
-Please see the [discussions tab above](https://github.com/realtaonline/PubNote/discussions) for open discussions and infrequently-asked questions.
+This approach helps indicate whether an update is likely to affect existing workflows or simply enhance the project.
+
+_Version 1.0.0 is currently awaiting feedback from targeted users prior to public announcement._
+
+Please review the following documents to understand repository governance, expectations, and support channels:
+
+- [ROADMAP.md](ROADMAP.md) – looking ahead  
+- [CHANGELOG.md](CHANGELOG.md) – looking back  
+- [CONTRIBUTING.md](CONTRIBUTING.md) – how to propose changes or fixes  
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) – expectations for respectful collaboration  
+- [SECURITY.md](SECURITY.md) – how to report vulnerabilities responsibly  
+- [SUPPORT.md](SUPPORT.md) – where and how to request help or ask questions
+
+Further resources are available via the tabs above:
+
+- See the [Wiki](https://github.com/realtaonline/PubNote/wiki) for installation instructions, additional details, and frequently asked questions.  
+- See the [Discussions](https://github.com/realtaonline/PubNote/discussions) for ongoing conversations and infrequently asked questions.
 
 At this time the project manager is [G. Ken Holman](mailto:gkholman@CraneSoftwrights.com), a [long-time XML community contributor](https://linkedin.com/in/gkholman) and the XML Technology Lead at [Réalta Online Publishing Services Ltd.](https://RealtaOnline.com) Ken's conference papers at [JATS-Con 2020/21](https://www.ncbi.nlm.nih.gov/books/NBK556169/) and [JATS-Con 2023](https://www.ncbi.nlm.nih.gov/books/NBK591971/) offer some insights into the implementation of this project using principles found in Réalta's JATS publishing service offering.
