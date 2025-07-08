@@ -10,6 +10,8 @@ Latest release: [![Latest release](https://img.shields.io/github/v/release/realt
 
 ---
 
-### [v0.0.11] – 2025-07-08
+### [v0.0.11] - [v0.0.12] – 2025-07-08
 - added change log
 - added description of semantic versioning on home page
+- change version file to markdown
+- repair YAML to point to .md version file
