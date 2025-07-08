@@ -108,11 +108,11 @@ For questions, suggestions, comments, and contributions we invite you to create 
 
 In particular, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome.
 
-The numeric versioning of this project [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) follows the `\<major/>`.`\<minor/>`.`\<patch/>` pattern, inspired by [Semantic Versioning](https://semver.org/). While generally aligned with SemVer principles, major version changes may also signal significant expansions in the project's scope.
+The numeric versioning of this project [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) follows the `<major/>`.`<minor/>`.`<patch/>` pattern, inspired by [Semantic Versioning](https://semver.org/). While generally aligned with SemVer principles, major version changes may also signal significant expansions in the project's scope.
 
-- `\<major/>` — increased when existing usage may break due to changes, or when substantial new functionality is introduced that significantly broadens the project’s scope (i.e. new project phases).
-- `\<minor/>` — increased when new features are added that extend functionality without disrupting existing use (i.e. backward-compatible additions).
-- `\<patch/>` — increased when errors are corrected or documentation is improved, without changes to features or behaviour (i.e. bug fixes and cosmetic adjustments).
+- `<major/>` — increased when existing usage may break due to changes, or when substantial new functionality is introduced that significantly broadens the project’s scope (i.e. new project phases).
+- `<minor/>` — increased when new features are added that extend functionality without disrupting existing use (i.e. backward-compatible additions).
+- `<patch/>` — increased when errors are corrected or documentation is improved, without changes to features or behaviour (i.e. bug fixes and cosmetic adjustments).
 
 This approach helps indicate whether an update is likely to affect existing workflows or simply enhance the project.
 
