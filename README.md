@@ -116,8 +116,6 @@ The numeric versioning of this project [![Latest release](https://img.shields.io
 
 This approach helps indicate whether an update is likely to affect existing workflows or simply enhance the project.
 
-_Version 1.0.0 is currently awaiting feedback from targeted users prior to public announcement._
-
 Please review the following documents to understand repository governance, expectations, and support channels:
 
 - [ROADMAP.md](ROADMAP.md) – looking ahead  
