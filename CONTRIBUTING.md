@@ -45,7 +45,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 ## Submitting a pull request
 
-1. [Fork][fork] and clone the repository.
+1. [Fork](fork) and clone the repository.
 1. Make sure the environment runs on your machine.
 1. Create a new branch: `git checkout -b my-branch-name`.
 1. Make your change, add tests, and make sure the original tests still pass.
