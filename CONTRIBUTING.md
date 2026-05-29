@@ -1,5 +1,24 @@
 We welcome feedback and improvements to this project, especially from those engaging with OLSPub or PubMed metadata out of necessity rather than enthusiasm. \<PubNote> is here to make that journey smoother.
 
+# Repository dependencies
+
+This repository uses a git submodule at `Crane-txt2xml/` which provides
+the text-to-XML conversion facility from Crane Softwrights Ltd.
+
+When cloning, use:
+
+    git clone --recurse-submodules <url>
+
+If you have already cloned without that flag:
+
+    git submodule update --init
+
+When working on a branch that bumps the Crane-txt2xml component to a new
+release, test the integration fully in a branch separate from main. The
+submodule pointer in `Crane-txt2xml/` records the exact commit in use;
+updating it requires deliberate action and should always be done on a
+feature branch first.
+
 # Contributions
 
 [code-of-conduct]: CODE_OF_CONDUCT.md
