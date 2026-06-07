@@ -4,10 +4,12 @@
                 xmlns:xst="http://www.CraneSoftwrights.com/ns/xslstyle"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
                 xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+                xmlns:pn="http://www.RealtaOnline.com/ns/PubNote"
                 xmlns:c="urn:X-Crane"
-                exclude-result-prefixes="xs xst c map"
+                exclude-result-prefixes="xs xst c map pn"
                 version="3.0">
 
+<xsl:import href="../xsl/xlate/PubNote-xlate-en.xsl"/>
 <xsl:import href="../Crane-txt2xml/xsl/Crane-xsd2ixml.xsl"/>
 
 <xst:doc info="BSD-3 License - Copyright © https://RealtaOnline.com"
@@ -74,6 +76,28 @@
   <xsl:for-each select="$c:allNames">
     <xsl:sequence select="array { tokenize(normalize-space(.),' ') }"/>
   </xsl:for-each>
+</xsl:function>
+
+<xst:function>
+  <para>
+    This returns the lookup entry for the given name 
+  </para>
+  <xst:param name="c:name">
+    <para>The element name to look up</para>
+  </xst:param>
+</xst:function>
+<xsl:function name="c:nameLookup" as="element()?">
+  <xsl:param    name="c:name" as="xs:string"/>
+  <xsl:sequence select="$pn:xlateLookup/*[@lookup=$c:name]"/>
+</xsl:function>
+
+<xst:function>
+  <para>
+    This returns all of the unique mixed content markdown introducer strings
+  </para>
+</xst:function>
+<xsl:function name="c:markdownIntroducers" as="attribute()*">
+  <xsl:sequence select="$pn:xlateLookup/*[empty(@replace)]/@markdown"/>
 </xsl:function>
 
 </xsl:stylesheet>

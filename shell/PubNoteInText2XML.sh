@@ -46,6 +46,6 @@ FILEDIR="$(cd "$(dirname "$1")" && pwd)"
 INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 
-$REPO ../Crane-txt2xml/shell/Crane-txt2xml.sh $REPO/PubMedIn/ixml/PubMedIn.ixml $REPO/PubMedIn/ixml/PubMedIn-ixml2xml.xsl "$FILEDIR/$INPUTBASE/$INPUT.xml"
+$REPO/Crane-txt2xml/shell/Crane-txt2xml.sh "$REPO/ixml/PubMedIn${SUFFIX}.ixml" "$REPO/ixml/PubMedIn-ixml2xml.xsl" "$1" "$1.xml"
 
 exit 1

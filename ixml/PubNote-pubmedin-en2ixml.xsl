@@ -10,7 +10,6 @@
                 version="3.0">
 
 <xsl:import href="PubNote-pubmedin-xml2ixml.xsl"/>
-<xsl:import href="../xsl/xlate/PubNote-xlate-en.xsl"/>
 
 <xst:doc info="BSD-3 License - Copyright © https://RealtaOnline.com"
         filename="PubNote-pubmedin-xml2ixml.xsl" vocabulary="DocBook">
@@ -58,28 +57,6 @@
   <xsl:for-each select="$c:allNames">
     <xsl:sequence select="array { tokenize(normalize-space(.),' ') }"/>
   </xsl:for-each>
-</xsl:function>
-
-<xst:function>
-  <para>
-    This returns the lookup entry for the given name 
-  </para>
-  <xst:param name="c:name">
-    <para>The element name to look up</para>
-  </xst:param>
-</xst:function>
-<xsl:function name="c:nameLookup" as="element()?">
-  <xsl:param    name="c:name" as="xs:string"/>
-  <xsl:sequence select="$pn:xlateLookup/*[@lookup=$c:name]"/>
-</xsl:function>
-
-<xst:function>
-  <para>
-    This returns all of the unique mixed content markdown introducer strings
-  </para>
-</xst:function>
-<xsl:function name="c:markdownIntroducers" as="attribute()*">
-  <xsl:sequence select="$pn:xlateLookup/*[empty(@replace)]/@markdown"/>
 </xsl:function>
 
 </xsl:stylesheet>

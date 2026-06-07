@@ -1,4 +1,4 @@
-{ 20260603-0542Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
+{ 20260607-1440Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
 
 
   -__document_element = ( ArticleSet | Article ), __WS*.
@@ -81,6 +81,7 @@ ArchiveCopySource = __WS*, ( ( -"ArchiveCopySource" | ( -"Archive", __WS+, -"Cop
     @__alias____type__Article__VersionDate>alias = -"@", ( "VersionDate" | ( "Version", __WS+, "Date" ) ), -':'.
     @__name____type__Article__VersionDate>name = +"VersionDate".
   -__content____type__AbstractText =  -__attrs____type__AbstractText, __WS*, __mixed_content.
+__PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_content).
     -__attrs____type__AbstractText = 
       ( __WS*, __type__AbstractText__MANDATORY1of1 )+.
       -__type__AbstractText__MANDATORY1of1 =  ( __attr____type__AbstractText__Label ).
@@ -184,11 +185,16 @@ ArchiveCopySource = __WS*, ( ( -"ArchiveCopySource" | ( -"Archive", __WS+, -"Cop
     @__alias____type__PMID__VersionID>alias = -"@", ( "VersionID" | ( "Version", __WS+, "ID" ) ), -':'.
     @__name____type__PMID__VersionID>name = +"VersionID".
   -__content____type__sup = __WS*, __mixed_content.
+__CARET>sup = -"^",  ('^' | __CARET_content).
   -__content____type__inf = __WS*, __mixed_content.
   -__content____type__sub = __WS*, __mixed_content.
+__TILDE>sub = -"~",  ('~' | __TILDE_content).
   -__content____type__b = __WS*, __mixed_content.
+__STAR>b = -"*",  ( '*' | __STAR_content).
   -__content____type__i = __WS*, __mixed_content.
+__SLASH>i = -"/",  ( '/' | __SLASH_content).
   -__content____type__u = __WS*, __mixed_content.
+__UNDER>u = -"_",  ('_' | __UNDER_content).
   -__content____type__GroupList = ( Group+ ).
   -__content____type__Group = ( GroupName?, IndividualName+ ).
   -__content____type__IndividualName = ( FirstName, MiddleName?, LastName, Suffix?, ( ( Affiliation | AffiliationInfo+ )? ), Identifier* ).
@@ -317,13 +323,7 @@ ArchiveCopySource = __WS*, ( ( -"ArchiveCopySource" | ( -"Archive", __WS+, -"Cop
 {=============================================================================}
 { Mixed content and unused markdown symbols for this vocabulary }
 
--__mixed_content_member =  .
-__CARET = #0.
-__PLUS  = #0.
-__SLASH = #0.
-__STAR = #0.
-__TILDE = #0.
-__UNDER = #0.
+-__mixed_content_member =  AbstractText | b | i | sub | sup | u.
 
 {-----------------------------------------------------------------------------}
 { Boilerplate included specification of XSD-generated Crane-txt2xml handling }

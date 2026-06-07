@@ -53,13 +53,13 @@ INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 OUTPUT="$FILEDIR/${INPUTBASE}/${INPUT}${MARKDOWNSUFFIX}${SUFFIX}.txt"
 
-echo Processing: "$1" into "$OUTPUT" ...
+#echo Processing: "$1" into "$OUTPUT" ...
 
 if [ ! -f "$1" ]; then echo Input XML "$1" not found ; exit 1 ; fi
 
 # Remove any old result file
 if [ -f "$OUTPUT" ]; then rm "$OUTPUT" ; fi
 
-java -Xss64m -Xms200m -Xmx1000m -cp "$REPO/utilities/saxon12he/saxon12he.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no escape=no $MARKDOWN
+java -Xss64m -Xms200m -Xmx1000m -cp "$REPO/utilities/saxon12he/saxon12he.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no $MARKDOWN
 ret=$?
 if [ "$ret" -ne "0" ]; then exit $ret ; fi

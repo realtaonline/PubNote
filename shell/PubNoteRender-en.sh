@@ -95,26 +95,23 @@ TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
 
 if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
 
-#---------
-echo Rendering "$1" using "$XML2TEXT" to "$TEXT" ...
-echo Rendering "$1" using "$XML2TEXT" to "$TEXT" ... 1> "$LOG"
+# Create the four text renderings for round-tripping
+
+echo Transform XML to XML text...
+echo Transform XML to XML text... 1>> "$LOG"
 "$XML2TEXT" "$1"  2>>"$LOG"
 
-echo Rendering "$1" using "$XML2TEXTM" to "$TEXTM" ...
-echo Rendering "$1" using "$XML2TEXTM" to "$TEXTM" ... 1> "$LOG"
+echo Transform XML to XML text with markdown...
+echo Transform XML to XML text with markdown... 1>> "$LOG"
 "$XML2TEXTS" "$1"  2>>"$LOG"
 
-echo Rendering "$1" using "$XML2TEXTS" to "$TEXTS" ...
-echo Rendering "$1" using "$XML2TEXTS" to "$TEXTS" ... 1> "$LOG"
+echo Transform XML to "${SUFFIX}" text...
+echo Transform XML to "${SUFFIX}" text... 1>> "$LOG"
 "$XML2TEXTS" "$1"  2>>"$LOG"
 
-echo Rendering "$1" using "$XML2TEXTMS" to "$TEXTMS" ...
-echo Rendering "$1" using "$XML2TEXTMS" to "$TEXTMS" ... 1> "$LOG"
+echo Transform XML to "${SUFFIX}" text with markdown...
+echo Transform XML to "${SUFFIX}" text with markdown... 1>> "$LOG"
 "$XML2TEXTMS" "$1"  2>>"$LOG"
-
-exit
-
-
 
 # Delete outputs and temporary files
 if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi

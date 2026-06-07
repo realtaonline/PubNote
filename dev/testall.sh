@@ -9,6 +9,7 @@ FAILED_CASES=()
 # Export functions and variables for xargs subprocesses
 process_file() {
   file="$1"
+  dir=$(dirname "$file")
   base=$(basename "$file" .xml)
   echo "Processing $base..."
 
@@ -29,6 +30,13 @@ process_file() {
   "$REPO/shell/PubNoteRender-us.sh" "$file" || fail=1
   "$REPO/shell/PubNoteRender-de.sh" "$file" || fail=1
   "$REPO/shell/PubNoteRender-fr.sh" "$file" || fail=1
+
+  if [[ "$base" == PubMedIn* ]]; then
+    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml.txt" || fail=1
+    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-en.txt" || fail=1
+    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-fr.txt" || fail=1
+    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-de.txt" || fail=1
+  fi
 
   if [ "$fail" -ne 0 ]; then
     echo "FAILED: $base"
