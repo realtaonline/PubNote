@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- PubMed Journal Article DTD Version 3.0 -->
+<!-- Hacked by hand to remove MathML-->
+<xs:schema xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- ============================================================= -->
+  <!-- REMAINING PUBMED CHARACTERS -->
+  <!-- ============================================================= -->
+  <xs:group name="data">
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:simpleType name="pub.status.int">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="pmc"/>
+      <xs:enumeration value="pmcr"/>
+      <xs:enumeration value="pubmed"/>
+      <xs:enumeration value="pubmedr"/>
+      <xs:enumeration value="premedline"/>
+      <xs:enumeration value="medline"/>
+      <xs:enumeration value="medliner"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="pub.status">
+    <xs:union memberTypes="pub.status.int">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="received"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="accepted"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="epublish"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="ppublish"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="revised"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="aheadofprint"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="ecollection"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="art.id.type.int">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="pubmed"/>
+      <xs:enumeration value="medline"/>
+      <xs:enumeration value="pmcid"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="art.id.type">
+    <xs:union memberTypes="art.id.type.int">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="doi"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="pii"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="pmcpid"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="pmpid"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- This is the top level element -->
+  <xs:element name="ArticleSet" type="__type__ArticleSet"/>
+  <xs:complexType name="__type__ArticleSet">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Article"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Article" type="__type__Article"/>
+  <xs:complexType name="__type__Article">
+      <xs:sequence>
+        <xs:element ref="Journal"/>
+        <xs:element minOccurs="0" ref="Replaces"/>
+        <xs:element minOccurs="0" ref="ArticleTitle"/>
+        <xs:element minOccurs="0" ref="VernacularTitle"/>
+        <xs:element minOccurs="0" ref="FirstPage"/>
+        <xs:element minOccurs="0" ref="LastPage"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ELocationID"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Language"/>
+        <xs:element minOccurs="0" ref="AuthorList"/>
+        <xs:element minOccurs="0" ref="GroupList"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PublicationType"/>
+        <xs:element minOccurs="0" ref="ArticleIdList"/>
+        <xs:element minOccurs="0" ref="History"/>
+        <xs:element minOccurs="0" ref="Abstract"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="OtherAbstract"/>
+        <xs:element minOccurs="0" ref="CopyrightInformation"/>
+        <xs:element minOccurs="0" ref="CoiStatement"/>
+        <xs:element minOccurs="0" ref="ObjectList"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ReferenceList"/>
+        <xs:element minOccurs="0" ref="ArchiveCopySource"/>
+      </xs:sequence>
+      <xs:attribute name="VersionID"/>
+      <xs:attribute name="VersionDate"/>
+    </xs:complexType>
+  <xs:element name="AbstractText" type="__type__AbstractText"/>
+  <xs:complexType name="__type__AbstractText" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      </xs:choice>
+      <xs:attribute name="Label" use="required"/>
+    </xs:complexType>
+  <xs:group name="abstract.common">
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="AbstractText"/>
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="abstract" mixed="true">
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="AbstractText"/>
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="other.abstract" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="AbstractText"/>
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      <xs:element ref="ArticleTitle"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="Journal" type="__type__Journal"/>
+  <xs:complexType name="__type__Journal">
+      <xs:sequence>
+        <xs:element ref="PublisherName"/>
+        <xs:element ref="JournalTitle"/>
+        <xs:element ref="Issn"/>
+        <xs:element minOccurs="0" ref="Volume"/>
+        <xs:element minOccurs="0" ref="Issue"/>
+        <xs:element ref="PubDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="PublisherName" type="xs:string"/>
+  <xs:element name="JournalTitle" type="xs:string"/>
+  <xs:element name="Issn" type="xs:string"/>
+  <xs:element name="Volume" type="xs:string"/>
+  <xs:element name="Issue" type="xs:string"/>
+  <xs:element name="PubDate" type="__type__PubDate"/>
+  <xs:complexType name="__type__PubDate">
+      <xs:sequence>
+        <xs:element ref="Year"/>
+        <xs:element minOccurs="0" ref="Month"/>
+        <xs:element minOccurs="0" ref="Day"/>
+        <xs:element minOccurs="0" ref="Season"/>
+      </xs:sequence>
+      <xs:attribute name="PubStatus" default="ppublish" type="pub.status"/>
+    </xs:complexType>
+  <xs:element name="Year" type="xs:string"/>
+  <xs:element name="Month" type="xs:string"/>
+  <xs:element name="Day" type="xs:string"/>
+  <xs:element name="Season" type="xs:string"/>
+  <!-- End of PubDate group -->
+  <xs:element name="History" type="__type__History"/>
+  <xs:complexType name="__type__History">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="PubDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  <!-- End of Journal group -->
+  <xs:element name="Replaces" type="__type__Replaces"/>
+  <xs:complexType name="__type__Replaces"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="IdType" default="pubmed" type="art.id.type"/>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <xs:element name="ArticleTitle" type="__type__ArticleTitle"/>
+  <xs:complexType name="__type__ArticleTitle" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  <xs:element name="VernacularTitle" type="__type__VernacularTitle"/>
+  <xs:complexType name="__type__VernacularTitle" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  <xs:element name="FirstPage" type="__type__FirstPage"/>
+  <xs:complexType name="__type__FirstPage"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="LZero" default="delete">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Save"/>
+            <xs:enumeration value="save"/>
+            <xs:enumeration value="delete"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <xs:element name="LastPage" type="xs:string"/>
+  <xs:element name="Language" type="xs:string"/>
+  <xs:element name="AuthorList" type="__type__AuthorList"/>
+  <xs:complexType name="__type__AuthorList">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Author"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:group name="affiliation">
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="Affiliation"/>
+        <xs:element maxOccurs="unbounded" ref="AffiliationInfo"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="Author" type="__type__Author"/>
+  <xs:complexType name="__type__Author">
+      <xs:sequence>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="FirstName"/>
+            <xs:element minOccurs="0" ref="MiddleName"/>
+            <xs:element ref="LastName"/>
+            <xs:element minOccurs="0" ref="Suffix"/>
+            <xs:element minOccurs="0" ref="Initials"/>
+          </xs:sequence>
+          <xs:element ref="CollectiveName"/>
+        </xs:choice>
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="Affiliation"/>
+        <xs:element maxOccurs="unbounded" ref="AffiliationInfo"/>
+      </xs:choice>
+    </xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Identifier"/>
+      </xs:sequence>
+      <xs:attribute name="EqualContrib">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="N"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  <xs:element name="FirstName" type="__type__FirstName"/>
+  <xs:complexType name="__type__FirstName"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="EmptyYN" default="N">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="N"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <xs:element name="MiddleName" type="xs:string"/>
+  <xs:element name="LastName" type="xs:string"/>
+  <xs:element name="CollectiveName" type="xs:string"/>
+  <xs:element name="Suffix" type="xs:string"/>
+  <xs:element name="Initials" type="xs:string"/>
+  <xs:element name="Affiliation" type="xs:string"/>
+  <xs:element name="AffiliationInfo" type="__type__AffiliationInfo"/>
+  <xs:complexType name="__type__AffiliationInfo">
+      <xs:sequence>
+        <xs:element ref="Affiliation"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Identifier"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Identifier" type="__type__Identifier"/>
+  <xs:complexType name="__type__Identifier"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="Source" use="required"/>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <!-- End of Author group -->
+  <!-- End of AuthorList group -->
+  <xs:element name="PublicationType" type="xs:string"/>
+  <xs:element name="ArticleIdList" type="__type__ArticleIdList"/>
+  <xs:complexType name="__type__ArticleIdList">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ArticleId"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="ArticleId" type="__type__ArticleId"/>
+  <xs:complexType name="__type__ArticleId"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="IdType" default="pii" type="art.id.type"/>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <xs:element name="Abstract" type="abstract"/>
+  <xs:element name="OtherAbstract" type="__type__OtherAbstract"/>
+  <xs:complexType name="__type__OtherAbstract">
+      <xs:complexContent>
+        <xs:extension base="other.abstract">
+          <xs:attribute name="Language" use="required"/>
+          <xs:attribute name="Type"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  <xs:element name="ObjectList" type="__type__ObjectList"/>
+  <xs:complexType name="__type__ObjectList">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Object"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Object" type="__type__Object"/>
+  <xs:complexType name="__type__Object">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Param"/>
+      </xs:sequence>
+      <xs:attribute name="Type" use="required"/>
+    </xs:complexType>
+  <xs:element name="Param" type="__type__Param"/>
+  <xs:complexType name="__type__Param" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      </xs:choice>
+      <xs:attribute name="Name" use="required"/>
+    </xs:complexType>
+  <xs:element name="ReferenceList" type="__type__ReferenceList"/>
+  <xs:complexType name="__type__ReferenceList">
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Title"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Reference"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ReferenceList"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Title" type="xs:string"/>
+  <xs:element name="Reference" type="__type__Reference"/>
+  <xs:complexType name="__type__Reference">
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="Citation"/>
+          <xs:element ref="PMID"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="ArticleIdList"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Citation" type="__type__Citation"/>
+  <xs:complexType name="__type__Citation" mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  <xs:element name="PMID" type="__type__PMID"/>
+  <xs:complexType name="__type__PMID"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="VersionID"/>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <!-- End of Article group -->
+  <!-- End of ArticleSet group -->
+  <xs:element name="sup" type="__type__sup"/>
+  <xs:complexType name="__type__sup" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="inf" type="__type__inf"/>
+  <xs:complexType name="__type__inf" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="sub" type="__type__sub"/>
+  <xs:complexType name="__type__sub" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="b" type="__type__b"/>
+  <xs:complexType name="__type__b" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="i" type="__type__i"/>
+  <xs:complexType name="__type__i" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="u" type="__type__u"/>
+  <xs:complexType name="__type__u" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="GroupList" type="__type__GroupList"/>
+  <xs:complexType name="__type__GroupList">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Group"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="Group" type="__type__Group"/>
+  <xs:complexType name="__type__Group">
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="GroupName"/>
+        <xs:element maxOccurs="unbounded" ref="IndividualName"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="GroupName" type="xs:string"/>
+  <xs:element name="IndividualName" type="__type__IndividualName"/>
+  <xs:complexType name="__type__IndividualName">
+      <xs:sequence>
+        <xs:element ref="FirstName"/>
+        <xs:element minOccurs="0" ref="MiddleName"/>
+        <xs:element ref="LastName"/>
+        <xs:element minOccurs="0" ref="Suffix"/>
+        <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="Affiliation"/>
+        <xs:element maxOccurs="unbounded" ref="AffiliationInfo"/>
+      </xs:choice>
+    </xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Identifier"/>
+      </xs:sequence>
+    </xs:complexType>
+  <xs:element name="ELocationID" type="__type__ELocationID"/>
+  <xs:complexType name="__type__ELocationID"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="EIdType" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="doi"/>
+            <xs:enumeration value="pii"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="ValidYN" default="Y">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="N"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension></xs:simpleContent></xs:complexType>
+  <xs:element name="CopyrightInformation" type="xs:string"/>
+  <xs:element name="CoiStatement" type="__type__CoiStatement"/>
+  <xs:complexType name="__type__CoiStatement" mixed="true">
+      <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element ref="sup"/>
+        <xs:element ref="inf"/>
+        <xs:element ref="b"/>
+        <xs:element ref="u"/>
+        <xs:element ref="i"/>
+        <xs:element ref="sub"/>
+      </xs:choice>
+    </xs:sequence>
+    </xs:complexType>
+  <xs:element name="ArchiveCopySource" type="__type__ArchiveCopySource"/>
+  <xs:complexType name="__type__ArchiveCopySource"><xs:simpleContent><xs:extension base="xs:string">
+      <xs:attribute name="DocType" default="pdf">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="pdf"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension></xs:simpleContent></xs:complexType>
+</xs:schema>

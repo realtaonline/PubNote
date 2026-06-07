@@ -7,11 +7,12 @@
 \<PubNote> consists of these out-of-the-box XML metadata tools:
 
 - **PubNoteInCheck** – validation of PubMed submission XML against the submission DTD  
-- **PubNoteInDraft** – drafting of PubMed submission XML from JATS article XML _(part of Phase 2 of this project)_
+- **PubNoteInText2XML** - conversion of PubMed submission text rendering into submission XML _(added in Phase 2 of this project)_  
+- **PubNoteInDraft** – drafting of PubMed submission text and XML from JATS article XML _(outlined for Phase 3 of this project)_
 - **PubNoteOutCheck** – validation of PubMed distribution XML against the distribution DTD  
 - **PubNoteOutExtract** – extraction of PubMed distribution XML documents from a set XML document  
 - **PubNoteOutIndent** – indentation of PubMed distribution XML documents from a single or a set XML document  
-- **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, and DOCX with multiple rendering choices
+- **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, DOCX, and text with multiple rendering choices
   - "**-en**"=English (A4), "**-us**"=English (US-letter), "**-de**"=German, "**-fr**"=French _(others welcome!)_
 
 \<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(Click any image to enlarge.)_: 
@@ -24,6 +25,10 @@
 \<PubNote> publishes the [original PubMed XML](test/PubMedOut-2.xml) with multiple-language labels (shown here in English) in [PDF](test/PubMedOut-2/PubMedOut-2.xml-en.pdf), [HTML](test/PubMedOut-2/PubMedOut-2.xml-en.html), [DOCX](test/PubMedOut-2/PubMedOut-2.xml-en.docx), and, if useful, [indented XML](test/PubMedOut-2/PubMedOut-2.indent.xml), without disturbing the original XML _(Click any image to enlarge.)_: 
 
 <img src="images/formats.png" width="100%"/>
+
+In phase 2 of this project a simple text rendering was added following particular syntax conventions recognized in the conversion from text to XML. This supports round-tripping a PubMed in (submission) XML document for editing by non-XML subject matter experts:
+
+<img src="images/pubnote-round-trip.png" width="80%"/>
 
 The [`test/`](test/) directory has anonymized sample PubMed in (submission) and out (distribution) XML files for testing.  _You can copy these XML files into a temporary directory outside of the git repository and use them for tests._
 
@@ -55,13 +60,15 @@ It is estimated that 8 million of these citations are to journal articles author
 
 In Europe in May 2025, the new [OLSPub](https://www.zbmed.de/en/research/current-projects/olspub) (Open Life Sciences Publishing) project was established by the publicly-funded ZB Med in Germany. This project strives to protect the wealth of information in PubMed in a parallel open database maintained outside of US jurisdiction. Ready for the future, the project already contains all existing PubMed data and is ready for any additional data publishers may wish to contribute directly. That project is getting a lot of attention.
 
-This \<PubNote> project, conceived in the spirit of OLSPub for jurisdictional independence, open data, and publisher empowerment, is an open-source resource for working with PubMed metadata.
+This \<PubNote> project, conceived in the spirit of OLSPub for jurisdictional independence, open data, and publisher empowerment, is an open-source resource for working with PubMed XML metadata. The target users are small publishers who may not have the XML tools to create, edit, or render the metadata.
 
 The entire visualization code base for \<PubNote> is oriented around simple and shallow metadata XML documents, a contrasting nature to the rich and deep JATS document model. Whereas JATS describes elaborate prose-oriented nested structures intended for branded distribution, PubMed describes only flat metadata structures intended only for internal reviews, indexing, and search.
 
 Nevertheless, these simple PubMed metadata structures are in arcane XML syntax which can be discomfiting to some users who may be allergic to angle brackets. \<PubNote> seeks to make working with and reviewing the content of these structures easy for all users.
 
-In summary, \<PubNote> aligns with OLSPub's objectives by offering open-source tooling to validate and inspect the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
+In summary, \<PubNote> aligns with OLSPub's objectives by offering open-source tooling to inspect, edit, and validate the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
+
+Phase 1 of this project was released to the public in November 2025. Phase 2 was released in June 2026.  
 
 ---
 
@@ -78,21 +85,21 @@ The basic flows interacting with OLSPub and PubMed are simple:
 
 The \<PubNote> visualization/validation environment wraps around these two "in/submission" and "out/distribution" XML documents, giving users tools to create, confirm, and consume the information.
 
-3. Presumably, there is some editing process for the user's **PubMedIn** submission document  
-4. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point _(Phase 2)_  
-5. Inputs used to create draft are expected to include (among others):  
-5a. – a distillation of multiple JATS XML documents into a draft, or  
-5b. – a simple text file with no angle brackets converted to XML using Invisible XML    
+3. For human metadata entry, the user can edit a simple text expression of in/submission content according to syntax rules
+4. **PubNoteIn-Text2XML** converts a simple text expression of in/submission content into a **PubMedIn** document (not suitable for PubMedOut documents)  
+5. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point from a distillation of multiple JATS XML documents into a draft _(Phase 3)_  
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
 7. Optionally, **PubNoteInCheck** can validate a **PubMedIn** document against the `PubMed.dtd`  
 8. Optionally, a **PubMedIn** document can be checked using the NIH online business rules validator  
 9. Optionally, **PubNoteOutCheck** can validate a **PubMedOut** document against the `pubmed_250101.dtd`  
 10. For human review, **PubNoteRender** formats the information found in a **PubMedOut** document  
 
-The visualization process then takes the **XSL-FO output** from **PubNoteRender** to produce human-readable documentation:
+The visualization process in **PubNoteRender** produces human-readable documentation:
 
-11. XSL-FO is created with all of the content to be presented downstream in PDF, HTML, and DOCX  
-12. XSL-FO is transformed into **PDF** for print purposes  
+11. **PubMedOut** and **PubMedIn** documents are rendered to various formats:  
+11a. Simple text is created following the specific **PubNoteIn-Text2XML** syntax conventions  
+11b. XSL-FO is created with all of the content to be presented downstream in PDF, HTML, and DOCX  
+12. XSL-FO is transformed into **PDF** for print purposes:  
 12a. – a conforming XSL-FO 1.1 processor directly produces the output _(not part of this repository)_  
 12b. – a non-conforming XSL-FO 1.1 process requires a transformation to make a suitable subset XSL-FO  
 13. XSL-FO is transformed into **XHTML** for browser display  

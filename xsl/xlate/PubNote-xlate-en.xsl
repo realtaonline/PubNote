@@ -27,13 +27,12 @@
 </xs:variable>
 <xsl:variable name="pn:xlateLookup" as="document-node()" xml:lang="en">
  <xsl:document>
-  <xlate lookup="Abstract">Abstract</xlate>
-  <xlate lookup="AbstractText">Abstract Text</xlate>
+  <xlate lookup="Abstract" mixed="true">Abstract</xlate>
   <xlate lookup="AccessionNumber">Accession Number</xlate>
   <xlate lookup="AccessionNumberList">Accession Number List</xlate>
   <xlate lookup="Acronym">Acronym</xlate>
   <xlate lookup="Affiliation">Affiliation</xlate>
-  <xlate lookup="AffiliationInfo">Affiliation Info</xlate>
+  <xlate lookup="AffiliationInfo" force-close="">Affiliation Info</xlate>
   <xlate lookup="Agency">Agency</xlate>
   <xlate lookup="ArchiveCopySource">Archive Copy Source</xlate>
   <xlate lookup="Article">Article</xlate>
@@ -41,7 +40,7 @@
   <xlate lookup="ArticleId">Article Id</xlate>
   <xlate lookup="ArticleIdList">Article Id List</xlate>
   <xlate lookup="ArticleSet">Article Set</xlate>
-  <xlate lookup="ArticleTitle">Article Title</xlate>
+  <xlate lookup="ArticleTitle" mixed="">Article Title</xlate>
   <xlate lookup="Author">Author</xlate>
   <xlate lookup="AuthorList">Author List</xlate>
   <xlate lookup="BeginningDate">Beginning Date</xlate>
@@ -51,9 +50,9 @@
   <xlate lookup="BookTitle">Book Title</xlate>
   <xlate lookup="Chemical">Chemical</xlate>
   <xlate lookup="ChemicalList">Chemical List</xlate>
-  <xlate lookup="Citation">Citation</xlate>
+  <xlate lookup="Citation" mixed="">Citation</xlate>
   <xlate lookup="CitationSubset">Citation Subset</xlate>
-  <xlate lookup="CoiStatement">Conflict of Interest Statement</xlate>
+  <xlate lookup="CoiStatement" mixed="">Conflict of Interest Statement</xlate>
   <xlate lookup="CollectionTitle">Collection Title</xlate>
   <xlate lookup="CollectiveName">Collective Name</xlate>
   <xlate lookup="CommentsCorrections">Comments Corrections</xlate>
@@ -71,7 +70,7 @@
   <xlate lookup="DeleteCitation">Delete Citation</xlate>
   <xlate lookup="DeleteDocument">Delete Document</xlate>
   <xlate lookup="DescriptorName">Descriptor Name</xlate>
-  <xlate lookup="DispFormula">Display Formula</xlate>
+  <xlate lookup="DispFormula" unsupported="">Display Formula</xlate>
   <xlate lookup="ELocationID">Electronic Location ID</xlate>
   <xlate lookup="Edition">Edition</xlate>
   <xlate lookup="EndPage">End Page</xlate>
@@ -91,7 +90,7 @@
   <xlate lookup="History">History</xlate>
   <xlate lookup="Hour">Hour</xlate>
   <xlate lookup="ISOAbbreviation">ISO Abbreviation</xlate>
-  <xlate lookup="ISSN">ISSN</xlate>
+  <xlate lookup="ISSN" pubmedin="ignore">ISSN</xlate>
   <xlate lookup="ISSNLinking">ISSN Linking</xlate>
   <xlate lookup="Identifier">Identifier</xlate>
   <xlate lookup="IndividualName">Individual Name</xlate>
@@ -99,7 +98,7 @@
   <xlate lookup="Investigator">Investigator</xlate>
   <xlate lookup="InvestigatorList">Investigator List</xlate>
   <xlate lookup="Isbn">ISBN</xlate>
-  <xlate lookup="Issn">ISSN</xlate>
+  <xlate lookup="Issn" pubmedout="ignore">ISSN</xlate>
   <xlate lookup="Issue">Issue</xlate>
   <xlate lookup="Item">Item</xlate>
   <xlate lookup="ItemList">Item List</xlate>
@@ -129,11 +128,11 @@
   <xlate lookup="NumberOfReferences">Number Of References</xlate>
   <xlate lookup="Object">Object</xlate>
   <xlate lookup="ObjectList">Object List</xlate>
-  <xlate lookup="OtherAbstract">Other Abstract</xlate>
+  <xlate lookup="OtherAbstract" mixed="true">Other Abstract</xlate>
   <xlate lookup="OtherID">Other ID</xlate>
   <xlate lookup="PMID">PubMed ID</xlate>
   <xlate lookup="Pagination">Pagination</xlate>
-  <xlate lookup="Param">Parameter</xlate>
+  <xlate lookup="Param" mixed="">Parameter</xlate>
   <xlate lookup="PersonalNameSubject">Personal Name Subject</xlate>
   <xlate lookup="PersonalNameSubjectList">Personal Name Subject List</xlate>
   <xlate lookup="PubDate">Publication Date</xlate>
@@ -169,17 +168,20 @@
   <xlate lookup="SupplMeshName">Suppl MeSH Name</xlate>
   <xlate lookup="Title">Title</xlate>
   <xlate lookup="URL">URL</xlate>
-  <xlate lookup="VernacularTitle">Vernacular Title</xlate>
+  <xlate lookup="VernacularTitle" mixed="">Vernacular Title</xlate>
   <xlate lookup="Volume">Volume</xlate>
   <xlate lookup="VolumeTitle">Volume Title</xlate>
   <xlate lookup="Year">Year</xlate>
+  <!--note that the DTD hardwires the name, so hardwired here with mml:-->
+  <xlate lookup="mml:math" unsupported="">MathML</xlate>
    <!--inline constructs-->
-  <xlate lookup="b">bold</xlate>
-  <xlate lookup="i">italic</xlate>
-  <xlate lookup="inf">inferred content</xlate>
-  <xlate lookup="sub">subscript</xlate>
-  <xlate lookup="sup">superscript</xlate>
-  <xlate lookup="u">underscore</xlate>
+  <xlate lookup="AbstractText" markdown="+" mixed="">Abstract Text</xlate>
+  <xlate lookup="b"   mixed="" markdown="*">bold</xlate>
+  <xlate lookup="i"   mixed="" markdown="/">italic</xlate>
+  <xlate lookup="inf" mixed="" markdown="~" replace="sub">inferior content</xlate>
+  <xlate lookup="sub" mixed="" markdown="~">subscript</xlate>
+  <xlate lookup="sup" mixed="" markdown="^">superscript</xlate>
+  <xlate lookup="u"   mixed="" markdown="_">underscore</xlate>
  </xsl:document>
 </xsl:variable>
 

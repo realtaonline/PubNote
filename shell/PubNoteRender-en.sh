@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ---------------------------------------------------------------------------
-# PubNoteRender-en.bat
+# PubNoteRender-en.sh
 #
 # A shell script for processing a PubNote XML input file into
 # PDF, HTML, and DOCX outputs using Saxon, FOP, and Wordinator.
@@ -63,17 +63,67 @@ DOCX_TEMP="$SWPXDIR/${DOCX_NAME}"
 SWPX="$SWPXDIR/${SWPX_NAME}"
 DOTX="$REPO/dev/PubNoteRender.dotx"
 LOG="$FILEDIR/${INPUT}${SUFFIX}.pdf.log.txt"
+TEXT="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
+TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-markdown.txt"
 
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" with "$LOG"...
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" with "$LOG"... 1> "$LOG"
+#Example input and all outputs including round-trip equivalents
+#
+#PM0.xml
+#PM0/PM0.txt
+#PM0/PM0/PM0.txt.xml
+#PM0/PM0-markdown.txt
+#PM0/PM0-markdown/PM0-markdown.txt.xml
+#PM0/PM0-en.txt
+#PM0/PM0-en/PM0-en.txt.xml
+#PM0/PM0-en-markdown.txt
+#PM0/PM0-en-markdown/PM0-markdown-en.txt.xml
+#PM0/PM0-en.pdf
+#PM0/PM0-en.html
+#PM0/PM0-en.docx
+
+XML2TEXT="$REPO/shell/PubNoteXML2Text.sh"
+TEXT="$FILEDIR/${INPUTBASE}/${INPUT}.txt"
+
+XML2TEXTM="$REPO/shell/PubNoteXML2TextMarkdown.sh"
+TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
+
+XML2TEXTS="$REPO/shell/PubNoteXML2Text${SUFFIX}.sh"
+TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
+
+XML2TEXTMS="$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh"
+TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
 
 if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
+
+#---------
+echo Rendering "$1" using "$XML2TEXT" to "$TEXT" ...
+echo Rendering "$1" using "$XML2TEXT" to "$TEXT" ... 1> "$LOG"
+"$XML2TEXT" "$1"  2>>"$LOG"
+
+echo Rendering "$1" using "$XML2TEXTM" to "$TEXTM" ...
+echo Rendering "$1" using "$XML2TEXTM" to "$TEXTM" ... 1> "$LOG"
+"$XML2TEXTS" "$1"  2>>"$LOG"
+
+echo Rendering "$1" using "$XML2TEXTS" to "$TEXTS" ...
+echo Rendering "$1" using "$XML2TEXTS" to "$TEXTS" ... 1> "$LOG"
+"$XML2TEXTS" "$1"  2>>"$LOG"
+
+echo Rendering "$1" using "$XML2TEXTMS" to "$TEXTMS" ...
+echo Rendering "$1" using "$XML2TEXTMS" to "$TEXTMS" ... 1> "$LOG"
+"$XML2TEXTMS" "$1"  2>>"$LOG"
+
+exit
+
+
 
 # Delete outputs and temporary files
 if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi
 if [[ -f "$FO" ]];    then rm "$FO" ;  fi
 if [[ -f "$PDF" ]];   then rm "$PDF" ; fi
 if [[ -f "$LOG" ]];   then rm "$LOG" ; fi
+
+echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ...
+echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ... >> "$LOG"
 
 echo Transform XML to FO...
 echo Transform XML to FO... 1>> "$LOG"
