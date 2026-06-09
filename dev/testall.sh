@@ -18,29 +18,29 @@ process_file() {
 
   if [[ "$base" == PubMedOut* ]]; then
     "$REPO/shell/PubNoteOutCheck.sh" "$file" || fail=1
-    "$REPO/shell/PubNoteOutExtract.sh" "$file" || fail=1
-    "$REPO/shell/PubNoteOutIndent.sh" "$file" || fail=1
+    "$REPO/shell/PubNoteOutExtract.sh" "$file" || fail=2
+    "$REPO/shell/PubNoteOutIndent.sh" "$file" || fail=3
   elif [[ "$base" == PubMedIn* ]]; then
-    "$REPO/shell/PubNoteInCheck.sh" "$file" || fail=1
+    "$REPO/shell/PubNoteInCheck.sh" "$file" || fail=4
   else
     echo "Skipping $file: no matching test pattern"
   fi
 
-  "$REPO/shell/PubNoteRender-en.sh" "$file" || fail=1
-  "$REPO/shell/PubNoteRender-us.sh" "$file" || fail=1
-  "$REPO/shell/PubNoteRender-de.sh" "$file" || fail=1
-  "$REPO/shell/PubNoteRender-fr.sh" "$file" || fail=1
+  "$REPO/shell/PubNoteRender-en.sh" "$file" || fail=5
+  "$REPO/shell/PubNoteRender-us.sh" "$file" || fail=6
+  "$REPO/shell/PubNoteRender-de.sh" "$file" || fail=7
+  "$REPO/shell/PubNoteRender-fr.sh" "$file" || fail=8
 
   if [[ "$base" == PubMedIn* ]]; then
-    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml.txt" || fail=1
-    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-en.txt" || fail=1
-    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-fr.txt" || fail=1
-    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-de.txt" || fail=1
+    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml.txt" || fail=9
+    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-en.txt" || fail=10
+    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-fr.txt" || fail=11
+    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-de.txt" || fail=12
   fi
 
   if [ "$fail" -ne 0 ]; then
-    echo "FAILED: $base"
-    echo "$base" >> "$TESTDIR/.failed_cases"
+    echo "FAILED: $base $Fail"
+    echo "$base $fail" >> "$TESTDIR/.failed_cases"
     return 1
   else
     echo "PASSED: $base"

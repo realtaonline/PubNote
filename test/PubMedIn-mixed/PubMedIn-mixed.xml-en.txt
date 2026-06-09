@@ -8,8 +8,7 @@ Article Set:
       Issue: 3 
       Publication Date: @PubStatus: ppublish 
         Year: " 2017"
-        Month: 03 
-    Article Title: "A case series of an \"off-the-shelf\" online health resource with integrated nurse:coaching to support self-management in COPD."
+        Month: 03 ArticleTitle: "A case series of an \"off-the-shelf\" online health resource with integrated nurse:coaching to support self-management in COPD."
     First Page: 2955 
     Last Page: 2967 
     Electronic Location ID: @EIdType: doi  @ValidYN: N  10.2147\/COPD.S139532 

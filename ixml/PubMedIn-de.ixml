@@ -1,4 +1,4 @@
-{ 20260607-1440Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
+{ 20260609-2016Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
 
 
   -__document_element = ( ArticleSet | Article ), __WS*.
@@ -12,7 +12,7 @@
 
 ArticleSet = __WS*, ( ( -"ArticleSet" | ( -"Article", __WS+, -"Set" ) | ( -"Artikelsatz" ) ), -':' ), __content____type__ArticleSet, ( __WS*, -'/', ( -"ArticleSet" | ( -"Article", __WS+, -"Set" ) | ( -"Artikelsatz" ) ))?.
 Article = __WS*, ( ( -"Article" | ( -"Artikel" ) ), -':' ), __content____type__Article, ( __WS*, -'/', ( -"Article" | ( -"Artikel" ) ))?.
-AbstractText = __WS*, ( ( -"AbstractText" | ( -"Abstract", __WS+, -"Text" ) | ( -"Zusammenfassungstext" ) ), -':' ), __content____type__AbstractText, ( __WS*, -'/', ( -"AbstractText" | ( -"Abstract", __WS+, -"Text" ) | ( -"Zusammenfassungstext" ) ))?.
+__mixed__AbstractText>AbstractText = ( ( -"AbstractText" | ( -"Abstract", __WS+, -"Text" ) | ( -"Zusammenfassungstext" ) ), -':' ), __content____type__AbstractText, ( __WS*, -'/', ( -"AbstractText" | ( -"Abstract", __WS+, -"Text" ) | ( -"Zusammenfassungstext" ) ))?.
 Journal = __WS*, ( ( -"Journal" | ( -"Zeitschrift" ) ), -':' ), __content____type__Journal, ( __WS*, -'/', ( -"Journal" | ( -"Zeitschrift" ) ))?.
 PublisherName = __WS*, ( ( -"PublisherName" | ( -"Publisher", __WS+, -"Name" ) | ( -"Verlagsname" ) ), -':' ), xs_string, ( __WS*, -'/', ( -"PublisherName" | ( -"Publisher", __WS+, -"Name" ) | ( -"Verlagsname" ) ))?.
 JournalTitle = __WS*, ( ( -"JournalTitle" | ( -"Journal", __WS+, -"Title" ) | ( -"Zeitschriftentitel" ) ), -':' ), xs_string, ( __WS*, -'/', ( -"JournalTitle" | ( -"Journal", __WS+, -"Title" ) | ( -"Zeitschriftentitel" ) ))?.
@@ -27,6 +27,7 @@ Season = __WS*, ( ( -"Season" | ( -"Staffel" ) ), -':' ), xs_string, ( __WS*, -'
 History = __WS*, ( ( -"History" | ( -"Historie" ) ), -':' ), __content____type__History, ( __WS*, -'/', ( -"History" | ( -"Historie" ) ))?.
 Replaces = __WS*, ( ( -"Replaces" | ( -"Ersetzt" ) ), -':' ), __content____type__Replaces, ( __WS*, -'/', ( -"Replaces" | ( -"Ersetzt" ) ))?.
 ArticleTitle = __WS*, ( ( -"ArticleTitle" | ( -"Article", __WS+, -"Title" ) | ( -"Artikeltitel" ) ), -':' ), __content____type__ArticleTitle, ( __WS*, -'/', ( -"ArticleTitle" | ( -"Article", __WS+, -"Title" ) | ( -"Artikeltitel" ) ))?.
+__mixed__ArticleTitle>ArticleTitle = ( ( -"ArticleTitle" | ( -"Article", __WS+, -"Title" ) | ( -"Artikeltitel" ) ), -':' ), __content____type__ArticleTitle, ( __WS*, -'/', ( -"ArticleTitle" | ( -"Article", __WS+, -"Title" ) | ( -"Artikeltitel" ) ))?.
 VernacularTitle = __WS*, ( ( -"VernacularTitle" | ( -"Vernacular", __WS+, -"Title" ) | ( -"Titel", __WS+, -"in", __WS+, -"Landessprache" ) ), -':' ), __content____type__VernacularTitle, ( __WS*, -'/', ( -"VernacularTitle" | ( -"Vernacular", __WS+, -"Title" ) | ( -"Titel", __WS+, -"in", __WS+, -"Landessprache" ) ))?.
 FirstPage = __WS*, ( ( -"FirstPage" | ( -"First", __WS+, -"Page" ) | ( -"Erste", __WS+, -"Seite" ) ), -':' ), __content____type__FirstPage, ( __WS*, -'/', ( -"FirstPage" | ( -"First", __WS+, -"Page" ) | ( -"Erste", __WS+, -"Seite" ) ))?.
 LastPage = __WS*, ( ( -"LastPage" | ( -"Last", __WS+, -"Page" ) | ( -"Letzte", __WS+, -"Seite" ) ), -':' ), xs_string, ( __WS*, -'/', ( -"LastPage" | ( -"Last", __WS+, -"Page" ) | ( -"Letzte", __WS+, -"Seite" ) ))?.
@@ -55,12 +56,12 @@ Title = __WS*, ( ( -"Title" | ( -"Titel" ) ), -':' ), xs_string, ( __WS*, -'/', 
 Reference = __WS*, ( ( -"Reference" | ( -"Referenz" ) ), -':' ), __content____type__Reference, ( __WS*, -'/', ( -"Reference" | ( -"Referenz" ) ))?.
 Citation = __WS*, ( ( -"Citation" | ( -"Zitation" ) ), -':' ), __content____type__Citation, ( __WS*, -'/', ( -"Citation" | ( -"Zitation" ) ))?.
 PMID = __WS*, ( ( -"PMID" | ( -"PubMed-ID" ) | ( -"Pub", __WS+, -"Med-ID" ) ), -':' ), __content____type__PMID, ( __WS*, -'/', ( -"PMID" | ( -"PubMed-ID" ) | ( -"Pub", __WS+, -"Med-ID" ) ))?.
-sup = __WS*, ( ( -"sup" | ( -"hochgestellt" ) ), -':' ), __content____type__sup, ( __WS*, -'/', ( -"sup" | ( -"hochgestellt" ) ))?.
-inf = __WS*, ( ( -"inf" | ( -"tiefgestellt" ) ), -':' ), __content____type__inf, ( __WS*, -'/', ( -"inf" | ( -"tiefgestellt" ) ))?.
-sub = __WS*, ( ( -"sub" | ( -"tiefgestellt" ) ), -':' ), __content____type__sub, ( __WS*, -'/', ( -"sub" | ( -"tiefgestellt" ) ))?.
-b = __WS*, ( ( -"b" | ( -"fett" ) ), -':' ), __content____type__b, ( __WS*, -'/', ( -"b" | ( -"fett" ) ))?.
-i = __WS*, ( ( -"i" | ( -"kursiv" ) ), -':' ), __content____type__i, ( __WS*, -'/', ( -"i" | ( -"kursiv" ) ))?.
-u = __WS*, ( ( -"u" | ( -"unterstrichen" ) ), -':' ), __content____type__u, ( __WS*, -'/', ( -"u" | ( -"unterstrichen" ) ))?.
+__mixed__sup>sup = ( ( -"sup" | ( -"hochgestellt" ) ), -':' ), __content____type__sup, ( __WS*, -'/', ( -"sup" | ( -"hochgestellt" ) ))?.
+__mixed__inf>inf = ( ( -"inf" | ( -"tiefgestellt" ) ), -':' ), __content____type__inf, ( __WS*, -'/', ( -"inf" | ( -"tiefgestellt" ) ))?.
+__mixed__sub>sub = ( ( -"sub" | ( -"tiefgestellt" ) ), -':' ), __content____type__sub, ( __WS*, -'/', ( -"sub" | ( -"tiefgestellt" ) ))?.
+__mixed__b>b = ( ( -"b" | ( -"fett" ) ), -':' ), __content____type__b, ( __WS*, -'/', ( -"b" | ( -"fett" ) ))?.
+__mixed__i>i = ( ( -"i" | ( -"kursiv" ) ), -':' ), __content____type__i, ( __WS*, -'/', ( -"i" | ( -"kursiv" ) ))?.
+__mixed__u>u = ( ( -"u" | ( -"unterstrichen" ) ), -':' ), __content____type__u, ( __WS*, -'/', ( -"u" | ( -"unterstrichen" ) ))?.
 GroupList = __WS*, ( ( -"GroupList" | ( -"Group", __WS+, -"List" ) | ( -"Gruppenliste" ) ), -':' ), __content____type__GroupList, ( __WS*, -'/', ( -"GroupList" | ( -"Group", __WS+, -"List" ) | ( -"Gruppenliste" ) ))?.
 Group = __WS*, ( ( -"Group" | ( -"Gruppe" ) ), -':' ), __content____type__Group, ( __WS*, -'/', ( -"Group" | ( -"Gruppe" ) ))?.
 GroupName = __WS*, ( ( -"GroupName" | ( -"Group", __WS+, -"Name" ) | ( -"Gruppenname" ) ), -':' ), xs_string, ( __WS*, -'/', ( -"GroupName" | ( -"Group", __WS+, -"Name" ) | ( -"Gruppenname" ) ))?.
@@ -107,6 +108,7 @@ __PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_conte
     @__alias____type__Replaces__IdType>alias = -"@", ( "IdType" | ( "Id", __WS+, "Type" ) ), -':'.
     @__name____type__Replaces__IdType>name = +"IdType".
   -__content____type__ArticleTitle = __WS*, __mixed_content.
+__PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
   -__content____type__VernacularTitle = __WS*, __mixed_content.
   -__content____type__FirstPage =  -__attrs____type__FirstPage, xs_string.
     -__attrs____type__FirstPage = 
@@ -323,7 +325,7 @@ __UNDER>u = -"_",  ('_' | __UNDER_content).
 {=============================================================================}
 { Mixed content and unused markdown symbols for this vocabulary }
 
--__mixed_content_member =  AbstractText | b | i | sub | sup | u.
+-__mixed_content_member = __mixed__sup | __mixed__inf | __mixed__b | __mixed__u | __mixed__i | __mixed__sub | __mixed__AbstractText | __mixed__ArticleTitle.
 
 {-----------------------------------------------------------------------------}
 { Boilerplate included specification of XSD-generated Crane-txt2xml handling }
@@ -348,34 +350,38 @@ __unicode = __HEX+ , -"\".
 { some vocabularies need mixed content with its own handling }
 -__mixed_content = ( __mixed_content_value, ( __WS*, __mixed_content_value )* )?.
 __mixed_content_value>__mixed_content_value = ( __quoted | __unquoted, __WS | __mixed_content_member | -"`", -"`" | -"`" , __more_markdown, -"`" ).
--__more_markdown = ( __BSM | __quoted | __CPLSTU | ~["`" | "\" | "+" | "*" | "/" | "~" | "^" | "_" | '"' | "@" ] ),
+-__more_markdown = ( __BSM | __quoted | __CEPLSTU | ~["`" | "\" | "|" | "+" | "*" | "/" | "~" | "^" | "_" | '"' | "@" ] ),
                    __more_markdown?.
--__CPLSTU = __CARET | __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
--__BSM = -"\", ( [ "\" | "`" | "@" | ":" | "+" | "*" | "/" | "~" | "^" | "_" | '"' | "@" ]
+-__CEPLSTU = __CARET | __PIPE | __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
+-__BSM = -"\", ( [ "\" | "`" | "@" | ":" | "|" | "+" | "*" | "/" | "~" | "^" | "_" | '"' | "@" ]
          | __unicode ).
--__CARET_inner = ( __BSM | __quoted | __PLSTU | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__CARET_inner = ( __BSM | __quoted | __EPLSTU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                  __CARET_inner?.
--__PLSTU = __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
+-__EPLSTU = __PIPE | __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
 -__CARET_content = __CARET_inner, -"^".
--__PLUS_inner = ( __BSM | __quoted | __CLSTU | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__PIPE_inner = ( __BSM | __quoted | __CPLSTU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+                __PIPE_inner?.
+-__CPLSTU = __CARET | __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
+-__PIPE_content = __PIPE_inner, -"|".
+-__PLUS_inner = ( __BSM | __quoted | __CELSTU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                 __PLUS_inner?.
--__CLSTU = __CARET | __SLASH | __STAR | __TILDE | __UNDER.
+-__CELSTU = __CARET | __PIPE | __SLASH | __STAR | __TILDE | __UNDER.
 -__PLUS_content = __PLUS_inner, -"+".
--__SLASH_inner = ( __BSM | __quoted | __CPSTU | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__SLASH_inner = ( __BSM | __quoted | __CEPSTU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                  __SLASH_inner?.
--__CPSTU = __CARET | __PLUS | __STAR | __TILDE | __UNDER.
+-__CEPSTU = __CARET | __PIPE | __PLUS | __SLASH | __STAR | __TILDE | __UNDER.
 -__SLASH_content = __SLASH_inner, -"/".
--__STAR_inner = ( __BSM | __quoted | __CPLTU | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__STAR_inner = ( __BSM | __quoted | __CEPLTU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                 __STAR_inner?.
--__CPLTU = __CARET | __PLUS | __SLASH | __TILDE | __UNDER.
+-__CEPLTU = __CARET | __PIPE | __PLUS | __SLASH | __TILDE | __UNDER.
 -__STAR_content = __STAR_inner, -"*".
--__TILDE_inner = ( __BSM | __quoted | __CPLSU | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__TILDE_inner = ( __BSM | __quoted | __CEPLSU | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                  __TILDE_inner?.
--__CPLSU = __CARET | __PLUS | __SLASH | __STAR | __UNDER.
+-__CEPLSU = __CARET | __PIPE | __PLUS | __SLASH | __STAR | __UNDER.
 -__TILDE_content = __TILDE_inner, -"~".
--__UNDER_inner = ( __BSM | __quoted | __CPLST | ~["`"|"\"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
+-__UNDER_inner = ( __BSM | __quoted | __CEPLST | ~["`"|"\"|"|"|"+"|"*"|"/"|"~"|"^"|"_"|'"'|"@"] ),
                  __UNDER_inner?.
--__CPLST = __CARET | __PLUS | __SLASH | __STAR | __TILDE.
+-__CEPLST = __CARET | __PIPE | __PLUS | __SLASH | __STAR | __TILDE.
 -__UNDER_content = __UNDER_inner, -"_".
 
 {EOF}

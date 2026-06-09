@@ -44,7 +44,6 @@
     <xlate lookup="ArticleId">Identifiant de l'article</xlate>
     <xlate lookup="ArticleIdList">Liste des identifiants des articles</xlate>
     <xlate lookup="ArticleSet">Groupe d'articles</xlate>
-    <xlate lookup="ArticleTitle" mixed="">Intitulé de l'article</xlate>
     <xlate lookup="Author">Auteur</xlate>
     <xlate lookup="AuthorList">Liste des auteurs</xlate>
     <xlate lookup="BeginningDate">Date de début</xlate>
@@ -180,6 +179,7 @@
     <xlate lookup="mml:math" unsupported="">MathML</xlate>
     <!--inline Constructions -->
     <xlate lookup="AbstractText" markdown="+" mixed="">Texte du l'abrégé</xlate>
+    <xlate lookup="ArticleTitle" markdown="|" mixed="">Intitulé de l'article</xlate>
     <xlate lookup="b"   mixed="" markdown="*">gras</xlate>
     <xlate lookup="i"   mixed="" markdown="/">italique</xlate>
     <xlate lookup="inf" mixed="" markdown="~" replace="sub">indice</xlate>
