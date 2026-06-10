@@ -1,0 +1,97 @@
+PubmedArticle:
+  MedlineCitation: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PMID: @Version: 1  2 
+    DateCompleted:
+      Year: 2000 
+      Month: 01 
+      Day: 01 
+    DateRevised:
+      Year: 2000 
+      Month: 01 
+      Day: 01 
+    Article: @PubModel: Print 
+      Journal:
+        ISSN: @IssnType: Electronic  0000-0000 
+        JournalIssue: @CitedMedium: Internet 
+          Volume: 66 
+          Issue: 4 
+          PubDate:
+            Year: 2000 
+            Month: 01 
+            Day: 01 
+        Title: AStudyonPlaceholderData 
+        ISOAbbreviation: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Pagination:
+        MedlinePgn: 100--1064 
+      AuthorList: @CompleteYN: Y 
+        Author: @ValidYN: Y 
+          LastName: Wilkins 
+          ForeName: Kate 
+          Initials: AA 
+        Author: @ValidYN: Y 
+          LastName: Sawyer 
+          ForeName: Dorothy 
+          Initials: AA 
+      Language: eng 
+      PublicationTypeList:
+        PublicationType: @UI: D016428  JournalArticle 
+        PublicationType: @UI: D013486  ResearchSupport,U.S.Gov't,Non-P.H.S. 
+        PublicationType: @UI: D013487  ResearchSupport,U.S.Gov't,P.H.S. 
+    MedlineJournalInfo:
+      Country: UnitedStates 
+      MedlineTA: JPlaceholderStud 
+      NlmUniqueID: FAKEID00001 
+      ISSNLinking: 0000-0000 
+    ChemicalList:
+      Chemical:
+        RegistryNumber: 0U46U6E8UK 
+        NameOfSubstance: @UI: D009243  NAD 
+      Chemical:
+        RegistryNumber: 53-59-8 
+        NameOfSubstance: @UI: D009249  NADP 
+    CitationSubset: IM 
+    CommentsCorrectionsList:
+      CommentsCorrections: @RefType: ErratumIn 
+        RefSource: BiochemPharmacol.1975Aug15;24(16)\:1517-21.doi\:10.1016\/0006-2952(75)90029-5 
+        PMID: @Version: 1  8 
+    MeshHeadingList:
+      MeshHeading:
+        DescriptorName: @UI: D005583  @MajorTopicYN: N  FourierAnalysis 
+      MeshHeading:
+        DescriptorName: @UI: D009682  @MajorTopicYN: N  MagneticResonanceSpectroscopy 
+      MeshHeading:
+        DescriptorName: @UI: D008958  @MajorTopicYN: N  Models,Molecular 
+      MeshHeading:
+        DescriptorName: @UI: D008968  @MajorTopicYN: N  MolecularConformation 
+      MeshHeading:
+        DescriptorName: @UI: D009243  @MajorTopicYN: Y  NAD 
+        QualifierName: @UI: Q000031  @MajorTopicYN: N  analogs&derivatives 
+      MeshHeading:
+        DescriptorName: @UI: D009249  @MajorTopicYN: Y  NADP 
+      MeshHeading:
+        DescriptorName: @UI: D013329  @MajorTopicYN: N  Structure-ActivityRelationship 
+      MeshHeading:
+        DescriptorName: @UI: D013696  @MajorTopicYN: N  Temperature 
+  PubmedData:
+    History:
+      PubMedPubDate: @PubStatus: pubmed 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+      PubMedPubDate: @PubStatus: medline 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+        Hour: 0 
+        Minute: 1 
+      PubMedPubDate: @PubStatus: entrez 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+        Hour: 0 
+        Minute: 0 
+    PublicationStatus: ppublish 
+    ArticleIdList:
+      ArticleId: @IdType: pubmed  FAKEID00001 
+      ArticleId: @IdType: pii  FAKEID00001 
+      ArticleId: @IdType: doi  10.9999\/fake.doi.00001 

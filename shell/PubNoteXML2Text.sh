@@ -39,7 +39,6 @@ fi
 
 if [[ ! "$MARKDOWN" == "" ]]; then
   MARKDOWNSUFFIX="-markdown"
-  shift
 fi
 
 if [ "" == "$1" ]; then
@@ -60,6 +59,6 @@ if [ ! -f "$1" ]; then echo Input XML "$1" not found ; exit 1 ; fi
 # Remove any old result file
 if [ -f "$OUTPUT" ]; then rm "$OUTPUT" ; fi
 
-java -Xss64m -Xms200m -Xmx1000m -cp "$REPO/utilities/saxon12he/saxon12he.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no $MARKDOWN
+java -Xss64m -Xms200m -Xmx1000m -cp "$REPO/utilities/saxonhe/saxonhe.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no $MARKDOWN
 ret=$?
 if [ "$ret" -ne "0" ]; then exit $ret ; fi

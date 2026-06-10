@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ArticleSet PUBLIC "-//NLM//DTD PubMed 2.8//EN"
+"https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd">
+<ArticleSet>
+  <Article>
+    <Journal>
+      <PublisherName>Public Health Agency of Canada</PublisherName>
+      <JournalTitle>Journal of Placeholder Studies</JournalTitle>
+      <Issn>0000-0000</Issn>
+      <Volume>33</Volume>
+      <Issue>4</Issue>
+      <PubDate PubStatus="ppublish">
+        <Year>2000</Year>
+        <Month>01</Month>
+        </PubDate>
+      </Journal>
+    <ArticleTitle>A Study on Placeholder Data</ArticleTitle>
+    <FirstPage>236</FirstPage>
+    <LastPage>246</LastPage>
+    <Language>EN</Language>
+    <Language>FR</Language>
+    <AuthorList>
+      <Author>
+        <FirstName>Yvonne</FirstName>
+        <LastName>Finn</LastName>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        </Author>
+      <Author>
+        <FirstName>Kate</FirstName>
+        <LastName>Bennet</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Mary</FirstName>
+        <LastName>Wilkins</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Dorothy</FirstName>
+        <LastName>Sawyer</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Kate</FirstName>
+        <LastName>Woodhouse</LastName>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        </Author>
+      </AuthorList>
+    <PublicationType>Journal Article</PublicationType>
+    <Abstract>This is a placeholder abstract. <AbstractText Label="INTRODUCTION">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adi</AbstractText>
+      <AbstractText Label="METHODS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspe</AbstractText>
+      <AbstractText Label="RESULTS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricie</AbstractText>
+      <AbstractText Label="CONCLUSIONS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultrici</AbstractText>
+      </Abstract>
+    <OtherAbstract Language="fr">This is a placeholder abstract. <AbstractText Label="TITRE">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, di</AbstractText>
+      <AbstractText Label="INTRODUCTION">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit am</AbstractText>
+      <AbstractText Label="MÉTHODOLOGIE">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspend</AbstractText>
+      <AbstractText Label="RÉSULTATS">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing </AbstractText>
+      <AbstractText Label="CONCLUSION">This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, cons</AbstractText>
+      </OtherAbstract>
+    <ObjectList>
+      <Object Type="keyword">
+        <Param Name="value">population attributable fraction</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">risk factors</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">obesity</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">physical inactivity</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">tobacco smoking</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">chronic disease</Param>
+        </Object>
+      </ObjectList>
+    </Article>
+  </ArticleSet>

@@ -45,7 +45,7 @@ INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 
 # Paths
-SAXON_JAR="$REPO/utilities/saxon12he/saxon12he.jar"
+SAXON_JAR="$REPO/utilities/saxonhe/saxonhe.jar"
 WORDINATOR_JAR="$REPO/utilities/wordinator/wordinator-1.1.1-fat.jar"
 XSLDIR="$REPO/xsl"
 XSLRENDER="$XSLDIR/PubNoteRender${SUFFIX}.xsl"
@@ -81,37 +81,29 @@ TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-markdown.txt"
 #PM0/PM0-en.html
 #PM0/PM0-en.docx
 
-XML2TEXT="$REPO/shell/PubNoteXML2Text.sh"
-TEXT="$FILEDIR/${INPUTBASE}/${INPUT}.txt"
-
-XML2TEXTM="$REPO/shell/PubNoteXML2TextMarkdown.sh"
-TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
-
-XML2TEXTS="$REPO/shell/PubNoteXML2Text${SUFFIX}.sh"
-TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
-
-XML2TEXTMS="$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh"
-TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
-
 if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
 
 # Create the four text renderings for round-tripping
 
 echo Transform XML to XML text...
 echo Transform XML to XML text... 1>> "$LOG"
-"$XML2TEXT" "$1"  2>>"$LOG"
+"$REPO/shell/PubNoteXML2Text.sh" "$1"  2>>"$LOG"
+TEXT="$FILEDIR/${INPUTBASE}/${INPUT}.txt"
 
 echo Transform XML to XML text with markdown...
 echo Transform XML to XML text with markdown... 1>> "$LOG"
-"$XML2TEXTS" "$1"  2>>"$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown.sh" "$1"  2>>"$LOG"
+TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
 
 echo Transform XML to "${SUFFIX}" text...
 echo Transform XML to "${SUFFIX}" text... 1>> "$LOG"
-"$XML2TEXTS" "$1"  2>>"$LOG"
+"$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" "$1"  2>>"$LOG"
+TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
 
 echo Transform XML to "${SUFFIX}" text with markdown...
 echo Transform XML to "${SUFFIX}" text with markdown... 1>> "$LOG"
-"$XML2TEXTMS" "$1"  2>>"$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh" "$1"  2>>"$LOG"
+TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
 
 # Delete outputs and temporary files
 if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi

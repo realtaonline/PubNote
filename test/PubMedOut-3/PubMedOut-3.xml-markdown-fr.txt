@@ -1,0 +1,107 @@
+Article PubMed:
+  Citation Medline: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    ID PubMed: @Version: 1  3 
+    Date de fin:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Date de révision:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Article: @PubModel: Print 
+      Journal:
+        ISSN: @IssnType: Print  0000-0000 
+        Numéro de la revue: @CitedMedium: Print 
+          Volume: 66 
+          Numéro: 4 
+          Date de publication:
+            Année: 2000 
+            Mois: 01 
+            Jour: 01 
+        Titre: AStudyonPlaceholderData 
+        ISO Abréviation: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Pagination:
+        Numéro de page Medline: 100--1175 
+      Liste des auteurs: @CompleteYN: Y 
+        Auteur: @ValidYN: Y 
+          Nom: Crusoe 
+          Prénom: Yvonne 
+          Initiales: AA 
+        Auteur: @ValidYN: Y 
+          Nom: Pickwick 
+          Prénom: Zachary 
+          Initiales: AA 
+      Langue: eng 
+      Liste des types de publication:
+        Type de publication: @UI: D016428  JournalArticle 
+        Type de publication: @UI: D013487  ResearchSupport,U.S.Gov't,P.H.S. 
+    Informations sur la revue Medline:
+      Pays: UnitedStates 
+      Abréviation du institulé Medline: JPlaceholderStud 
+      ID unique NLM: FAKEID00001 
+      Lien ISSN: 0000-0000 
+    Liste des produits chimiques:
+      Produit chimique:
+        Numéro de registre: 00BH33GNGH 
+        Nom de la substance: @UI: D002104  Cadmium 
+      Produit chimique:
+        Numéro de registre: EC4.2.1.1 
+        Nom de la substance: @UI: D002256  CarbonicAnhydrases 
+      Produit chimique:
+        Numéro de registre: FXS1BY2PGL 
+        Nom de la substance: @UI: D008628  Mercury 
+      Produit chimique:
+        Numéro de registre: J41CSQ7QDS 
+        Nom de la substance: @UI: D015032  Zinc 
+    Sous-groupe de citations: IM 
+    Liste des intitulés MeSH:
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D000818  @MajorTopicYN: N  Animals 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D001665  @MajorTopicYN: N  BindingSites 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002104  @MajorTopicYN: Y  Cadmium 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002256  @MajorTopicYN: Y  CarbonicAnhydrases 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002417  @MajorTopicYN: N  Cattle 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D006801  @MajorTopicYN: N  Humans 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D006863  @MajorTopicYN: N  Hydrogen-IonConcentration 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D009682  @MajorTopicYN: N  MagneticResonanceSpectroscopy 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D008628  @MajorTopicYN: Y  Mercury 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D011485  @MajorTopicYN: N  ProteinBinding 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D011487  @MajorTopicYN: N  ProteinConformation 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D015032  @MajorTopicYN: Y  Zinc 
+        Nom du qualificatif: @UI: Q000494  @MajorTopicYN: N  pharmacology 
+  Données PubMed:
+    Historique:
+      Date de publication PubMed: @PubStatus: pubmed 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+      Date de publication PubMed: @PubStatus: medline 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 1 
+      Date de publication PubMed: @PubStatus: entrez 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 0 
+    Statut de la publication: ppublish 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @IdType: pubmed  FAKEID00001 
+      Identifiant de l'article: @IdType: pii  FAKEID00001 
+      Identifiant de l'article: @IdType: doi  10.9999\/fake.doi.00001 

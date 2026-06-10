@@ -32,10 +32,14 @@ process_file() {
   "$REPO/shell/PubNoteRender-fr.sh" "$file" || fail=8
 
   if [[ "$base" == PubMedIn* ]]; then
-    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml.txt" || fail=9
-    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-en.txt" || fail=10
-    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-fr.txt" || fail=11
-    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-de.txt" || fail=12
+    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml.txt"             || fail=9
+    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-en.txt"          || fail=10
+    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-fr.txt"          || fail=11
+    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-de.txt"          || fail=12
+    "$REPO/shell/PubNoteInText2XML.sh"    "$dir/$base/$base.xml-markdown.txt"    || fail=13
+    "$REPO/shell/PubNoteInText2XML-en.sh" "$dir/$base/$base.xml-markdown-en.txt" || fail=14
+    "$REPO/shell/PubNoteInText2XML-fr.sh" "$dir/$base/$base.xml-markdown-fr.txt" || fail=15
+    "$REPO/shell/PubNoteInText2XML-de.sh" "$dir/$base/$base.xml-markdown-de.txt" || fail=16
   fi
 
   if [ "$fail" -ne 0 ]; then
@@ -50,8 +54,8 @@ process_file() {
 export -f process_file
 export REPO TESTDIR
 
-# Run up to 16 files in parallel
-find "$TESTDIR" -maxdepth 1 -name '*.xml' | sort | xargs -P 16 -n 1 bash -c 'process_file "$0"' 
+# Abandon running in parallel as some non-project resources appear not to be threadsafe
+find "$TESTDIR" -maxdepth 1 -name '*.xml' | sort | xargs -P 1 -n 1 bash -c 'process_file "$0"' 
 
 # Summary
 if [ -f "$TESTDIR/.failed_cases" ]; then

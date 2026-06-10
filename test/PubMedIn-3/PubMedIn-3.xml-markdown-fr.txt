@@ -1,0 +1,36 @@
+Groupe d'articles:
+  Article:
+    Journal:
+      Nom de l'éditeur: Lancet Publishing Group 
+      Intitulé de la revue: Journal of Placeholder Studies 
+      ISSN: 0000-0000 
+      Volume: ""
+      Numéro: ""
+      Date de publication: @PubStatus: aheadofprint 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 ArticleTitle: `A Study on Placeholder Data`
+    Première page: @LZero: delete  ""
+    Dernière page: ""
+    ID d'emplacement électronique: @EIdType: doi  @ValidYN: Y  10.9999\/fake.doi.00001 
+    ID d'emplacement électronique: @EIdType: pii  @ValidYN: Y  FAKEID00001 
+    Langue: EN 
+    Liste des auteurs:
+      Auteur:
+        Prénom: @EmptyYN: N  Jack 
+        Nom: Linton 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Polly 
+        Deuxième prénom: Bennet 
+        Nom: March 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Emma 
+        Nom: Wilkins 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+    Type de publication: REVIEW 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @IdType: pii  FAKEID00001 
+      Identifiant de l'article: @IdType: doi  10.9999\/fake.doi.00001 
+    L'abrégé: `This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus`

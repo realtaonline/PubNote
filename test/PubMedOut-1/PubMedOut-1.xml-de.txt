@@ -1,0 +1,95 @@
+PubMed-Artikel:
+  Medline-Zitat: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PubMed-ID: @Version: 1  5 
+    Abschlussdatum:
+      Jahr: 2000 
+      Monat: 01 
+      Tag: 01 
+    Überarbeitungsdatum:
+      Jahr: 2000 
+      Monat: 01 
+      Tag: 01 
+    Artikel: @PubModel: Print 
+      Zeitschrift:
+        ISSN: @IssnType: Electronic  0000-0000 
+        Zeitschriftenausgabe: @CitedMedium: Internet 
+          Band: 66 
+          Ausgabe: 4 
+          Veröffentlichungsdatum:
+            Jahr: 2000 
+            Monat: 01 
+            Tag: 01 
+        Titel: AStudyonPlaceholderData 
+        ISO-Abkürzung: JPlaceholderStud ArticleTitle: "AStudyonPlaceholderData"
+      Seitennummerierung:
+        Medline-Seitenzahl: 100--1193 
+      Autorenliste: @CompleteYN: Y 
+        Autor: @ValidYN: Y 
+          Nachname: Copperfield 
+          Vorname: Victor 
+          Initialen: AA 
+        Autor: @ValidYN: Y 
+          Nachname: Darcy 
+          Vorname: Tom 
+          Initialen: AA 
+      Sprache: eng 
+      Publikationstypliste:
+        Publikationstyp: @UI: D016428  JournalArticle 
+    Medline-Zeitschrifteninfo:
+      Land: UnitedStates 
+      Medline-Titelabkürzung: JPlaceholderStud 
+      Eindeutige NLM-ID: FAKEID00001 
+      ISSN-Verknüpfung: 0000-0000 
+    Chemikalienliste:
+      Chemikalie:
+        Registrierungsnummer: 0 
+        Name der Substanz: @UI: D006422  Hemerythrin 
+      Chemikalie:
+        Registrierungsnummer: 0 
+        Name der Substanz: @UI: D008667  Metalloproteins 
+      Chemikalie:
+        Registrierungsnummer: 0 
+        Name der Substanz: @UI: D009124  MuscleProteins 
+    Zitationsuntergruppe: IM 
+    MeSH-Überschriftenliste:
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D000818  @MajorTopicYN: N  Animals 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D003063  @MajorTopicYN: N  Cnidaria 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D003201  @MajorTopicYN: N  Computers 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D006422  @MajorTopicYN: Y  Hemerythrin 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D008667  @MajorTopicYN: Y  Metalloproteins 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D008958  @MajorTopicYN: N  Models,Molecular 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D009124  @MajorTopicYN: Y  MuscleProteins 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D011487  @MajorTopicYN: N  ProteinConformation 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D013045  @MajorTopicYN: N  SpeciesSpecificity 
+  PubMed-Daten:
+    Historie:
+      PubMed-Veröffentlichungsdatum: @PubStatus: pubmed 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+      PubMed-Veröffentlichungsdatum: @PubStatus: medline 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+        Stunde: 0 
+        Minute: 1 
+      PubMed-Veröffentlichungsdatum: @PubStatus: entrez 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+        Stunde: 0 
+        Minute: 0 
+    Veröffentlichungsstatus: ppublish 
+    Artikel-ID-Liste:
+      Artikel-ID: @IdType: pubmed  FAKEID00001 
+      Artikel-ID: @IdType: pii  FAKEID00001 
+      Artikel-ID: @IdType: doi  10.9999\/fake.doi.00001 

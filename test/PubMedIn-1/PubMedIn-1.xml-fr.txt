@@ -1,0 +1,100 @@
+Groupe d'articles:
+  Article:
+    Journal:
+      Nom de l'éditeur: DOVE Medical Press 
+      Intitulé de la revue: Journal of Placeholder Studies 
+      ISSN: 0000-0000 
+      Volume: 12 
+      Numéro: 3 
+      Date de publication: @PubStatus: ppublish 
+        Année: 2000 
+        Mois: 01 ArticleTitle: "A Study on Placeholder Data"
+    Première page: @LZero: delete  2955 
+    Dernière page: 2967 
+    ID d'emplacement électronique: @EIdType: doi  @ValidYN: Y  10.9999\/fake.doi.00001 
+    Langue: EN 
+    Liste des auteurs:
+      Auteur:
+        Prénom: @EmptyYN: N  Emma 
+        Nom: Crusoe 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Dorothy 
+        Deuxième prénom: Finn 
+        Nom: Linton 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Lewis 
+        Nom: Pickwick 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+        Identifiant: @Source: ORCID  FAKEID00001 
+      Auteur:
+        Prénom: @EmptyYN: N  Oliver 
+        Nom: Holmes 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+          Identifiant: @Source: ROR  FAKEID00001 
+        /Détails sur l'affiliation 
+      Auteur:
+        Prénom: @EmptyYN: N  Yvonne 
+        Nom: Watson 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+    Type de publication: Journal Article 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @IdType: pii  FAKEID00001 
+      Identifiant de l'article: @IdType: doi  10.9999\/fake.doi.00001 
+    Historique:
+      Date de publication: @PubStatus: received 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+      Date de publication: @PubStatus: accepted 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+      Date de publication: @PubStatus: aheadofprint 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+    L'abrégé: "This is a placeholder abstract. "AbstractText: @Label: BACKGROUND "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, c"/AbstractText "
+      "AbstractText: @Label: METHODS "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscin"/AbstractText "
+      "AbstractText: @Label: RESULTS "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet"/AbstractText "
+      "AbstractText: @Label: DISCUSSION "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendis"/AbstractText "
+      "
+    Autre résumé: @Langue: eng  @Type: plain-language-summary "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, u"
+    Détails sur les droits d'auteur: © 2000 Fictional Publisher. All rights reserved. 
+    Déclaration de conflit d'intérêts: "The authors report no conflicts of interest in this 
+     work."
+    Liste d'objets:
+      Objet: @Type: keyword 
+        Paramètre: @Name: value "COPD"
+      Objet: @Type: keyword 
+        Paramètre: @Name: value "Internet"
+      Objet: @Type: keyword 
+        Paramètre: @Name: value "coaching"
+      Objet: @Type: keyword 
+        Paramètre: @Name: value "patient activation"
+      Objet: @Type: grant 
+        Paramètre: @Name: id "FAKEGRANT"
+        Paramètre: @Name: grantor "FAKEGRANT"
+      Objet: @Type: grant 
+        Paramètre: @Name: id "FAKEGRANT"
+        Paramètre: @Name: grantor "FAKEGRANT"
+        Paramètre: @Name: acronym "FAKEGRANT"
+        Paramètre: @Name: country "FAKEGRANT"
+    Liste de références:
+      Référence:
+        Citation: "Doe J. Fictional Study on Placeholder Data. Journal of Placeholder Studies. 2000;1(1):100‑104."
+        Liste des identifiants des articles:
+          Identifiant de l'article: @IdType: pmcid  FAKEID00001 
+          Identifiant de l'article: @IdType: pubmed  FAKEID00001 
+      Référence:
+        Citation: "Doe J. Fictional Study on Placeholder Data. Journal of Placeholder Studies. 2000;1(1):100‑104."
+        Liste des identifiants des articles:
+          Identifiant de l'article: @IdType: pmcid  FAKEID00001 
+          Identifiant de l'article: @IdType: pubmed  FAKEID00001 

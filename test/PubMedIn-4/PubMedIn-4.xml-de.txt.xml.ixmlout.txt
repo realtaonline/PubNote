@@ -1,0 +1,153 @@
+ArticleSet:
+  Article:
+    Journal:
+      PublisherName:
+        __value: Sage 
+        __value: Publications 
+      JournalTitle:
+        __value: Journal 
+        __value: of 
+        __value: Placeholder 
+        __value: Studies 
+      Issn:
+        __value: 0000-0000 
+      Volume:
+        __value: 31 
+      Issue:
+        __value: 2 
+      PubDate:
+        __attr: @alias: PubStatus  @name: PubStatus  ppublish 
+        Year:
+          __value: 2000 
+        Month:
+          __value: 01 
+    Replaces:
+      __attr: @alias: IdType  @name: IdType  doi 
+      __value: 10.1177/1049909113482745 
+    ArticleTitle:
+      __mixed_content_value: A Study on Placeholder Data 
+    FirstPage:
+      __attr: @alias: LZero  @name: LZero  delete 
+      __value: 211 
+    LastPage:
+      __value: 219 
+    ELocationID:
+      __attr: @alias: EIdType  @name: EIdType  doi 
+      __attr: @alias: ValidYN  @name: ValidYN  Y 
+      __value: 10.9999/fake.doi.00001 
+    Language:
+      __value: EN 
+    AuthorList:
+      Author:
+        FirstName:
+          __attr: @alias: EmptyYN  @name: EmptyYN  N 
+          __value: Lewis 
+        LastName:
+          __value: Crusoe 
+        Affiliation:
+          __value: Department 
+          __value: of 
+          __value: Placeholder 
+          __value: Studies, 
+          __value: Fictional 
+          __value: University 
+      Author:
+        FirstName:
+          __attr: @alias: EmptyYN  @name: EmptyYN  N 
+          __value: Henry 
+        LastName:
+          __value: Rochester 
+        AffiliationInfo:
+          Affiliation:
+            __value: Department 
+            __value: of 
+            __value: Placeholder 
+            __value: Studies, 
+            __value: Fictional 
+            __value: University 
+        AffiliationInfo:
+          Affiliation:
+            __value: Department 
+            __value: of 
+            __value: Placeholder 
+            __value: Studies, 
+            __value: Fictional 
+            __value: University 
+    PublicationType:
+      __value: JOURNAL 
+      __value: ARTICLE 
+    ArticleIdList:
+      ArticleId:
+        __attr: @alias: IdType  @name: IdType  pii 
+        __value: FAKEID00001 
+      ArticleId:
+        __attr: @alias: IdType  @name: IdType  doi 
+        __value: 10.9999/fake.doi.00001 
+    History:
+      PubDate:
+        __attr: @alias: PubStatus  @name: PubStatus  aheadofprint 
+        Year:
+          __value: 2000 
+        Month:
+          __value: 01 
+        Day:
+          __value: 01 
+    Abstract:
+      __mixed_content_value: "This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor "
+    ObjectList:
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: brain 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: dyspnea 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: electrical 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: nausea 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: neuromodulation 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: pain 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: palliative care 
+      Object:
+        __attr: @alias: Type  @name: Type 
+          __value: keyword 
+        Param:
+          __attr: @alias: Name  @name: Name 
+            __value: value 
+          __mixed_content_value: stimulation 

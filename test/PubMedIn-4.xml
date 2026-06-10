@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ArticleSet PUBLIC "-//NLM//DTD PubMed 2.8//EN"
+"https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd">
+<ArticleSet>
+  <Article>
+    <Journal>
+      <PublisherName>Sage Publications</PublisherName>
+      <JournalTitle>Journal of Placeholder Studies</JournalTitle>
+      <Issn>0000-0000</Issn>
+      <Volume>31</Volume>
+      <Issue>2</Issue>
+      <PubDate PubStatus="ppublish">
+        <Year>2000</Year>
+        <Month>01</Month>
+        </PubDate>
+      </Journal>
+    <Replaces IdType="doi">10.1177/1049909113482745</Replaces>
+    <ArticleTitle>A Study on Placeholder Data</ArticleTitle>
+    <FirstPage>211</FirstPage>
+    <LastPage>219</LastPage>
+    <ELocationID EIdType="doi">10.9999/fake.doi.00001</ELocationID>
+    <Language>EN</Language>
+    <AuthorList>
+      <Author>
+        <FirstName>Lewis</FirstName>
+        <LastName>Crusoe</LastName>
+        <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+        </Author>
+      <Author>
+        <FirstName>Henry</FirstName>
+        <LastName>Rochester</LastName>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        <AffiliationInfo>
+          <Affiliation>Department of Placeholder Studies, Fictional University</Affiliation>
+          </AffiliationInfo>
+        </Author>
+      </AuthorList>
+    <PublicationType>JOURNAL ARTICLE</PublicationType>
+    <ArticleIdList>
+      <ArticleId IdType="pii">FAKEID00001</ArticleId>
+      <ArticleId IdType="doi">10.9999/fake.doi.00001</ArticleId>
+      </ArticleIdList>
+    <History>
+      <PubDate PubStatus="aheadofprint">
+        <Year>2000</Year>
+        <Month>01</Month>
+        <Day>01</Day>
+        </PubDate>
+      </History>
+    <Abstract>This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor </Abstract>
+    <ObjectList>
+      <Object Type="keyword">
+        <Param Name="value">brain</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">dyspnea</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">electrical</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">nausea</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">neuromodulation</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">pain</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">palliative care</Param>
+        </Object>
+      <Object Type="keyword">
+        <Param Name="value">stimulation</Param>
+        </Object>
+      </ObjectList>
+    </Article>
+  </ArticleSet>

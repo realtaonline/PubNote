@@ -1,0 +1,140 @@
+Article PubMed:
+  Citation Medline: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    ID PubMed: @Version: 1  4 
+    Date de fin:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Date de révision:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Article: @PubModel: Print 
+      Journal:
+        ISSN: @IssnType: Electronic  0000-0000 
+        Numéro de la revue: @CitedMedium: Internet 
+          Volume: 66 
+          Numéro: 4 
+          Date de publication:
+            Année: 2000 
+            Mois: 01 
+            Jour: 01 
+        Titre: A Study on Placeholder Data 
+        ISO Abréviation: JPlaceholderStud ArticleTitle: "AStudyonPlaceholderData"
+      Pagination:
+        Numéro de page Medline: 100--1195 
+      Liste des auteurs: @CompleteYN: Y 
+        Auteur: @ValidYN: Y 
+          Nom: Holmes 
+          Prénom: Ursula 
+          Initiales: AA 
+        Auteur: @ValidYN: Y 
+          Nom: Pickwick 
+          Prénom: Dorothy 
+          Initiales: AA 
+        Auteur: @ValidYN: Y 
+          Nom: Watson 
+          Prénom: Ursula 
+          Initiales: AA 
+      Langue: eng 
+      Liste des octrois: @CompleteYN: Y 
+        Grant:
+          ID de l'octroi: FAKEGRANT 
+          Acronyme: BB_ 
+          Agence: FAKEGRANT 
+          Pays: UnitedKingdom 
+        Grant:
+          ID de l'octroi: FAKEGRANT 
+          Acronyme: MRC_ 
+          Agence: FAKEGRANT 
+          Pays: UnitedKingdom 
+        Grant:
+          ID de l'octroi: FAKEGRANT 
+          Agence: FAKEGRANT 
+          Pays: UnitedKingdom 
+      Liste des types de publication:
+        Type de publication: @UI: D016428  JournalArticle 
+    Informations sur la revue Medline:
+      Pays: UnitedStates 
+      Abréviation du institulé Medline: JPlaceholderStud 
+      ID unique NLM: FAKEID00001 
+      Lien ISSN: 0000-0000 
+    Liste des produits chimiques:
+      Produit chimique:
+        Numéro de registre: 0 
+        Nom de la substance: @UI: D003911  Dextrans 
+      Produit chimique:
+        Numéro de registre: 886U3H6UFF 
+        Nom de la substance: @UI: D002738  Chloroquine 
+      Produit chimique:
+        Numéro de registre: EC3.1.6.- 
+        Nom de la substance: @UI: D013429  Sulfatases 
+      Produit chimique:
+        Numéro de registre: EC3.1.6.8 
+        Nom de la substance: @UI: D002553  Cerebroside-Sulfatase 
+      Produit chimique:
+        Numéro de registre: EC3.2.1.31 
+        Nom de la substance: @UI: D005966  Glucuronidase 
+    Sous-groupe de citations: IM 
+    Liste des intitulés MeSH:
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D001692  @MajorTopicYN: N  BiologicalTransport 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002478  @MajorTopicYN: N  Cells,Cultured 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002553  @MajorTopicYN: N  Cerebroside-Sulfatase 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D002738  @MajorTopicYN: N  Chloroquine 
+        Nom du qualificatif: @UI: Q000494  @MajorTopicYN: Y  pharmacology 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D003911  @MajorTopicYN: N  Dextrans 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D005347  @MajorTopicYN: N  Fibroblasts 
+        Nom du qualificatif: @UI: Q000201  @MajorTopicYN: N  enzymology 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D005966  @MajorTopicYN: N  Glucuronidase 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D006801  @MajorTopicYN: N  Humans 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D007966  @MajorTopicYN: N  Leukodystrophy,Metachromatic 
+        Nom du qualificatif: @UI: Q000201  @MajorTopicYN: N  enzymology 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D008247  @MajorTopicYN: N  Lysosomes 
+        Nom du qualificatif: @UI: Q000187  @MajorTopicYN: N  drugeffects 
+        Nom du qualificatif: @UI: Q000201  @MajorTopicYN: Y  enzymology 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D010873  @MajorTopicYN: N  Pinocytosis 
+        Nom du qualificatif: @UI: Q000187  @MajorTopicYN: N  drugeffects 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D012867  @MajorTopicYN: N  Skin 
+        Nom du qualificatif: @UI: Q000201  @MajorTopicYN: N  enzymology 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D013429  @MajorTopicYN: N  Sulfatases 
+        Nom du qualificatif: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+  Données PubMed:
+    Historique:
+      Date de publication PubMed: @PubStatus: pubmed 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+      Date de publication PubMed: @PubStatus: medline 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 1 
+      Date de publication PubMed: @PubStatus: entrez 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 0 
+    Statut de la publication: ppublish 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @IdType: pubmed  FAKEID00001 
+      Identifiant de l'article: @IdType: pii  FAKEID00001 
+      Identifiant de l'article: @IdType: doi  10.9999\/fake.doi.00001 

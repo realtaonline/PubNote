@@ -1,0 +1,71 @@
+Groupe d'articles:
+  Article:
+    Journal:
+      Nom de l'éditeur: Public Health Agency of Canada 
+      Intitulé de la revue: Journal of Placeholder Studies 
+      ISSN: 0000-0000 
+      Volume: 33 
+      Numéro: 4 
+      Date de publication: @PubStatus: ppublish 
+        Année: 2000 
+        Mois: 01 ArticleTitle: `A Study on Placeholder Data`
+    Première page: @LZero: delete  236 
+    Dernière page: 246 
+    Langue: EN 
+    Langue: FR 
+    Liste des auteurs:
+      Auteur:
+        Prénom: @EmptyYN: N  Yvonne 
+        Nom: Finn 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+      Auteur:
+        Prénom: @EmptyYN: N  Kate 
+        Nom: Bennet 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Mary 
+        Nom: Wilkins 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Dorothy 
+        Nom: Sawyer 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @EmptyYN: N  Kate 
+        Nom: Woodhouse 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+    Type de publication: Journal Article 
+    L'abrégé: `This is a placeholder abstract. +@Label:"INTRODUCTION"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adi+
+      +@Label:"METHODS"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspe+
+      +@Label:"RESULTS"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricie+
+      +@Label:"CONCLUSIONS"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultrici+
+      `
+    Autre résumé: @Langue: fr  `This is a placeholder abstract. +@Label:"TITRE"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, di+
+      +@Label:"INTRODUCTION"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit am+
+      +@Label:"MÉTHODOLOGIE"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspend+
+      +@Label:"RÉSULTATS"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing +
+      +@Label:"CONCLUSION"This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, cons+
+      `
+    Liste d'objets:
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `population attributable fraction`
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `risk factors`
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `obesity`
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `physical inactivity`
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `tobacco smoking`
+      Objet: @Type: keyword 
+        Paramètre: @Name: value  `chronic disease`

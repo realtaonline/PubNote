@@ -13,7 +13,7 @@ find "$REPO/xsl" -maxdepth 1 -name '*.xsl' -exec sh -c '
   file="$1"
   base=$(basename "$file")
   echo Generating HTML for $1...
-  java -jar "$2/utilities/saxon12he/saxon12he.jar" -a -warnings:silent -s:"$file" > "$2/xsl/$base.html"
+  java -jar "$2/utilities/saxonhe/saxonhe.jar" -a -warnings:silent -s:"$file" > "$2/xsl/$base.html"
 ' sh {} "$REPO" \;
 
 echo

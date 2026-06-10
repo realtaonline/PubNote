@@ -33,7 +33,7 @@ INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 
 # Paths
-SAXON_JAR="$REPO/utilities/saxon12he/saxon12he.jar"
+SAXON_JAR="$REPO/utilities/saxonhe/saxonhe.jar"
 XSL="$REPO/xsl/PubNoteOutExtract.xsl"
 LOG="${INPUT}.indent.log.txt"
 

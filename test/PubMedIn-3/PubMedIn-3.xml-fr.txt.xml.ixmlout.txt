@@ -1,0 +1,96 @@
+ArticleSet:
+  Article:
+    Journal:
+      PublisherName:
+        __value: Lancet 
+        __value: Publishing 
+        __value: Group 
+      JournalTitle:
+        __value: Journal 
+        __value: of 
+        __value: Placeholder 
+        __value: Studies 
+      Issn:
+        __value: 0000-0000 
+      Volume:
+        __value: ""
+      Issue:
+        __value: ""
+      PubDate:
+        __attr: @alias: PubStatus  @name: PubStatus  aheadofprint 
+        Year:
+          __value: 2000 
+        Month:
+          __value: 01 
+        Day:
+          __value: 01 
+    ArticleTitle:
+      __mixed_content_value: A Study on Placeholder Data 
+    FirstPage:
+      __attr: @alias: LZero  @name: LZero  delete 
+      __value: ""
+    LastPage:
+      __value: ""
+    ELocationID:
+      __attr: @alias: EIdType  @name: EIdType  doi 
+      __attr: @alias: ValidYN  @name: ValidYN  Y 
+      __value: 10.9999/fake.doi.00001 
+    ELocationID:
+      __attr: @alias: EIdType  @name: EIdType  pii 
+      __attr: @alias: ValidYN  @name: ValidYN  Y 
+      __value: FAKEID00001 
+    Language:
+      __value: EN 
+    AuthorList:
+      Author:
+        FirstName:
+          __attr: @alias: EmptyYN  @name: EmptyYN  N 
+          __value: Jack 
+        LastName:
+          __value: Linton 
+        Affiliation:
+          __value: Department 
+          __value: of 
+          __value: Placeholder 
+          __value: Studies, 
+          __value: Fictional 
+          __value: University 
+      Author:
+        FirstName:
+          __attr: @alias: EmptyYN  @name: EmptyYN  N 
+          __value: Polly 
+        MiddleName:
+          __value: Bennet 
+        LastName:
+          __value: March 
+        Affiliation:
+          __value: Department 
+          __value: of 
+          __value: Placeholder 
+          __value: Studies, 
+          __value: Fictional 
+          __value: University 
+      Author:
+        FirstName:
+          __attr: @alias: EmptyYN  @name: EmptyYN  N 
+          __value: Emma 
+        LastName:
+          __value: Wilkins 
+        Affiliation:
+          __value: Department 
+          __value: of 
+          __value: Placeholder 
+          __value: Studies, 
+          __value: Fictional 
+          __value: University 
+    PublicationType:
+      __value: REVIEW 
+    ArticleIdList:
+      ArticleId:
+        __attr: @alias: IdType  @name: IdType  pii 
+        __value: FAKEID00001 
+      ArticleId:
+        __attr: @alias: IdType  @name: IdType  doi 
+        __value: 10.9999/fake.doi.00001 
+    Abstract:
+      __mixed_content_value: This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus 
