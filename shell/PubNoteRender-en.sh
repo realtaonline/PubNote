@@ -85,24 +85,20 @@ if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
 
 # Create the four text renderings for round-tripping
 
-echo Transform XML to XML text...
-echo Transform XML to XML text... 1>> "$LOG"
-"$REPO/shell/PubNoteXML2Text.sh" "$1"  2>>"$LOG"
+echo Transform XML to XML text...  | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2Text.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXT="$FILEDIR/${INPUTBASE}/${INPUT}.txt"
 
-echo Transform XML to XML text with markdown...
-echo Transform XML to XML text with markdown... 1>> "$LOG"
-"$REPO/shell/PubNoteXML2TextMarkdown.sh" "$1"  2>>"$LOG"
+echo Transform XML to XML text with markdown... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
 
-echo Transform XML to "${SUFFIX}" text...
-echo Transform XML to "${SUFFIX}" text... 1>> "$LOG"
-"$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" "$1"  2>>"$LOG"
+echo Transform XML to "${SUFFIX}" text... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
 
-echo Transform XML to "${SUFFIX}" text with markdown...
-echo Transform XML to "${SUFFIX}" text with markdown... 1>> "$LOG"
-"$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh" "$1"  2>>"$LOG"
+echo Transform XML to "${SUFFIX}" text with markdown... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
 
 # Delete outputs and temporary files
@@ -111,11 +107,9 @@ if [[ -f "$FO" ]];    then rm "$FO" ;  fi
 if [[ -f "$PDF" ]];   then rm "$PDF" ; fi
 if [[ -f "$LOG" ]];   then rm "$LOG" ; fi
 
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ...
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ... >> "$LOG"
+echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ... | tee -a "$LOG"
 
-echo Transform XML to FO...
-echo Transform XML to FO... 1>> "$LOG"
+echo Transform XML to FO... | tee -a "$LOG"
 java -jar "$SAXON_JAR" -s:"$FILEDIR/$INPUT" -xsl:"$XSLRENDER" -o:"$FO" 2>> "$LOG"
 retval=$?
 if [[ "$retval" != "0" ]]; then
@@ -123,8 +117,7 @@ if [[ "$retval" != "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform FO to FOP FO...
-  echo Transform FO to FOP FO... 1>> "$LOG"
+  echo Transform FO to FOP FO... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$FO" -xsl:"$XSLDIR/scrubPubNote.xsl" -o:"$FOPFO" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
@@ -133,8 +126,7 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Render FOP FO to PDF...
-  echo Render FOP FO to PDF... 1>> "$LOG"
+  echo Render FOP FO to PDF... | tee -a "$LOG"
   (
     cd "$REPO" || exit 1
     sh "$FOP" -fo "$FOPFO" -pdf "$PDF" 2>> "$LOG"
@@ -144,8 +136,7 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform FO to HTML...
-  echo Transform FO to HTML... 1>> "$LOG"
+  echo Transform FO to HTML... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$FO" -xsl:"$XSLDIR/pnfo2html.xsl" -o:"$HTML" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
@@ -154,15 +145,13 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform HTML to SWPX...
-  echo Transform HTML to SWPX... 1>> "$LOG"
+  echo Transform HTML to SWPX... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$HTML" -xsl:"$XSLDIR/html2swpx.xsl" -o:"$SWPX" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
     echo Saxon execution error creating SWPX
   fi
-  echo Transform SWPX to DOCX...
-  echo Transform SWPX to DOCX... 1>> "$LOG"
+  echo Transform SWPX to DOCX... | tee -a "$LOG"
   cp "$DOTX" "$SWPXDIR"
   java -jar "$WORDINATOR_JAR" -i "$SWPXDIR" -o "$SWPXDIR" -t "$DOTX" 2>&1 1>> "$LOG"
   if [[ -f  "$DOCX_TEMP" ]]; then cp "$DOCX_TEMP" "$DOCX" ; fi

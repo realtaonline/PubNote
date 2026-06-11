@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><ambiguous><guidance>
-  The program has encountered an ambiguity problem parsing the user input. Such
-  an error is not something that can be diagnosed by users. Please visit the
-  project's git repository and file an issue including both your input data
-  and this report file so that the problem can be reproduced in the lab. Thank
-  you for your support of this project.
-      </guidance><difference item="1"><base xpath="/ixml/ArticleSet[2]/Article[1]"><Journal/><ArticleTitle/><FirstPage/><LastPage/><ELocationID/><Language/><AuthorList/><PublicationType/><ArticleIdList/><History/><Abstract/><OtherAbstract/><CopyrightInformation/><CoiStatement/><ObjectList/><ReferenceList/></base><other xpath="/ixml/ArticleSet[1]/Article[1]"><Journal/><ArticleTitle/><FirstPage/><LastPage/><ELocationID/><Language/><AuthorList/><PublicationType/><ArticleIdList/><History/><Abstract/><OtherAbstract/><CopyrightInformation/><CoiStatement/><ObjectList/><ReferenceList/></other></difference></ambiguous>
