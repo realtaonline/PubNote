@@ -8,8 +8,3 @@ build/
 # Miscellaneous local development
 *.tar.gz
 tarball.sh
-
-
-
-# TEMPORARY for Crane-txt2xml development only
-Crane-txt2xml/
