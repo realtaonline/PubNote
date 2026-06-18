@@ -1,5 +1,61 @@
 name: Create Release
 
+# =============================================================================
+# Create Release
+# =============================================================================
+#
+# Invocation:
+#   Automatically triggered on every push to the `main` branch. There is no
+#   manual workflow_dispatch trigger configured; to produce a new release,
+#   push a commit (typically a version bump) to main.
+#
+# Preconditions (job aborts if not met):
+#   - Exactly one file matching `version-*.md` must exist at the repository
+#     root. VERSION is parsed from the filename itself, e.g.
+#     `version-1.4.0.md` -> VERSION="1.4.0". Zero or multiple matches fail
+#     the job before anything is built.
+#   - No GitHub release may already exist for tag `v<VERSION>`. This guards
+#     against silently overwriting a prior release if the version file
+#     wasn't bumped.
+#
+# What it does:
+#   1. Checks out the repository.
+#   2. Derives VERSION from the version-*.md filename.
+#   3. Confirms tag v<VERSION> does not already exist as a release.
+#   4. Copies the working tree (rsync, excluding dotfiles/dotdirs) into
+#      build/PubNote-v<VERSION>/.
+#   5. Zips that directory to build/PubNote-v<VERSION>.zip.
+#   6. Duplicates that zip as build/PubNote-latest.zip (stable name).
+#   7. Publishes a GitHub Release tagged v<VERSION>, attaching both zips.
+#
+# Produces:
+#   A GitHub Release named "PubNote v<VERSION>", tag v<VERSION>,
+#   with two downloadable assets:
+#     - PubNote-v<VERSION>.zip   permanent, version-specific
+#     - PubNote-latest.zip       overwritten each release, stable URL
+#
+# Next steps after a release is produced:
+#   - Check the Releases page to confirm the assets and notes look right.
+#   - Update any external docs/pages that link to a specific version or to
+#     the -latest URL.
+#   - Replace/rename version-*.md to the next version string before the
+#     next push to main -- this workflow will refuse to run again for the
+#     *same* version because of the tag-existence check.
+#
+# Permissions:
+#   - `contents: write` is required at job level for softprops/action-gh-
+#     release@v2 to create the release and upload assets via the REST API.
+#     Without it, GITHUB_TOKEN defaults to read-only and the release step
+#     fails with HTTP 403 "Resource not accessible by integration".
+#
+# Disabled/inactive:
+#   - Lines building a .tar.gz "mac-use-wget-or-curl" artefact are commented
+#     out throughout (prep, packaging, -latest duplication, release upload).
+#     Uncomment all four matching lines together if that secondary
+#     distribution format is reinstated.
+#
+# =============================================================================
+
 on:
   push:
     branches:
@@ -8,6 +64,8 @@ on:
 jobs:
   package-and-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Check out repository
@@ -42,21 +100,21 @@ jobs:
       - name: Prepare release directory
         run: |
           echo "INFO: Preparing release directory"
-          mkdir -p build/PubNote-${{ steps.check_version.outputs.VERSION }}
-          rsync -a --exclude='.*' ./ build/PubNote-${{ steps.check_version.outputs.VERSION }}/
+          mkdir -p build/PubNote-v${{ steps.check_version.outputs.VERSION }}
+          rsync -a --exclude='.*' ./ build/PubNote-v${{ steps.check_version.outputs.VERSION }}/
 
       - name: Create ZIP package
         run: |
           echo "INFO: Creating ZIP package"
           cd build
-          zip -r PubNote-${{ steps.check_version.outputs.VERSION }}.zip PubNote-${{ steps.check_version.outputs.VERSION }}
-          # tar -czf PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz PubNote-${{ steps.check_version.outputs.VERSION }}
+          zip -r PubNote-v${{ steps.check_version.outputs.VERSION }}.zip PubNote-v${{ steps.check_version.outputs.VERSION }}
+          # tar -czf PubNote-v${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz PubNote-v${{ steps.check_version.outputs.VERSION }}
 
       - name: Duplicate with -latest filenames
         run: |
           echo "INFO: Duplicating artefacts with stable -latest filenames"
-          cp build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip build/PubNote-latest.zip
-          # cp build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz build/PubNote-latest--mac-use-wget-or-curl.tgz
+          cp build/PubNote-v${{ steps.check_version.outputs.VERSION }}.zip build/PubNote-latest.zip
+          # cp build/PubNote-v${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz build/PubNote-latest--mac-use-wget-or-curl.tgz
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
@@ -64,8 +122,8 @@ jobs:
           tag_name: v${{ steps.check_version.outputs.VERSION }}
           name: PubNote v${{ steps.check_version.outputs.VERSION }}
           files: |
-            build/PubNote-${{ steps.check_version.outputs.VERSION }}.zip
-            # build/PubNote-${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz
+            build/PubNote-v${{ steps.check_version.outputs.VERSION }}.zip
+            # build/PubNote-v${{ steps.check_version.outputs.VERSION }}--mac-use-wget-or-curl.tar.gz
             build/PubNote-latest.zip
             #build/PubNote-latest--mac-use-wget-or-curl.tgz
         env:
