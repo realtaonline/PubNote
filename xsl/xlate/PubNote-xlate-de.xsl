@@ -69,10 +69,14 @@
     <xlate lookup="DeleteDocument">Dokument löschen</xlate>
     <xlate lookup="DescriptorName">Deskriptorname</xlate>
     <xlate lookup="DispFormula" unsupported="">Anzeigeformel</xlate>
+    <xlate lookup="DocType">Dokumenttyp</xlate>
+    <xlate lookup="EIdType">Typ der elektronischen Kennung</xlate>
     <xlate lookup="ELocationID">Elektronische Standort-ID</xlate>
     <xlate lookup="Edition">Ausgabe</xlate>
+    <xlate lookup="EmptyYN">Leer</xlate>
     <xlate lookup="EndPage">Endseite</xlate>
     <xlate lookup="EndingDate">Enddatum</xlate>
+    <xlate lookup="EqualContrib">Gleichberechtigter Beitrag</xlate>
     <xlate lookup="FirstName">Vorname</xlate>
     <xlate lookup="FirstPage">Erste Seite</xlate>
     <xlate lookup="ForeName">Vorname</xlate>
@@ -90,6 +94,7 @@
     <xlate lookup="ISOAbbreviation">ISO-Abkürzung</xlate>
     <xlate lookup="ISSN" pubmedin="ignore">ISSN</xlate>
     <xlate lookup="ISSNLinking">ISSN-Verknüpfung</xlate>
+    <xlate lookup="IdType">Kennungstyp</xlate>
     <xlate lookup="Identifier">Kennung</xlate>
     <xlate lookup="IndividualName">Name der Person</xlate>
     <xlate lookup="Initials">Initialen</xlate>
@@ -105,6 +110,8 @@
     <xlate lookup="JournalTitle">Zeitschriftentitel</xlate>
     <xlate lookup="Keyword">Schlüsselwort</xlate>
     <xlate lookup="KeywordList">Stichwortliste</xlate>
+    <xlate lookup="LZero">Führende Null</xlate>
+    <xlate lookup="Label">Bezeichnung</xlate>
     <xlate lookup="Language">Sprache</xlate>
     <xlate lookup="LastName">Nachname</xlate>
     <xlate lookup="LastPage">Letzte Seite</xlate>
@@ -120,6 +127,7 @@
     <xlate lookup="MiddleName">Zweiter Vorname</xlate>
     <xlate lookup="Minute">Minute</xlate>
     <xlate lookup="Month">Monat</xlate>
+    <xlate lookup="Name">Name</xlate>
     <xlate lookup="NameOfSubstance">Name der Substanz</xlate>
     <xlate lookup="NlmUniqueID">Eindeutige NLM-ID</xlate>
     <xlate lookup="Note">Hinweis</xlate>
@@ -135,6 +143,7 @@
     <xlate lookup="PersonalNameSubjectList">Personenname</xlate>
     <xlate lookup="PubDate">Veröffentlichungsdatum</xlate>
     <xlate lookup="PubMedPubDate">PubMed-Veröffentlichungsdatum</xlate>
+    <xlate lookup="PubStatus">Veröffentlichungsstatus</xlate>
     <xlate lookup="PublicationStatus">Veröffentlichungsstatus</xlate>
     <xlate lookup="PublicationType">Publikationstyp</xlate>
     <xlate lookup="PublicationTypeList">Publikationstypliste</xlate>
@@ -160,13 +169,18 @@
     <xlate lookup="SectionTitle">Abschnittstitel</xlate>
     <xlate lookup="Sections">Abschnitte</xlate>
     <xlate lookup="SpaceFlightMission">Weltraummission</xlate>
+    <xlate lookup="Source">Quelle</xlate>
     <xlate lookup="StartPage">Startseite</xlate>
     <xlate lookup="Suffix">Suffix</xlate>
     <xlate lookup="SupplMeshList">Liste der ergänzenden MeSH</xlate>
     <xlate lookup="SupplMeshName">Ergänzende MeSH-Name</xlate>
     <xlate lookup="Title">Titel</xlate>
+    <xlate lookup="Type">Typ</xlate>
     <xlate lookup="URL">URL</xlate>
+    <xlate lookup="ValidYN">Gültig</xlate>
     <xlate lookup="VernacularTitle" mixed="">Titel in Landessprache</xlate>
+    <xlate lookup="VersionDate">Versionsdatum</xlate>
+    <xlate lookup="VersionID">Versions-ID</xlate>
     <xlate lookup="Volume">Band</xlate>
     <xlate lookup="VolumeTitle">Bandtitel</xlate>
     <xlate lookup="Year">Jahr</xlate>
