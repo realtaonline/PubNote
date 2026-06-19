@@ -75,19 +75,19 @@
     <xlate lookup="DescriptorName">Nom du descripteur</xlate>
     <xlate lookup="DispFormula" unsupported="">Formule d'affichage</xlate>
     <xlate lookup="DocType">Type de document</xlate>
+    <xlate lookup="Edition">Édition</xlate>
     <xlate lookup="EIdType">Type d'identifiant électronique</xlate>
     <xlate lookup="ELocationID">ID d'emplacement électronique</xlate>
-    <xlate lookup="Edition">Édition</xlate>
     <xlate lookup="EmptyYN">Vide</xlate>
-    <xlate lookup="EndPage">Fin de page</xlate>
     <xlate lookup="EndingDate">Fin Date</xlate>
+    <xlate lookup="EndPage">Fin de page</xlate>
     <xlate lookup="EqualContrib">Contribution égale</xlate>
     <xlate lookup="FirstName">Prénom</xlate>
     <xlate lookup="FirstPage">Première page</xlate>
     <xlate lookup="ForeName">Prénom</xlate>
+    <xlate lookup="GeneralNote">Remarque générale</xlate>
     <xlate lookup="GeneSymbol">Symbole du gène</xlate>
     <xlate lookup="GeneSymbolList">Liste des symboles des gènes</xlate>
-    <xlate lookup="GeneralNote">Remarque générale</xlate>
     <xlate lookup="Grant">Grant</xlate>
     <xlate lookup="GrantID">ID de l'octroi</xlate>
     <xlate lookup="GrantList">Liste des octrois</xlate>
@@ -96,17 +96,17 @@
     <xlate lookup="GroupName">Nom du groupe</xlate>
     <xlate lookup="History">Historique</xlate>
     <xlate lookup="Hour">Heure</xlate>
-    <xlate lookup="ISOAbbreviation">ISO Abréviation</xlate>
-    <xlate lookup="ISSN" pubmedin="ignore">ISSN</xlate>
-    <xlate lookup="ISSNLinking">Lien ISSN</xlate>
-    <xlate lookup="IdType">Type d'identifiant</xlate>
     <xlate lookup="Identifier">Identifiant</xlate>
+    <xlate lookup="IdType">Type d'identifiant</xlate>
     <xlate lookup="IndividualName">Nom de la personne</xlate>
     <xlate lookup="Initials">Initiales</xlate>
     <xlate lookup="Investigator">Investigator</xlate>
     <xlate lookup="InvestigatorList">Liste des investigateurs</xlate>
     <xlate lookup="Isbn">ISBN</xlate>
+    <xlate lookup="ISOAbbreviation">ISO Abréviation</xlate>
+    <xlate lookup="ISSN" pubmedin="ignore">ISSN</xlate>
     <xlate lookup="Issn" pubmedout="ignore">ISSN</xlate>
+    <xlate lookup="ISSNLinking">Lien ISSN</xlate>
     <xlate lookup="Issue">Numéro</xlate>
     <xlate lookup="Item">Article</xlate>
     <xlate lookup="ItemList">Liste des articles</xlate>
@@ -115,18 +115,18 @@
     <xlate lookup="JournalTitle">Intitulé de la revue</xlate>
     <xlate lookup="Keyword">Mot-clé</xlate>
     <xlate lookup="KeywordList">Liste de mots-clés</xlate>
-    <xlate lookup="LZero">Zéro non significatif</xlate>
     <xlate lookup="Label">Étiquette</xlate>
     <xlate lookup="Language">Langue</xlate>
     <xlate lookup="LastName">Nom</xlate>
     <xlate lookup="LastPage">Dernière page</xlate>
     <xlate lookup="LocationLabel">Libellé de l'emplacement</xlate>
+    <xlate lookup="LZero">Zéro non significatif</xlate>
     <xlate lookup="Medium">Support</xlate>
     <xlate lookup="MedlineCitation">Citation Medline</xlate>
     <xlate lookup="MedlineDate">Date Medline</xlate>
     <xlate lookup="MedlineJournalInfo">Informations sur la revue Medline</xlate>
     <xlate lookup="MedlinePgn">Numéro de page Medline</xlate>
-    <xlate lookup="MedlineTA">Abréviation du titre Medline</xlate>
+    <xlate lookup="MedlineTA">Abréviation du institulé Medline</xlate>
     <xlate lookup="MeshHeading">Intitulé MeSH</xlate>
     <xlate lookup="MeshHeadingList">Liste des intitulés MeSH</xlate>
     <xlate lookup="MiddleName">Deuxième prénom</xlate>
@@ -141,14 +141,12 @@
     <xlate lookup="ObjectList">Liste d'objets</xlate>
     <xlate lookup="OtherAbstract" mixed="true">Autre résumé</xlate>
     <xlate lookup="OtherID">Autre identifiant</xlate>
-    <xlate lookup="PMID">ID PubMed</xlate>
     <xlate lookup="Pagination">Pagination</xlate>
     <xlate lookup="Param" mixed="">Paramètre</xlate>
     <xlate lookup="PersonalNameSubject">Nom de la personne - Sujet</xlate>
     <xlate lookup="PersonalNameSubjectList">Liste des noms de personnes - Sujet</xlate>
+    <xlate lookup="PMID">ID PubMed</xlate>
     <xlate lookup="PubDate">Date de publication</xlate>
-    <xlate lookup="PubMedPubDate">Date de publication PubMed</xlate>
-    <xlate lookup="PubStatus">Statut de publication</xlate>
     <xlate lookup="PublicationStatus">Statut de la publication</xlate>
     <xlate lookup="PublicationType">Type de publication</xlate>
     <xlate lookup="PublicationTypeList">Liste des types de publication</xlate>
@@ -161,20 +159,22 @@
     <xlate lookup="PubmedBookArticleSet">Groupe d'articles de livre PubMed</xlate>
     <xlate lookup="PubmedBookData">Données de livre PubMed</xlate>
     <xlate lookup="PubmedData">Données PubMed</xlate>
+    <xlate lookup="PubMedPubDate">Date de publication PubMed</xlate>
+    <xlate lookup="PubStatus">Statut de publication</xlate>
     <xlate lookup="QualifierName">Nom du qualificatif</xlate>
-    <xlate lookup="RefSource">Source de référence</xlate>
     <xlate lookup="Reference">Référence</xlate>
     <xlate lookup="ReferenceList">Liste de références</xlate>
+    <xlate lookup="RefSource">Source de référence</xlate>
     <xlate lookup="RegistryNumber">Numéro de registre</xlate>
     <xlate lookup="Replaces">Remplace</xlate>
     <xlate lookup="ReportNumber">Numéro de rapport</xlate>
     <xlate lookup="Season">Saison</xlate>
     <xlate lookup="Second">Second</xlate>
     <xlate lookup="Section">Section</xlate>
-    <xlate lookup="SectionTitle">Titre de la section</xlate>
     <xlate lookup="Sections">Sections</xlate>
-    <xlate lookup="SpaceFlightMission">Mission spatiale</xlate>
+    <xlate lookup="SectionTitle">Titre de la section</xlate>
     <xlate lookup="Source">Source</xlate>
+    <xlate lookup="SpaceFlightMission">Mission spatiale</xlate>
     <xlate lookup="StartPage">Page de démarrage</xlate>
     <xlate lookup="Suffix">Suffixe</xlate>
     <xlate lookup="SupplMeshList">Liste des MeSH supplémentaires</xlate>
@@ -191,7 +191,7 @@
     <xlate lookup="Year">Année</xlate>
     <!--note that the DTD hardwires the name, so hardwired here with mml:-->
     <xlate lookup="mml:math" unsupported="">MathML</xlate>
-    <!--inline Constructions -->
+    <!--inline constructs-->
     <xlate lookup="AbstractText" markdown="+" mixed="">Texte du l'abrégé</xlate>
     <xlate lookup="ArticleTitle" markdown="|" mixed="">Intitulé de l'article</xlate>
     <xlate lookup="b"   mixed="" markdown="*">gras</xlate>
