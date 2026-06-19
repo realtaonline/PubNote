@@ -119,7 +119,7 @@
     <xlate lookup="MedlineDate">Date Medline</xlate>
     <xlate lookup="MedlineJournalInfo">Informations sur la revue Medline</xlate>
     <xlate lookup="MedlinePgn">Numéro de page Medline</xlate>
-    <xlate lookup="MedlineTA">Abréviation du institulé Medline</xlate>
+    <xlate lookup="MedlineTA">Abréviation du titre Medline</xlate>
     <xlate lookup="MeshHeading">Intitulé MeSH</xlate>
     <xlate lookup="MeshHeadingList">Liste des intitulés MeSH</xlate>
     <xlate lookup="MiddleName">Deuxième prénom</xlate>

@@ -10,16 +10,10 @@
 
 <xst:doc info="https://github.com/CraneSoftwrights/Crane-txt2xml"
         filename="Pubnote-ixml2xml.xsl" vocabulary="DocBook">
-  <xst:title>Convert an ISS document into a PubNote document</xst:title>
+  <xst:title>Convert the output of an iXML processor into a PubNote document</xst:title>
   <para>
-    The Intermediate Sentence Syntax in Crane-txt2xml is the glue
-    between an arbitrary sentence parser and the vocabulary-specific
-    structure generator.
-  </para>
-  <para>
-    This stylesheet follows the UBL serialization rules regarding
-    aggregate and basic components, based on the presence of child text
-    nodes or absence of child element nodes.
+    When there is special handling necessary, it will go here. Meanwhile, the
+    off-the-shelf serialization of the iXML output is sufficient.
   </para>
 </xst:doc>
 
@@ -30,7 +24,5 @@
 <xst:doc>
   <xst:title>No PubMed-specific handling</xst:title>
 </xst:doc>
-
-
 
 </xsl:stylesheet>
