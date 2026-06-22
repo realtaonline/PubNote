@@ -5,7 +5,7 @@ TESTDIR="$REPO/test"
 
 EXITSTATUS=0
 FAILED_CASES=()
-if [[ -f "$TESTDIR/.failed_cases" ]] ; then   rm "$TESTDIR/.failed_cases" fi
+if [[ -f "$TESTDIR/.failed_cases" ]] ; then rm "$TESTDIR/.failed_cases" ; fi
 
 # Export functions and variables for xargs subprocesses
 process_file() {

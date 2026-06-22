@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslstyle/xslstyle-docbook.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../utilities/xslstyle/xslstyle-docbook.xsl"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xst="http://www.CraneSoftwrights.com/ns/xslstyle"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -64,6 +64,9 @@
 
 <xst:function>
   <para>Return an array of all possible name conventions</para>
+  <xst:param name="c:name">
+    <para>The name from which the multiple entries are derived.</para>
+  </xst:param>
 </xst:function>
 <xsl:function name="c:nameEntries" as="array(xs:string+)*">
   <xsl:param    name="c:name" as="xs:string"/>
