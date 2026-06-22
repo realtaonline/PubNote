@@ -2,10 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteRender-fr.bat
 ::
-:: Script utilitaire pour appeler PubNoteRender-en.bat avec le suffixe -fr.
-::
-:: Permet un glisser-déposer ou une automatisation par appel pour produire
-:: des rendus en français à partir d’un fichier XML PubNote.
+:: Produit à partir d’un fichier XML PubNote des sorties PDF, HTML, DOCX et
+:: texte en utilisant des étiquettes en français.
 ::
 :: Les fichiers de sortie sont écrits dans un sous-répertoire portant le nom
 :: du fichier d’entrée. Les fichiers temporaires sont supprimés sauf si un

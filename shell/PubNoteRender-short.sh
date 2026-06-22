@@ -3,10 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteRender-short.sh
 
-# Helper script to call PubNoteRender-en.sh with the -short suffix.
-
-# Supports drag-and-drop or automated calls to generate abbreviated
-# XML-named element and attribute output from a PubNote XML file.
+# Renders a PubNote XML file to PDF, HTML, DOCX, and text using the
+# short-label set (calls PubNoteRender-en.sh with the -short suffix).
 
 # The output files are written to a subdirectory named after
 # the input file. Temporary files are deleted if

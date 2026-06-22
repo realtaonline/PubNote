@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteInCheck.bat
 ::
-:: A batch file for validating a PubNote submission XML input file.
+:: Validates a PubNote submission XML input file against the submission DTD.
 ::
 :: Usage:
 ::   PubNoteInCheck.bat file.xml

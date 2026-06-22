@@ -2,10 +2,9 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteRender.bat
 ::
-:: Helper script to call PubNoteRender-en.bat with the empty suffix.
-::
-:: Supports drag-and-drop or automated calls to generate
-:: XML-named element and attribute output from a PubNote XML file.
+:: Renders a PubNote XML file to PDF, HTML, DOCX, and text using raw XML
+:: element and attribute names as labels (calls PubNoteRender-en.bat with
+:: an empty suffix).
 ::
 :: The output files are written to a subdirectory named after
 :: the input file. Temporary files are deleted if

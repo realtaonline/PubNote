@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteInIndent.sh
 #
-# A shell script for processing a PubNote submission XML input file into
-# an indented version of itself, but without the document type declaration.
+# Produces an indented version of a PubNote submission XML input file,
+# without its document type declaration.
 #
 # Usage:
 #   PubNoteInIndent.sh file.xml

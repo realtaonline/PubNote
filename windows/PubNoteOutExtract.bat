@@ -4,10 +4,9 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteOutExtract.bat
 ::
-:: A batch file for processing a PubNote distribution XML output file into
-:: the set of XML Article files found embedded in an ArticleSet document 
-:: element. This also will copy an XML output file that has an Article document
-:: element.
+:: Extracts the individual XML Article files embedded in a PubNote
+:: distribution XML ArticleSet document (or copies a single Article
+:: document).
 ::
 :: Usage:
 ::   PubNoteOutExtract.bat file.xml [indent=yes]

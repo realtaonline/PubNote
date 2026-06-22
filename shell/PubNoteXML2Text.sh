@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteText2XML.sh
 #
-# A shell script for processing a PubNote in/submission text input file into
-# an equivalent XML file.
+# Converts a PubNote XML file into an editable text file, with optional
+# markdown mixed-content rendering.
 #
 # Supports an optional language suffix (e.g., -en, -fr, -de), passed as the
 # environment variable $SUFFIX for translating the element and attribute names

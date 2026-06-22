@@ -4,8 +4,7 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteOutIndent.bat
 ::
-:: A batch file for processing a PubNote distribution XML output file into
-:: an indented version of itself.
+:: Produces an indented version of a PubNote distribution XML output file.
 ::
 :: Usage:
 ::   PubNoteOutIndent.bat file.xml

@@ -4,9 +4,8 @@ setlocal
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2TextMarkdown-en.bat
 ::
-:: A batch file for processing a PubNote XML file into an editable text file
-:: using markdown in the mixed content, with English labels for the elements
-:: and attributes.
+:: Converts a PubNote XML file into an editable text file with markdown
+:: mixed content, using English labels.
 ::
 :: Usage:
 ::   PubNoteXML2TextMarkdown-en.bat file.xml

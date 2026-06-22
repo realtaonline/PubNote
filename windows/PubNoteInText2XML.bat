@@ -4,8 +4,8 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteInText2XML.bat
 ::
-:: A batch file for processing a PubNote in/submission text input file into
-:: an equivalent XML file.
+:: Converts a PubNote submission text input file into XML using Invisible
+:: XML (iXML).
 ::
 :: Supports an optional language suffix (e.g., -en, -fr, -de, -short), passed
 :: as the first argument.

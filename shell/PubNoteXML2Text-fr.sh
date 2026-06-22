@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteXML2Text-fr.sh
 #
-# A shell script for processing a PubNote XML file into an editable text file
-# using French labels for the elements and attributes.
+# Converts a PubNote XML file into an editable text file, using French
+# labels for the elements and attributes.
 #
 # Usage:
 #   PubNoteXML2Text-fr.sh file.xml

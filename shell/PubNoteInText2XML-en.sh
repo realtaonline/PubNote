@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteInText2XML-en.sh
 #
-# A shell script for processing a PubNote in/submission text input file into
-# an equivalent XML file.
+# Converts a PubNote submission text input file into XML, using
+# English-labelled iXML grammar.
 #
 # Usage:
 #   PubNoteInText2XML-en.sh file.xml

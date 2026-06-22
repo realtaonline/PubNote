@@ -2,8 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2Text-en.bat
 ::
-:: A batch file for processing a PubNote XML file into an editable text file
-:: using English labels for the elements and attributes.
+:: Converts a PubNote XML file into an editable text file, using English
+:: labels for the elements and attributes.
 ::
 :: Usage:
 ::   PubNoteXML2Text-en.bat file.xml

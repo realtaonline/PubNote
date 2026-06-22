@@ -4,9 +4,8 @@ setlocal
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2TextMarkdown-fr.bat
 ::
-:: Script utilitaire pour produire, à partir d'un fichier XML PubNote, un
-:: fichier texte modifiable utilisant markdown dans le contenu mixte, avec
-:: des étiquettes en français pour les éléments et attributs.
+:: Convertit un fichier XML PubNote en fichier texte modifiable utilisant
+:: markdown dans le contenu mixte, avec des étiquettes en français.
 ::
 :: Utilisation :
 ::   PubNoteXML2TextMarkdown-fr.bat fichier.xml

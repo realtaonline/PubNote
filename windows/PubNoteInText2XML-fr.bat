@@ -2,10 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteInText2XML-fr.bat
 ::
-:: Script utilitaire pour appeler PubNoteInText2XML.bat avec le suffixe -fr.
-::
-:: Permet un glisser-déposer ou une automatisation par appel pour produire
-:: du XML PubNote à partir d'un fichier texte étiqueté en français.
+:: Convertit un fichier texte de soumission PubNote en XML, en utilisant
+:: la grammaire iXML étiquetée en français.
 ::
 :: Utilisation :
 ::   PubNoteInText2XML-fr.bat fichier.txt

@@ -2,9 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteInText2XML-de.bat
 ::
-:: A batch file for processing a PubNote in/submission text input file into
-:: an equivalent XML file using German labels for the elements and
-:: attributes.
+:: Converts a PubNote submission text input file into XML, using
+:: German-labelled iXML grammar.
 ::
 :: Usage:
 ::   PubNoteInText2XML-de.bat file.txt

@@ -3,8 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteXML2TextMarkdown-en.sh
 #
-# A shell script for processing a PubNote in/submission text input file into
-# an equivalent XML file using markdown in the mixed content
+# Converts a PubNote XML file into an editable text file with markdown
+# mixed content, using English labels.
 #
 # Usage:
 #   PubNoteXML2TextMarkdown-en.sh file.xml

@@ -2,8 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteRender-en.bat
 ::
-:: A Windows batch script for processing a PubNote XML input file into
-:: PDF, HTML, and DOCX outputs using Saxon, FOP, and Wordinator.
+:: Renders a PubNote XML file to PDF, HTML, DOCX, and text using Saxon, FOP,
+:: and Wordinator.
 ::
 :: Supports an optional language suffix (e.g., -fr, -de) passed as the
 :: first argument, and handles transformation, rendering, and cleanup.

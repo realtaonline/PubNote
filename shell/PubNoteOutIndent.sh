@@ -3,8 +3,7 @@
 # ---------------------------------------------------------------------------
 # PubNoteOutIndent.sh
 #
-# A shell script for processing a PubNote distribution XML output file into
-# an indented version of itself.
+# Produces an indented version of a PubNote distribution XML output file.
 #
 # Usage:
 #   PubNoteOutIndent.sh file.xml

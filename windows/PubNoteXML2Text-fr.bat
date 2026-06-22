@@ -2,10 +2,8 @@
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2Text-fr.bat
 ::
-:: Script utilitaire pour appeler PubNoteXML2Text.bat avec le suffixe -fr.
-::
-:: Produit un fichier texte modifiable, étiqueté en français, à partir d'un
-:: fichier XML PubNote.
+:: Convertit un fichier XML PubNote en fichier texte modifiable, en
+:: utilisant des étiquettes en français pour les éléments et attributs.
 ::
 :: Utilisation :
 ::   PubNoteXML2Text-fr.bat fichier.xml

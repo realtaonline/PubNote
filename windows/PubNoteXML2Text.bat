@@ -4,7 +4,8 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2Text.bat
 ::
-:: A batch file for processing a PubNote XML file into an editable text file.
+:: Converts a PubNote XML file into an editable text file, with optional
+:: markdown mixed-content rendering.
 ::
 :: Supports an optional language suffix (e.g., -en, -fr, -de, -short) passed
 :: as the first argument, for translating the element and attribute names
