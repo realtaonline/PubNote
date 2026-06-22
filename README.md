@@ -4,7 +4,7 @@
 
 \<PubNote> is conceived, initiated, and maintained by Ireland-based [Réalta Online Publishing Solutions Limited – https://RealtaOnline.com](https://RealtaOnline.com). Réalta is a purveyor of fast, accurate, and quality online and API publishing services for tailored single-source JATS XML publishing with high fidelity to PDF, HTML, and DOCX output formats. _[Contact us](mailto:support@RealtaOnline.com) for your off-site online JATS publishing needs without the maintenance of on-site publishing software._
 
-\<PubNote> consists of these out-of-the-box XML metadata tools:
+\<PubNote> consists of these out-of-the-box XML metadata tools for [Windows](windows/README.md), [Shell](shell/README.md), and [Mac](mac/README.md) invocations:
 
 - **PubNoteInCheck** – validation of PubMed submission XML against the submission DTD  
 - **PubNoteInText2XML-xx** - conversion of PubMed submission text rendering into submission XML  
