@@ -96,7 +96,7 @@ The basic flows interacting with OLSPub and PubMed are simple:
 The \<PubNote> visualization/validation environment wraps around these two "in/submission" and "out/distribution" XML documents, giving users tools to create, confirm, and consume the information.
 
 3. For human metadata entry, the user can edit a simple text expression of in/submission content according to syntax rules
-4. **PubNoteIn-Text2XML** converts a simple text expression of in/submission content into a **PubMedIn** document (not suitable for PubMedOut documents)  
+4. **PubNoteInText2XML-xx** converts a simple text expression of in/submission content into a **PubMedIn** document (not suitable for PubMedOut documents)  
 5. Optionally, the user uses **PubNoteDraft** to create a **PubMedDraftIn** document as a starting point from a distillation of multiple JATS XML documents into a draft _(Phase 3)_  
 6. For human review, **PubNoteRender** formats the information found in a **PubMedIn** document  
 7. Optionally, **PubNoteInCheck** can validate a **PubMedIn** document against the `PubMed.dtd`  
@@ -107,7 +107,7 @@ The \<PubNote> visualization/validation environment wraps around these two "in/s
 The visualization process in **PubNoteRender** produces human-readable documentation:
 
 11. **PubMedOut** and **PubMedIn** documents are rendered to various formats:  
-11a. Simple text is created following the specific **PubNoteIn-Text2XML** syntax conventions  
+11a. Simple text is created using **PubNoteXML2Text-xx** following the specific **PubNoteInText2XML-xx** syntax conventions  
 11b. XSL-FO is created with all of the content to be presented downstream in PDF, HTML, and DOCX  
 12. XSL-FO is transformed into **PDF** for print purposes:  
 12a. – a conforming XSL-FO 1.1 processor directly produces the output _(not part of this repository)_  
