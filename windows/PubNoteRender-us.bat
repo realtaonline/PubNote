@@ -1,4 +1,5 @@
 @echo off
+setlocal
 
 :: ---------------------------------------------------------------------------
 :: PubNoteRender-us.bat
@@ -14,7 +15,7 @@
 :: If "batch=yes" is the final argument, the script will not wait at the end.
 ::
 :: Usage:
-::   PubNoteRender-de.bat file.xml [batch=yes]
+::   PubNoteRender-us.bat file.xml [batch=yes]
 :: ---------------------------------------------------------------------------
 
 call "%~dp0\PubNoteRender-en.bat" -us "%~1" "%~2" "%~3" "%~4" "%~5" "%~6" "%~7" "%~8" "%~9"
