@@ -7,17 +7,19 @@
 \<PubNote> consists of these out-of-the-box XML metadata tools:
 
 - **PubNoteInCheck** – validation of PubMed submission XML against the submission DTD  
-- **PubNoteInText2XML-xx** - conversion of PubMed submission text rendering into submission XML _(added in Phase 2 of this project)_  
+- **PubNoteInText2XML-xx** - conversion of PubMed submission text rendering into submission XML  
 - **PubNoteInDraft** – drafting of PubMed submission text and XML from JATS article XML _(outlined for Phase 3 of this project)_
 - **PubNoteOutCheck** – validation of PubMed distribution XML against the distribution DTD  
 - **PubNoteOutExtract** – extraction of PubMed distribution XML documents from a set XML document  
 - **PubNoteOutIndent** – indentation of PubMed distribution XML documents from a single or a set XML document  
-- **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, DOCX, and text with multiple rendering choices
+- **PubNoteXML2Text-xx** – transform PubMed XML document into text without using markdown for mixed content
+- **PubNoteXML2TextMarkdown-xx** – transform PubMed XML document into text using markdown for mixed content
+- **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, DOCX, text without markdown, and text with markdown
 
 Suffixes **-xx**:
   - "**-en**"=English (A4), "**-us**"=English (US-letter), "**-de**"=German, "**-fr**"=French _(others welcome!)_
-  - "**-short**"=short labels for use in compression
-  - absent suffix: use XML names as defined in the document models 
+  - "**-short**"=short labels for use in making the text files smaller than with XML or natural language labels
+  - absent suffix: use XML names as defined in the document models as the labels
 
 \<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(Click any image to enlarge.)_: 
 
@@ -30,7 +32,11 @@ Suffixes **-xx**:
 
 <img src="images/formats.png" width="100%"/>
 
-In phase 2 of this project a simple text rendering was added following particular syntax conventions recognized in the conversion from text to XML. This supports round-tripping a PubMed in (submission) XML document for editing by non-XML subject matter experts:
+Also included is a simple text file rendering following particular syntax conventions recognized in the conversion from text to XML. Each of the languages is available to be used to prep for editing and conversion:
+
+<img src="images/multilingual.png" width="100%"/>
+
+This labeling supports round-tripping a PubMed in (submission) XML document for editing by non-XML subject matter experts who can use the simple text labels instead of XML angle brackets and syntax:
 
 <img src="images/pubnote-round-trip.png" width="80%"/>
 
@@ -68,7 +74,7 @@ This \<PubNote> project, conceived in the spirit of OLSPub for jurisdictional in
 
 The entire visualization code base for \<PubNote> is oriented around simple and shallow metadata XML documents, a contrasting nature to the rich and deep JATS document model. Whereas JATS describes elaborate prose-oriented nested structures intended for branded distribution, PubMed describes only flat metadata structures intended only for internal reviews, indexing, and search.
 
-Nevertheless, these simple PubMed metadata structures are in arcane XML syntax which can be discomfiting to some users who may be allergic to angle brackets. \<PubNote> seeks to make working with and reviewing the content of these structures easy for all users.
+Nevertheless, these simple PubMed metadata structures are in arcane XML syntax which can be discomfiting to some users who may be allergic to angle brackets. \<PubNote> seeks to make working with and reviewing the content of these structures easy for all users. Moreover, non-XML-aware subject matter experts can use a simple text format either with XML names or natural language labels to compose or edit submission metadata documents using a simple text editor and syntax.
 
 In summary, \<PubNote> aligns with OLSPub's objectives by offering open-source tooling to inspect, edit, and validate the XML metadata formats used in its submission and distribution workflows. The tool aims to aid metadata quality assurance and empower non-technical contributors, thus improving their trust in meeting specialized XML obligations.
 
@@ -117,11 +123,13 @@ The visualization process in **PubNoteRender** produces human-readable documenta
 
 For questions, suggestions, comments, and contributions we invite you to create issues and pull requests, both of which are accessible in tabs in the GitHub web page header. Eager qualified contributors are invited to introduce themselves for consideration in joining the team.
 
+With phases 1 and 2 complete, phase 3 is awaiting the determination of what to distill from JATS XML documents into draft PubMed in (submission) documents.
+
 In particular, improvements and additions to the label language translations for [xsl/xlate/](xsl/xlate/) are most welcome.
 
-The numeric versioning of this project [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) follows the `<major/>`.`<minor/>`.`<patch/>` pattern, inspired by [Semantic Versioning](https://semver.org/). While generally aligned with SemVer principles, major version changes may also signal significant expansions in the project's scope.
+The numeric versioning of this project [![Latest release](https://img.shields.io/github/v/release/realtaonline/PubNote)](https://github.com/realtaonline/PubNote/releases) follows the `<major/>`.`<minor/>`.`<patch/>` pattern according to [Semantic Versioning](https://semver.org/):
 
-- `<major/>` — increased when existing usage may break due to changes, or when substantial new functionality is introduced that significantly broadens the project’s scope (i.e. new project phases).
+- `<major/>` — increased when existing usage breaks due to changes
 - `<minor/>` — increased when new features are added that extend functionality without disrupting existing use (i.e. backward-compatible additions).
 - `<patch/>` — increased when errors are corrected or documentation is improved, without changes to features or behaviour (i.e. bug fixes and cosmetic adjustments).
 

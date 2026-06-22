@@ -40,7 +40,7 @@ set "INPUT=%~nx1"
 set "INPUTBASE=%~n1"
 
 set "MODELIXML=%REPO%\ixml\PubMedIn%SUFFIX%.ixml"
-set "MODELXSLT=%REPO%\ixml\PubMedIn-ixml2xml.xsl"
+set "MODELXSLT=%REPO%\xsl\PubMedIn-ixml2xml.xsl"
 
 call "%REPO%\Crane-txt2xml\windows\Crane-txt2xml.bat" "%MODELIXML%" "%MODELXSLT%" "%~1" "%~1.xml"
 exit /b %errorlevel%

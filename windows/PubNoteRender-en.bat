@@ -20,7 +20,7 @@
 ::   PubNoteRender-en.bat [-suffix] file.xml [batch=yes]
 ::
 :: If "batch=yes" is provided as the last argument, the script suppresses
-:: the pause prompt after execution.
+:: the wait prompt after execution.
 ::
 :: Output files are placed in a subdirectory named after the input file.
 :: Temporary/intermediate files are cleaned unless "debug.txt" is found
@@ -63,7 +63,7 @@ set "WORKDIR=%INPUTDIR%%INPUTNAME%"
 set "SWPXDIR=%WORKDIR%\%INPUT%%SUFFIX%-SWPX"
 
 :: File paths
-set "SAXON_JAR=%REPO%\utilities\saxon12he\saxon12he.jar"
+set "SAXON_JAR=%REPO%\utilities\saxonhe\saxonhe.jar"
 set "WORDINATOR_JAR=%REPO%\utilities\wordinator\wordinator-1.1.1-fat.jar"
 set "XSLDIR=%REPO%\xsl"
 set "XSLRENDER=%XSLDIR%\PubNoteRender%SUFFIX%.xsl"
@@ -90,15 +90,32 @@ echo Rendering "%INPUTDIR%%INPUT%" using "%XSLRENDER%" to "%PDF%"...
 if not exist "%WORKDIR%" mkdir "%WORKDIR%"
 if not exist "%SWPXDIR%" mkdir "%SWPXDIR%"
 
-:: Delete outputs
+:: Delete outputs and temporary files from any previous run
 del /q "%FOPFO%" 2>nul
 del /q "%FO%"    2>nul
 del /q "%PDF%"   2>nul
 del /q "%LOG%"   2>nul
 
+:: Create the four text renderings for round-tripping
+echo Transform XML to XML text...
+echo Transform XML to XML text... >>"%LOG%"
+call "%THIS%\PubNoteXML2Text.bat" "%~1" "batch=yes" >>"%LOG%" 2>&1
+
+echo Transform XML to XML text with markdown...
+echo Transform XML to XML text with markdown... >>"%LOG%"
+call "%THIS%\PubNoteXML2TextMarkdown.bat" "%~1" "batch=yes" >>"%LOG%" 2>&1
+
+echo Transform XML to "%SUFFIX%" text...
+echo Transform XML to "%SUFFIX%" text... >>"%LOG%"
+call "%THIS%\PubNoteXML2Text%SUFFIX%.bat" "%~1" "batch=yes" >>"%LOG%" 2>&1
+
+echo Transform XML to "%SUFFIX%" text with markdown...
+echo Transform XML to "%SUFFIX%" text with markdown... >>"%LOG%"
+call "%THIS%\PubNoteXML2TextMarkdown%SUFFIX%.bat" "%~1" "batch=yes" >>"%LOG%" 2>&1
+
 :: Transform XML to FO
 echo Transform XML to FO...
-echo Transform XML to FO... >"%LOG%"
+echo Transform XML to FO... >>"%LOG%"
 java -jar "%SAXON_JAR%" -s:"%INPUTDIR%%INPUT%" -xsl:"%XSLRENDER%" -o:"%FO%" 2>>"%LOG%"
 if errorlevel 1 (
   echo Saxon execution error creating XSL-FO >>"%LOG%"
@@ -183,10 +200,17 @@ goto argloop
 
 :afterargs
 if /i "%LASTARG%"=="batch=yes" goto skipPause
+echo >con ...
 pause
 
 :skipPause
 exit /b %RETVAL%
+
+:fail
+echo.
+echo Render failed, please check "%LOG%"
+set RETVAL=1
+goto afterargs
 
 :usage
 echo Usage: PubNoteRender%SUFFIX%.bat file.xml

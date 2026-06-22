@@ -94,14 +94,14 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:window-width="1823"
-     inkscape:window-height="1187"
+     inkscape:window-height="1022"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.3728408"
-     inkscape:cx="359.10937"
-     inkscape:cy="283.35405"
+     inkscape:cx="351.461"
+     inkscape:cy="288.08876"
      inkscape:window-x="97"
-     inkscape:window-y="39"
+     inkscape:window-y="30"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2"
      fit-margin-top="2"
@@ -113,6 +113,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm" />
+  <rect
+     style="fill:#ffffff;stroke-linecap:square;paint-order:fill markers stroke"
+     id="rect1"
+     width="718.11023"
+     height="566.92914"
+     x="3.3641427e-06"
+     y="-2.1626629e-06" />
   <rect
      y="295.19681"
      x="122.41106"

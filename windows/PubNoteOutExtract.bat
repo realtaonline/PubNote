@@ -35,7 +35,7 @@ set "INPUTBASE=%~n1"
 set "FILEDIR=%~dp1"
 
 :: Paths
-set "SAXON_JAR=%THIS%\..\utilities\saxon12he\saxon12he.jar"
+set "SAXON_JAR=%THIS%\..\utilities\saxonhe\saxonhe.jar"
 set "XSL=%THIS%\..\xsl\PubNoteOutExtract.xsl"
 set "LOG=%FILEDIR%\%~nx1.extract.log.txt"
 
@@ -65,7 +65,7 @@ goto loop
 
 :afterloop
 if /i "%LASTARG%"=="batch=yes" goto end
-
+echo >con ...
 pause
 
 :end

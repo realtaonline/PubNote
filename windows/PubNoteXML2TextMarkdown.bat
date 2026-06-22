@@ -1,4 +1,6 @@
 @echo off
+setlocal
+
 :: ---------------------------------------------------------------------------
 :: PubNoteXML2TextMarkdown.bat
 ::
@@ -11,5 +13,5 @@
 :: ---------------------------------------------------------------------------
 
 set "MARKDOWN=markdown=yes"
-call "%~dp0\PubNoteXML2Text.bat" %1 %2 %3 %4 %5 %6 %7 %8 %9
+call "%~dp0\PubNoteXML2Text.bat" "%~1" "%~2" "%~3" "%~4" "%~5" "%~6" "%~7" "%~8" "%~9"
 exit /b %errorlevel%

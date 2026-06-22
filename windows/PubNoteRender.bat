@@ -18,4 +18,4 @@
 
 set "SUFFIX="
 set "SUFFIXSET=1"
-call "%~dp0\PubNoteRender-en.bat" %1
+call "%~dp0\PubNoteRender-en.bat" "%~1" "%~2" "%~3" "%~4" "%~5" "%~6" "%~7" "%~8" "%~9"

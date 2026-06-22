@@ -89,6 +89,12 @@ TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-markdown.txt"
 
 if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
 
+# Delete outputs and temporary files from any previous run
+if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi
+if [[ -f "$FO" ]];    then rm "$FO" ;  fi
+if [[ -f "$PDF" ]];   then rm "$PDF" ; fi
+if [[ -f "$LOG" ]];   then rm "$LOG" ; fi
+
 # Create the four text renderings for round-tripping
 
 echo Transform XML to XML text...  | tee -a "$LOG"
@@ -99,6 +105,8 @@ echo Transform XML to XML text with markdown... | tee -a "$LOG"
 "$REPO/shell/PubNoteXML2TextMarkdown.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
 
+if [[ ! "${SUFFIX}" == "-us" ]] ; then
+
 echo Transform XML to "${SUFFIX}" text... | tee -a "$LOG"
 "$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
@@ -107,11 +115,11 @@ echo Transform XML to "${SUFFIX}" text with markdown... | tee -a "$LOG"
 "$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
 TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
 
-# Delete outputs and temporary files
-if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi
-if [[ -f "$FO" ]];    then rm "$FO" ;  fi
-if [[ -f "$PDF" ]];   then rm "$PDF" ; fi
-if [[ -f "$LOG" ]];   then rm "$LOG" ; fi
+else
+
+echo Explicitly skipping "$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" and "$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh"
+
+fi
 
 echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ... | tee -a "$LOG"
 

@@ -12,7 +12,7 @@
 :: Temporary files are deleted unless a file named "debug.txt" is found
 :: in the same directory as the input file.
 ::
-:: If "batch=yes" is the final argument, the script will not pause at the end.
+:: If "batch=yes" is the final argument, the script will not wait at the end.
 ::
 :: Usage:
 ::   PubNoteRender-de.bat file.xml [batch=yes]

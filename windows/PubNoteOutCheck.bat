@@ -66,7 +66,7 @@ goto loop
 
 :afterloop
 if /i "%LASTARG%"=="batch=yes" goto end
-
+echo >con ...
 pause
 
 :end
