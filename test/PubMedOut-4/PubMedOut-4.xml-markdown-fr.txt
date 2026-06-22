@@ -1,0 +1,97 @@
+Article PubMed:
+  Citation Medline: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    ID PubMed: @Version: 1  2 
+    Date de fin:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Date de révision:
+      Année: 2000 
+      Mois: 01 
+      Jour: 01 
+    Article: @PubModel: Print 
+      Journal:
+        ISSN: @IssnType: Electronic  0000-0000 
+        Numéro de la revue: @CitedMedium: Internet 
+          Volume: 66 
+          Numéro: 4 
+          Date de publication:
+            Année: 2000 
+            Mois: 01 
+            Jour: 01 
+        Titre: AStudyonPlaceholderData 
+        ISO Abréviation: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Pagination:
+        Numéro de page Medline: 100--1064 
+      Liste des auteurs: @CompleteYN: Y 
+        Auteur: @Valide: Y 
+          Nom: Wilkins 
+          Prénom: Kate 
+          Initiales: AA 
+        Auteur: @Valide: Y 
+          Nom: Sawyer 
+          Prénom: Dorothy 
+          Initiales: AA 
+      Langue: eng 
+      Liste des types de publication:
+        Type de publication: @UI: D016428  JournalArticle 
+        Type de publication: @UI: D013486  ResearchSupport,U.S.Gov't,Non-P.H.S. 
+        Type de publication: @UI: D013487  ResearchSupport,U.S.Gov't,P.H.S. 
+    Informations sur la revue Medline:
+      Pays: UnitedStates 
+      Abréviation du institulé Medline: JPlaceholderStud 
+      ID unique NLM: FAKEID00001 
+      Lien ISSN: 0000-0000 
+    Liste des produits chimiques:
+      Produit chimique:
+        Numéro de registre: 0U46U6E8UK 
+        Nom de la substance: @UI: D009243  NAD 
+      Produit chimique:
+        Numéro de registre: 53-59-8 
+        Nom de la substance: @UI: D009249  NADP 
+    Sous-groupe de citations: IM 
+    Liste des corrections des commentaires:
+      Corrections des commentaires: @RefType: ErratumIn 
+        Source de référence: BiochemPharmacol.1975Aug15;24(16)\:1517-21.doi\:10.1016\/0006-2952(75)90029-5 
+        ID PubMed: @Version: 1  8 
+    Liste des intitulés MeSH:
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D005583  @MajorTopicYN: N  FourierAnalysis 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D009682  @MajorTopicYN: N  MagneticResonanceSpectroscopy 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D008958  @MajorTopicYN: N  Models,Molecular 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D008968  @MajorTopicYN: N  MolecularConformation 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D009243  @MajorTopicYN: Y  NAD 
+        Nom du qualificatif: @UI: Q000031  @MajorTopicYN: N  analogs&derivatives 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D009249  @MajorTopicYN: Y  NADP 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D013329  @MajorTopicYN: N  Structure-ActivityRelationship 
+      Intitulé MeSH:
+        Nom du descripteur: @UI: D013696  @MajorTopicYN: N  Temperature 
+  Données PubMed:
+    Historique:
+      Date de publication PubMed: @Statut de publication: pubmed 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+      Date de publication PubMed: @Statut de publication: medline 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 1 
+      Date de publication PubMed: @Statut de publication: entrez 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+        Heure: 0 
+        Minute: 0 
+    Statut de la publication: ppublish 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @Type d'identifiant: pubmed  FAKEID00001 
+      Identifiant de l'article: @Type d'identifiant: pii  FAKEID00001 
+      Identifiant de l'article: @Type d'identifiant: doi  10.9999\/fake.doi.00001 

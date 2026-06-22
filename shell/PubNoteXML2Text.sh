@@ -14,7 +14,7 @@
 # mixed content, passed as $MARKDOWN
 #
 # Usage:
-#   PubNoteXML2Text.sh file.xml
+#   PubNoteXML2Text.sh [suffix] file.xml
 #
 # Output files are placed in a subdirectory named after the input file.
 # Temporary/intermediate files are cleaned unless "debug.txt" is found

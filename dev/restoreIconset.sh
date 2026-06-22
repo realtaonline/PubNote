@@ -27,6 +27,11 @@ fi
 #  /usr/libexec/PlistBuddy -c "Set :CFBundleExecutable $(basename "$APP")" "$APP/Contents/Info.plist"
 #fi
 
+if [[ -f "$APP/Contents/Resources/Assets.car" ]]; then
+    rm "$APP/Contents/Resources/Assets.car"
+fi
+
 touch "$APP"
+codesign --force --deep --sign - "$APP"
 
 echo "Icon restored to $APP"

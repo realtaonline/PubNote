@@ -8,6 +8,14 @@
 :: Supports an optional language suffix (e.g., -fr, -de) passed as the
 :: first argument, and handles transformation, rendering, and cleanup.
 ::
+:: Also supports an optional language suffix supplied via the SUFFIX
+:: environment variable, set by the caller before invoking this script.
+:: Because "set SUFFIX=" actually removes SUFFIX from the environment
+:: in cmd.exe rather than leaving it defined-but-empty, callers wanting
+:: the empty (raw XML names) case must also set SUFFIXSET=1 to signal
+:: that SUFFIX was deliberately left empty rather than never supplied.
+:: If SUFFIXSET is not set at all, SUFFIX defaults to -en.
+::
 :: Usage:
 ::   PubNoteRender-en.bat [-suffix] file.xml [batch=yes]
 ::
@@ -27,15 +35,18 @@ set "THIS=%~dp0"
 if "%THIS:~-1%"=="\" set "THIS=%THIS:~0,-1%"
 for %%I in ("%THIS%\..") do set "REPO=%%~fI"
 
-:: Optional suffix like -fr, -de, -us
-set "SUFFIX=-en"
-
 :: Check for optional -suffix
 echo %1 | findstr "^-" >nul
 if %errorlevel%==0 (
   set "SUFFIX=%1"
+  set "SUFFIXSET=1"
   shift
 )
+
+:: If no -suffix argument was given and the caller did not set
+:: SUFFIXSET=1 beforehand (to deliberately request an empty SUFFIX),
+:: default to -en.
+if not defined SUFFIXSET set "SUFFIX=-en"
 
 :: Require input file
 if "%~1"=="" goto :usage
@@ -49,7 +60,7 @@ set "INPUT=%~nx1"
 set "INPUTNAME=%~n1"
 set "INPUTDIR=%~dp1"
 set "WORKDIR=%INPUTDIR%%INPUTNAME%"
-set "SWPXDIR=%WORKDIR%\%INPUT%%SUFFIX%"
+set "SWPXDIR=%WORKDIR%\%INPUT%%SUFFIX%-SWPX"
 
 :: File paths
 set "SAXON_JAR=%REPO%\utilities\saxon12he\saxon12he.jar"

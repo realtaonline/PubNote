@@ -7,13 +7,17 @@
 \<PubNote> consists of these out-of-the-box XML metadata tools:
 
 - **PubNoteInCheck** – validation of PubMed submission XML against the submission DTD  
-- **PubNoteInText2XML** - conversion of PubMed submission text rendering into submission XML _(added in Phase 2 of this project)_  
+- **PubNoteInText2XML-xx** - conversion of PubMed submission text rendering into submission XML _(added in Phase 2 of this project)_  
 - **PubNoteInDraft** – drafting of PubMed submission text and XML from JATS article XML _(outlined for Phase 3 of this project)_
 - **PubNoteOutCheck** – validation of PubMed distribution XML against the distribution DTD  
 - **PubNoteOutExtract** – extraction of PubMed distribution XML documents from a set XML document  
 - **PubNoteOutIndent** – indentation of PubMed distribution XML documents from a single or a set XML document  
 - **PubNoteRender-xx** – visualization of PubMed submission or distribution XML to PDF, HTML, DOCX, and text with multiple rendering choices
+
+Suffixes **-xx**:
   - "**-en**"=English (A4), "**-us**"=English (US-letter), "**-de**"=German, "**-fr**"=French _(others welcome!)_
+  - "**-short**"=short labels for use in compression
+  - absent suffix: use XML names as defined in the document models 
 
 \<PubNote> works in four user interfaces, shown in this example where the file `PubMedOut-4.xml` (copied from the repository test directory to a base directory also named "test") is being rendered using `PubNoteRender-de` (found in the user Crane's local copy of this git repository) _(Click any image to enlarge.)_: 
 

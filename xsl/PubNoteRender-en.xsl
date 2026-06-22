@@ -162,7 +162,7 @@
                  select="key('pn:xlateLookup',name(.),$pn:xlateLookup)"/>
       <xsl:choose>
         <xsl:when test="exists($lookupName)">
-          <xsl:value-of select="$lookupName"/>
+          <xsl:value-of select="($lookupName[normalize-space(.)],name(.))[1]"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="name(.)"/>

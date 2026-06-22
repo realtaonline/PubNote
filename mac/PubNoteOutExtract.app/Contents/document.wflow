@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>528</string>
+	<string>534</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -51,12 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {rawinput, parameters}	-- ✳︎ SET THESE TO CUSTOMISE
-	set thisAppName to "PubNoteOutExtract"	set extraParams to "\"param1=value1\" \"param2=value2\""
-
-
-	set shellScriptPath to "../../shell/" &amp; thisAppName &amp; ".sh"    set batchMode to false    set input to {}    repeat with arg in rawinput        if arg is equal to "batch=yes" then            set batchMode to true        else            set end of input to arg        end if    end repeat			if input is {} then		display dialog "❗ Missing file input. Please drag and drop one or more files onto this " &amp; thisAppName &amp; " app." buttons {"OK"} default button "OK"		return	end if		set appPath to POSIX path of (path to me)	set scriptPath to appPath &amp; shellScriptPath		set failedFiles to {}	set passedFiles to {}		repeat with anItem in input		set theFile to POSIX path of anItem		set bashCommand to "/bin/sh " &amp; quoted form of scriptPath &amp; " " &amp; quoted form of theFile &amp; " " &amp; extraParams				try			do shell script bashCommand			set end of passedFiles to theFile		on error			set end of failedFiles to theFile		end try	end repeat		if not batchMode then		if (count of failedFiles) &gt; 0 then			set waitForIt to display dialog "❌ " &amp; thisAppName &amp; " failed for the following file(s):" &amp; linefeed &amp; formatList(failedFiles) buttons {"OK"} default button "OK"		else			set waitForIt to display dialog "✅ All files processed successfully for " &amp; thisAppName &amp; ":" &amp; linefeed &amp; formatList(passedFiles) buttons {"OK"} default button "OK"		end if	end if
-		return input	quitend runon formatList(displayList)	set returnList to ""	set displayCount to count of displayList	set i to 1	repeat with f in displayList		set returnList to returnList &amp; i &amp; "/" &amp; displayCount &amp; " " &amp; f &amp; linefeed		set i to i + 1	end repeat    return returnListend formatList</string>
+					<string>on run {rawinput, parameters}	-- ✳︎ SET THESE TO CUSTOMISE	set thisAppName to "PubNoteOutExtract"	set extraParams to "\"param1=value1\" \"param2=value2\""	set shellScriptPath to "../../shell/" &amp; thisAppName &amp; ".sh"    set batchMode to false    set input to {}    repeat with arg in rawinput        if arg is equal to "batch=yes" then            set batchMode to true        else            set end of input to arg        end if    end repeat			if input is {} then		display dialog "❗ Missing file input. Please drag and drop one or more files onto this " &amp; thisAppName &amp; " app." buttons {"OK"} default button "OK"		return	end if		set appPath to POSIX path of (path to me)	set scriptPath to appPath &amp; shellScriptPath		set failedFiles to {}	set passedFiles to {}		repeat with anItem in input		set theFile to POSIX path of anItem		set bashCommand to "/bin/sh " &amp; quoted form of scriptPath &amp; " " &amp; quoted form of theFile &amp; " " &amp; extraParams				try			do shell script bashCommand			set end of passedFiles to theFile		on error			set end of failedFiles to theFile		end try	end repeat		if not batchMode then		if (count of failedFiles) &gt; 0 then			set waitForIt to display dialog "❌ " &amp; thisAppName &amp; " failed for the following file(s):" &amp; linefeed &amp; formatList(failedFiles) buttons {"OK"} default button "OK"		else			set waitForIt to display dialog "✅ All files processed successfully for " &amp; thisAppName &amp; ":" &amp; linefeed &amp; formatList(passedFiles) buttons {"OK"} default button "OK"		end if	end if		return input	quitend runon formatList(displayList)	set returnList to ""	set displayCount to count of displayList	set i to 1	repeat with f in displayList		set returnList to returnList &amp; i &amp; "/" &amp; displayCount &amp; " " &amp; f &amp; linefeed		set i to i + 1	end repeat    return returnListend formatList</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -110,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>624.500000:883.000000</string>
+				<string>632.000000:949.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

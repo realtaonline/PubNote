@@ -1,0 +1,140 @@
+PMArt:
+  MedCit: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PMID: @Version: 1  4 
+    DtCm:
+      Yr: 2000 
+      Mo: 01 
+      Day: 01 
+    DtRv:
+      Yr: 2000 
+      Mo: 01 
+      Day: 01 
+    Art: @PubModel: Print 
+      Jrn:
+        ISSN: @IssnType: Electronic  0000-0000 
+        JrnIss: @CitedMedium: Internet 
+          Vol: 66 
+          Iss: 4 
+          PubD:
+            Yr: 2000 
+            Mo: 01 
+            Day: 01 
+        Ti: A Study on Placeholder Data 
+        ISOAb: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Pgn:
+        MedPg: 100--1195 
+      AuL: @CompleteYN: Y 
+        Au: @Valid: Y 
+          LName: Holmes 
+          Fore: Ursula 
+          Init: AA 
+        Au: @Valid: Y 
+          LName: Pickwick 
+          Fore: Dorothy 
+          Init: AA 
+        Au: @Valid: Y 
+          LName: Watson 
+          Fore: Ursula 
+          Init: AA 
+      Lang: eng 
+      GrL: @CompleteYN: Y 
+        Gr:
+          GrId: FAKEGRANT 
+          Acro: BB_ 
+          Agcy: FAKEGRANT 
+          Ctry: UnitedKingdom 
+        Gr:
+          GrId: FAKEGRANT 
+          Acro: MRC_ 
+          Agcy: FAKEGRANT 
+          Ctry: UnitedKingdom 
+        Gr:
+          GrId: FAKEGRANT 
+          Agcy: FAKEGRANT 
+          Ctry: UnitedKingdom 
+      PubTyL:
+        PubTy: @UI: D016428  JournalArticle 
+    MedJI:
+      Ctry: UnitedStates 
+      MedTA: JPlaceholderStud 
+      NlmId: FAKEID00001 
+      ISSNLk: 0000-0000 
+    ChemL:
+      Chem:
+        RegN: 0 
+        NmSub: @UI: D003911  Dextrans 
+      Chem:
+        RegN: 886U3H6UFF 
+        NmSub: @UI: D002738  Chloroquine 
+      Chem:
+        RegN: EC3.1.6.- 
+        NmSub: @UI: D013429  Sulfatases 
+      Chem:
+        RegN: EC3.1.6.8 
+        NmSub: @UI: D002553  Cerebroside-Sulfatase 
+      Chem:
+        RegN: EC3.2.1.31 
+        NmSub: @UI: D005966  Glucuronidase 
+    CitSub: IM 
+    MeshL:
+      Mesh:
+        DscN: @UI: D001692  @MajorTopicYN: N  BiologicalTransport 
+      Mesh:
+        DscN: @UI: D002478  @MajorTopicYN: N  Cells,Cultured 
+      Mesh:
+        DscN: @UI: D002553  @MajorTopicYN: N  Cerebroside-Sulfatase 
+        QualN: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+      Mesh:
+        DscN: @UI: D002738  @MajorTopicYN: N  Chloroquine 
+        QualN: @UI: Q000494  @MajorTopicYN: Y  pharmacology 
+      Mesh:
+        DscN: @UI: D003911  @MajorTopicYN: N  Dextrans 
+        QualN: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      Mesh:
+        DscN: @UI: D005347  @MajorTopicYN: N  Fibroblasts 
+        QualN: @UI: Q000201  @MajorTopicYN: N  enzymology 
+        QualN: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      Mesh:
+        DscN: @UI: D005966  @MajorTopicYN: N  Glucuronidase 
+        QualN: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+      Mesh:
+        DscN: @UI: D006801  @MajorTopicYN: N  Humans 
+      Mesh:
+        DscN: @UI: D007966  @MajorTopicYN: N  Leukodystrophy,Metachromatic 
+        QualN: @UI: Q000201  @MajorTopicYN: N  enzymology 
+      Mesh:
+        DscN: @UI: D008247  @MajorTopicYN: N  Lysosomes 
+        QualN: @UI: Q000187  @MajorTopicYN: N  drugeffects 
+        QualN: @UI: Q000201  @MajorTopicYN: Y  enzymology 
+      Mesh:
+        DscN: @UI: D010873  @MajorTopicYN: N  Pinocytosis 
+        QualN: @UI: Q000187  @MajorTopicYN: N  drugeffects 
+      Mesh:
+        DscN: @UI: D012867  @MajorTopicYN: N  Skin 
+        QualN: @UI: Q000201  @MajorTopicYN: N  enzymology 
+      Mesh:
+        DscN: @UI: D013429  @MajorTopicYN: N  Sulfatases 
+        QualN: @UI: Q000378  @MajorTopicYN: Y  metabolism 
+  PMD:
+    Hist:
+      PMPubD: @PubSt: pubmed 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+      PMPubD: @PubSt: medline 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+        Hr: 0 
+        Min: 1 
+      PMPubD: @PubSt: entrez 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+        Hr: 0 
+        Min: 0 
+    PubStat: ppublish 
+    ArtIdL:
+      ArtId: @IdTy: pubmed  FAKEID00001 
+      ArtId: @IdTy: pii  FAKEID00001 
+      ArtId: @IdTy: doi  10.9999\/fake.doi.00001 

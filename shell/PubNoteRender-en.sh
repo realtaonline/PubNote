@@ -9,6 +9,12 @@
 # Supports an optional language suffix (e.g., -fr, -de) passed as the
 # first argument, and handles transformation, rendering, and cleanup.
 #
+# Also supports an optional language suffix supplied via the environment
+# variable $SUFFIX (e.g., SUFFIX=-de PubNoteRender-en.sh file.xml). If
+# $SUFFIX is explicitly set to the empty string, the raw XML element and
+# attribute names are used as labels rather than natural language labels.
+# If $SUFFIX is not set at all, it defaults to "-en".
+#
 # Usage:
 #   PubNoteRender-en.sh [-suffix] file.xml
 #
@@ -21,13 +27,13 @@
 # Get the absolute path to the script's parent's directory (inside the repo)
 REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-# Optional suffix like -fr, -de, -us
-SUFFIX="-en"
-
 # Check for optional -suffix argument
 if [[ "$1" == -* ]]; then
   SUFFIX="$1"
   shift
+fi
+if [[ -z "${SUFFIX+x}" ]]; then
+  SUFFIX="-en"
 fi
 
 # Require input file
@@ -58,7 +64,7 @@ HTML="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.html"
 DOCX_NAME="${INPUT}${SUFFIX}.docx"
 SWPX_NAME="${INPUT}${SUFFIX}.swpx"
 DOCX="$FILEDIR/${INPUTBASE}/${DOCX_NAME}"
-SWPXDIR="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}/"
+SWPXDIR="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-SWPX/"
 DOCX_TEMP="$SWPXDIR/${DOCX_NAME}"
 SWPX="$SWPXDIR/${SWPX_NAME}"
 DOTX="$REPO/dev/PubNoteRender.dotx"

@@ -1,4 +1,4 @@
-{ 20260618-2354Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
+{ 20260621-0112Z https://github.com/CraneSoftwrights/Crane-txt2xml#readme }
 
 
   -__document_element = ( ArticleSet | Article ), __WS*.
@@ -76,10 +76,10 @@ ArchiveCopySource = __WS*, ( ( -"ArchiveCopySource" | ( -"Archive", __WS+, -"Cop
       ( __WS*, __type__Article__OPTIONAL )*.
     -__type__Article__OPTIONAL = ( __attr____type__Article__VersionID | __attr____type__Article__VersionDate ).
     __attr____type__Article__VersionID>__attr = __alias____type__Article__VersionID, __name____type__Article__VersionID, __WS*, xs_string__attr.
-    @__alias____type__Article__VersionID>alias = -"@", ( "VersionID" | ( "Version", __WS+, "ID" ) ), -':'.
+    @__alias____type__Article__VersionID>alias = -"@", ( "VersionID" | ( "Version", __WS+, "ID" ) | ( "Versions-ID" ) ), -':'.
     @__name____type__Article__VersionID>name = +"VersionID".
     __attr____type__Article__VersionDate>__attr = __alias____type__Article__VersionDate, __name____type__Article__VersionDate, __WS*, xs_string__attr.
-    @__alias____type__Article__VersionDate>alias = -"@", ( "VersionDate" | ( "Version", __WS+, "Date" ) ), -':'.
+    @__alias____type__Article__VersionDate>alias = -"@", ( "VersionDate" | ( "Version", __WS+, "Date" ) | ( "Versionsdatum" ) ), -':'.
     @__name____type__Article__VersionDate>name = +"VersionDate".
   -__content____type__AbstractText =  -__attrs____type__AbstractText, __WS*, __mixed_content.
 __PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_content).
@@ -87,7 +87,7 @@ __PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_conte
       ( __WS*, __type__AbstractText__MANDATORY1of1 )+.
       -__type__AbstractText__MANDATORY1of1 =  ( __attr____type__AbstractText__Label ).
     __attr____type__AbstractText__Label>__attr = __alias____type__AbstractText__Label, __name____type__AbstractText__Label, __WS*, xs_string__attr.
-    @__alias____type__AbstractText__Label>alias = -"@", ( "Label" ), -':'.
+    @__alias____type__AbstractText__Label>alias = -"@", ( "Label" | ( "Bezeichnung" ) ), -':'.
     @__name____type__AbstractText__Label>name = +"Label".
   -__content__abstract = __WS*, __mixed_content.
   -__content__other.abstract = __WS*, __mixed_content.
@@ -97,7 +97,7 @@ __PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_conte
       ( __WS*, __type__PubDate__OPTIONAL )*.
     -__type__PubDate__OPTIONAL = ( __attr____type__PubDate__PubStatus ).
     __attr____type__PubDate__PubStatus>__attr = __alias____type__PubDate__PubStatus, __name____type__PubDate__PubStatus, __WS*, pub.status__attr.
-    @__alias____type__PubDate__PubStatus>alias = -"@", ( "PubStatus" | ( "Pub", __WS+, "Status" ) ), -':'.
+    @__alias____type__PubDate__PubStatus>alias = -"@", ( "PubStatus" | ( "Pub", __WS+, "Status" ) | ( "Veröffentlichungsstatus" ) ), -':'.
     @__name____type__PubDate__PubStatus>name = +"PubStatus".
   -__content____type__History = ( PubDate* ).
   -__content____type__Replaces =  -__attrs____type__Replaces, xs_string.
@@ -105,7 +105,7 @@ __PLUS>AbstractText = -"+",  -__attrs____type__AbstractText, ('+' | __PLUS_conte
       ( __WS*, __type__Replaces__OPTIONAL )*.
     -__type__Replaces__OPTIONAL = ( __attr____type__Replaces__IdType ).
     __attr____type__Replaces__IdType>__attr = __alias____type__Replaces__IdType, __name____type__Replaces__IdType, __WS*, art.id.type__attr.
-    @__alias____type__Replaces__IdType>alias = -"@", ( "IdType" | ( "Id", __WS+, "Type" ) ), -':'.
+    @__alias____type__Replaces__IdType>alias = -"@", ( "IdType" | ( "Id", __WS+, "Type" ) | ( "Kennungstyp" ) ), -':'.
     @__name____type__Replaces__IdType>name = +"IdType".
   -__content____type__ArticleTitle = __WS*, __mixed_content.
 __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
@@ -115,7 +115,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__FirstPage__OPTIONAL )*.
     -__type__FirstPage__OPTIONAL = ( __attr____type__FirstPage__LZero ).
     __attr____type__FirstPage__LZero>__attr = __alias____type__FirstPage__LZero, __name____type__FirstPage__LZero, __WS*, ( ( ( 'Save', __WS ) |      ( '"', __WS*, 'Save', __WS*,'"' ), +'Save' ) | ( ( 'save', __WS ) |      ( '"', __WS*, 'save', __WS*,'"' ), +'save' ) | ( ( 'delete', __WS ) |      ( '"', __WS*, 'delete', __WS*,'"' ), +'delete' ) ).
-    @__alias____type__FirstPage__LZero>alias = -"@", ( "LZero" ), -':'.
+    @__alias____type__FirstPage__LZero>alias = -"@", ( "LZero" | ( "Führende", __WS+, "Null" ) ), -':'.
     @__name____type__FirstPage__LZero>name = +"LZero".
   -__content____type__AuthorList = ( Author* ).
   -__content____type__Author =  -__attrs____type__Author, ( ( ( FirstName, MiddleName?, LastName, Suffix?, Initials? ) | CollectiveName ), ( ( Affiliation | AffiliationInfo+ )? ), Identifier* ).
@@ -123,14 +123,14 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__Author__OPTIONAL )*.
     -__type__Author__OPTIONAL = ( __attr____type__Author__EqualContrib ).
     __attr____type__Author__EqualContrib>__attr = __alias____type__Author__EqualContrib, __name____type__Author__EqualContrib, __WS*, ( ( ( 'Y', __WS ) |      ( '"', __WS*, 'Y', __WS*,'"' ), +'Y' ) | ( ( 'N', __WS ) |      ( '"', __WS*, 'N', __WS*,'"' ), +'N' ) ).
-    @__alias____type__Author__EqualContrib>alias = -"@", ( "EqualContrib" | ( "Equal", __WS+, "Contrib" ) ), -':'.
+    @__alias____type__Author__EqualContrib>alias = -"@", ( "EqualContrib" | ( "Equal", __WS+, "Contrib" ) | ( "Gleichberechtigter", __WS+, "Beitrag" ) ), -':'.
     @__name____type__Author__EqualContrib>name = +"EqualContrib".
   -__content____type__FirstName =  -__attrs____type__FirstName, xs_string.
     -__attrs____type__FirstName = 
       ( __WS*, __type__FirstName__OPTIONAL )*.
     -__type__FirstName__OPTIONAL = ( __attr____type__FirstName__EmptyYN ).
     __attr____type__FirstName__EmptyYN>__attr = __alias____type__FirstName__EmptyYN, __name____type__FirstName__EmptyYN, __WS*, ( ( ( 'Y', __WS ) |      ( '"', __WS*, 'Y', __WS*,'"' ), +'Y' ) | ( ( 'N', __WS ) |      ( '"', __WS*, 'N', __WS*,'"' ), +'N' ) ).
-    @__alias____type__FirstName__EmptyYN>alias = -"@", ( "EmptyYN" | ( "Empty", __WS+, "YN" ) ), -':'.
+    @__alias____type__FirstName__EmptyYN>alias = -"@", ( "EmptyYN" | ( "Empty", __WS+, "YN" ) | ( "Leer" ) ), -':'.
     @__name____type__FirstName__EmptyYN>name = +"EmptyYN".
   -__content____type__AffiliationInfo = ( Affiliation, Identifier* ).
   -__content____type__Identifier =  -__attrs____type__Identifier, xs_string.
@@ -138,7 +138,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__Identifier__MANDATORY1of1 )+.
       -__type__Identifier__MANDATORY1of1 =  ( __attr____type__Identifier__Source ).
     __attr____type__Identifier__Source>__attr = __alias____type__Identifier__Source, __name____type__Identifier__Source, __WS*, xs_string__attr.
-    @__alias____type__Identifier__Source>alias = -"@", ( "Source" ), -':'.
+    @__alias____type__Identifier__Source>alias = -"@", ( "Source" | ( "Quelle" ) ), -':'.
     @__name____type__Identifier__Source>name = +"Source".
   -__content____type__ArticleIdList = ( ArticleId* ).
   -__content____type__ArticleId =  -__attrs____type__ArticleId, xs_string.
@@ -146,7 +146,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__ArticleId__OPTIONAL )*.
     -__type__ArticleId__OPTIONAL = ( __attr____type__ArticleId__IdType ).
     __attr____type__ArticleId__IdType>__attr = __alias____type__ArticleId__IdType, __name____type__ArticleId__IdType, __WS*, art.id.type__attr.
-    @__alias____type__ArticleId__IdType>alias = -"@", ( "IdType" | ( "Id", __WS+, "Type" ) ), -':'.
+    @__alias____type__ArticleId__IdType>alias = -"@", ( "IdType" | ( "Id", __WS+, "Type" ) | ( "Kennungstyp" ) ), -':'.
     @__name____type__ArticleId__IdType>name = +"IdType".
   -__content____type__OtherAbstract =  -__attrs____type__OtherAbstract, __content__other.abstract.
     -__attrs____type__OtherAbstract = 
@@ -159,7 +159,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
     @__alias____type__OtherAbstract__Language>alias = -"@", ( "Language" | ( "Sprache" ) ), -':'.
     @__name____type__OtherAbstract__Language>name = +"Language".
     __attr____type__OtherAbstract__Type>__attr = __alias____type__OtherAbstract__Type, __name____type__OtherAbstract__Type, __WS*, xs_string__attr.
-    @__alias____type__OtherAbstract__Type>alias = -"@", ( "Type" ), -':'.
+    @__alias____type__OtherAbstract__Type>alias = -"@", ( "Type" | ( "Typ" ) ), -':'.
     @__name____type__OtherAbstract__Type>name = +"Type".
   -__content____type__ObjectList = ( Object+ ).
   -__content____type__Object =  -__attrs____type__Object, ( Param* ).
@@ -167,7 +167,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__Object__MANDATORY1of1 )+.
       -__type__Object__MANDATORY1of1 =  ( __attr____type__Object__Type ).
     __attr____type__Object__Type>__attr = __alias____type__Object__Type, __name____type__Object__Type, __WS*, xs_string__attr.
-    @__alias____type__Object__Type>alias = -"@", ( "Type" ), -':'.
+    @__alias____type__Object__Type>alias = -"@", ( "Type" | ( "Typ" ) ), -':'.
     @__name____type__Object__Type>name = +"Type".
   -__content____type__Param =  -__attrs____type__Param, __WS*, __mixed_content.
     -__attrs____type__Param = 
@@ -184,7 +184,7 @@ __PIPE>ArticleTitle = -"|",  ('|' | __PIPE_content).
       ( __WS*, __type__PMID__OPTIONAL )*.
     -__type__PMID__OPTIONAL = ( __attr____type__PMID__VersionID ).
     __attr____type__PMID__VersionID>__attr = __alias____type__PMID__VersionID, __name____type__PMID__VersionID, __WS*, xs_string__attr.
-    @__alias____type__PMID__VersionID>alias = -"@", ( "VersionID" | ( "Version", __WS+, "ID" ) ), -':'.
+    @__alias____type__PMID__VersionID>alias = -"@", ( "VersionID" | ( "Version", __WS+, "ID" ) | ( "Versions-ID" ) ), -':'.
     @__name____type__PMID__VersionID>name = +"VersionID".
   -__content____type__sup = __WS*, __mixed_content.
 __CARET>sup = -"^",  ('^' | __CARET_content).
@@ -208,10 +208,10 @@ __UNDER>u = -"_",  ('_' | __UNDER_content).
       -__type__ELocationID__OPTIONAL = ( __attr____type__ELocationID__ValidYN ).
       -__type__ELocationID__MANDATORY1of1 =  ( __attr____type__ELocationID__EIdType ).
     __attr____type__ELocationID__EIdType>__attr = __alias____type__ELocationID__EIdType, __name____type__ELocationID__EIdType, __WS*, ( ( ( 'doi', __WS ) |      ( '"', __WS*, 'doi', __WS*,'"' ), +'doi' ) | ( ( 'pii', __WS ) |      ( '"', __WS*, 'pii', __WS*,'"' ), +'pii' ) ).
-    @__alias____type__ELocationID__EIdType>alias = -"@", ( "EIdType" | ( "EId", __WS+, "Type" ) ), -':'.
+    @__alias____type__ELocationID__EIdType>alias = -"@", ( "EIdType" | ( "EId", __WS+, "Type" ) | ( "Typ", __WS+, "der", __WS+, "elektronischen", __WS+, "Kennung" ) ), -':'.
     @__name____type__ELocationID__EIdType>name = +"EIdType".
     __attr____type__ELocationID__ValidYN>__attr = __alias____type__ELocationID__ValidYN, __name____type__ELocationID__ValidYN, __WS*, ( ( ( 'Y', __WS ) |      ( '"', __WS*, 'Y', __WS*,'"' ), +'Y' ) | ( ( 'N', __WS ) |      ( '"', __WS*, 'N', __WS*,'"' ), +'N' ) ).
-    @__alias____type__ELocationID__ValidYN>alias = -"@", ( "ValidYN" | ( "Valid", __WS+, "YN" ) ), -':'.
+    @__alias____type__ELocationID__ValidYN>alias = -"@", ( "ValidYN" | ( "Valid", __WS+, "YN" ) | ( "Gültig" ) ), -':'.
     @__name____type__ELocationID__ValidYN>name = +"ValidYN".
   -__content____type__CoiStatement = __WS*, __mixed_content.
   -__content____type__ArchiveCopySource =  -__attrs____type__ArchiveCopySource, xs_string.
@@ -219,7 +219,7 @@ __UNDER>u = -"_",  ('_' | __UNDER_content).
       ( __WS*, __type__ArchiveCopySource__OPTIONAL )*.
     -__type__ArchiveCopySource__OPTIONAL = ( __attr____type__ArchiveCopySource__DocType ).
     __attr____type__ArchiveCopySource__DocType>__attr = __alias____type__ArchiveCopySource__DocType, __name____type__ArchiveCopySource__DocType, __WS*, ( ( ( 'pdf', __WS ) |      ( '"', __WS*, 'pdf', __WS*,'"' ), +'pdf' ) ).
-    @__alias____type__ArchiveCopySource__DocType>alias = -"@", ( "DocType" | ( "Doc", __WS+, "Type" ) ), -':'.
+    @__alias____type__ArchiveCopySource__DocType>alias = -"@", ( "DocType" | ( "Doc", __WS+, "Type" ) | ( "Dokumenttyp" ) ), -':'.
     @__name____type__ArchiveCopySource__DocType>name = +"DocType".
   -pub.status.int = ( ( ( 'pmc', __WS ) |      ( '"', __WS*, 'pmc', __WS*,'"' ), +'pmc' ) | ( ( 'pmcr', __WS ) |      ( '"', __WS*, 'pmcr', __WS*,'"' ), +'pmcr' ) | ( ( 'pubmed', __WS ) |      ( '"', __WS*, 'pubmed', __WS*,'"' ), +'pubmed' ) | ( ( 'pubmedr', __WS ) |      ( '"', __WS*, 'pubmedr', __WS*,'"' ), +'pubmedr' ) | ( ( 'premedline', __WS ) |      ( '"', __WS*, 'premedline', __WS*,'"' ), +'premedline' ) | ( ( 'medline', __WS ) |      ( '"', __WS*, 'medline', __WS*,'"' ), +'medline' ) | ( ( 'medliner', __WS ) |      ( '"', __WS*, 'medliner', __WS*,'"' ), +'medliner' ) ).
   -pub.status.int__attr = pub.status.int.

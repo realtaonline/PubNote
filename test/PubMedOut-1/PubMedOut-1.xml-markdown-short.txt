@@ -1,0 +1,95 @@
+PMArt:
+  MedCit: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PMID: @Version: 1  5 
+    DtCm:
+      Yr: 2000 
+      Mo: 01 
+      Day: 01 
+    DtRv:
+      Yr: 2000 
+      Mo: 01 
+      Day: 01 
+    Art: @PubModel: Print 
+      Jrn:
+        ISSN: @IssnType: Electronic  0000-0000 
+        JrnIss: @CitedMedium: Internet 
+          Vol: 66 
+          Iss: 4 
+          PubD:
+            Yr: 2000 
+            Mo: 01 
+            Day: 01 
+        Ti: AStudyonPlaceholderData 
+        ISOAb: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Pgn:
+        MedPg: 100--1193 
+      AuL: @CompleteYN: Y 
+        Au: @Valid: Y 
+          LName: Copperfield 
+          Fore: Victor 
+          Init: AA 
+        Au: @Valid: Y 
+          LName: Darcy 
+          Fore: Tom 
+          Init: AA 
+      Lang: eng 
+      PubTyL:
+        PubTy: @UI: D016428  JournalArticle 
+    MedJI:
+      Ctry: UnitedStates 
+      MedTA: JPlaceholderStud 
+      NlmId: FAKEID00001 
+      ISSNLk: 0000-0000 
+    ChemL:
+      Chem:
+        RegN: 0 
+        NmSub: @UI: D006422  Hemerythrin 
+      Chem:
+        RegN: 0 
+        NmSub: @UI: D008667  Metalloproteins 
+      Chem:
+        RegN: 0 
+        NmSub: @UI: D009124  MuscleProteins 
+    CitSub: IM 
+    MeshL:
+      Mesh:
+        DscN: @UI: D000818  @MajorTopicYN: N  Animals 
+      Mesh:
+        DscN: @UI: D003063  @MajorTopicYN: N  Cnidaria 
+      Mesh:
+        DscN: @UI: D003201  @MajorTopicYN: N  Computers 
+      Mesh:
+        DscN: @UI: D006422  @MajorTopicYN: Y  Hemerythrin 
+      Mesh:
+        DscN: @UI: D008667  @MajorTopicYN: Y  Metalloproteins 
+      Mesh:
+        DscN: @UI: D008958  @MajorTopicYN: N  Models,Molecular 
+      Mesh:
+        DscN: @UI: D009124  @MajorTopicYN: Y  MuscleProteins 
+      Mesh:
+        DscN: @UI: D011487  @MajorTopicYN: N  ProteinConformation 
+      Mesh:
+        DscN: @UI: D013045  @MajorTopicYN: N  SpeciesSpecificity 
+  PMD:
+    Hist:
+      PMPubD: @PubSt: pubmed 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+      PMPubD: @PubSt: medline 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+        Hr: 0 
+        Min: 1 
+      PMPubD: @PubSt: entrez 
+        Yr: 2000 
+        Mo: 01 
+        Day: 01 
+        Hr: 0 
+        Min: 0 
+    PubStat: ppublish 
+    ArtIdL:
+      ArtId: @IdTy: pubmed  FAKEID00001 
+      ArtId: @IdTy: pii  FAKEID00001 
+      ArtId: @IdTy: doi  10.9999\/fake.doi.00001 

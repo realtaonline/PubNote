@@ -6,5 +6,6 @@ utilities/fop/fop-config.windows.xml
 build/
 
 # Miscellaneous local development
+*.zip
 *.tar.gz
 tarball.sh

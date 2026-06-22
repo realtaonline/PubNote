@@ -7,7 +7,7 @@
 # an equivalent XML file using markdown in the mixed content
 #
 # Usage:
-#   PubNoteXML2TextMarkdown-fr.sh [-suffix] file.xml
+#   PubNoteXML2TextMarkdown-fr.sh file.xml
 # 
 # ---------------------------------------------------------------------------
 

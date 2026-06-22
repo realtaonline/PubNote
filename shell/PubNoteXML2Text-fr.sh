@@ -7,7 +7,7 @@
 # using French labels for the elements and attributes.
 #
 # Usage:
-#   PubNoteXML2Text-fr.sh [-suffix] file.xml
+#   PubNoteXML2Text-fr.sh file.xml
 # 
 # ---------------------------------------------------------------------------
 

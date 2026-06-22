@@ -7,7 +7,7 @@
 # using English labels for the elements and attributes.
 #
 # Usage:
-#   PubNoteXML2Text-en.sh [-suffix] file.xml
+#   PubNoteXML2Text-en.sh file.xml
 # 
 # ---------------------------------------------------------------------------
 
