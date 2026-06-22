@@ -59,6 +59,6 @@ if [ ! -f "$1" ]; then echo Input XML "$1" not found ; exit 1 ; fi
 # Remove any old result file
 if [ -f "$OUTPUT" ]; then rm "$OUTPUT" ; fi
 
-java -cp "$REPO/utilities/saxonhe/saxonhe.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no $MARKDOWN
+java -cp "$REPO/utilities/saxonhe/saxonhe.jar" net.sf.saxon.Transform -s:"$1" -xsl:"$REPO/xsl/PubNote-xml2txt${SUFFIX}.xsl" -o:"$OUTPUT" labels=no $PNNOINDENT $MARKDOWN
 ret=$?
 if [ "$ret" -ne "0" ]; then exit $ret ; fi

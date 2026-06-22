@@ -55,7 +55,7 @@ set "OUTPUT=%FILEDIR%%INPUTBASE%\%INPUT%%MARKDOWNSUFFIX%%SUFFIX%.txt"
 :: Remove any old result file
 if exist "%OUTPUT%" del "%OUTPUT%"
 
-java -cp "%REPO%\utilities\saxonhe\saxonhe.jar" net.sf.saxon.Transform -s:"%~1" -xsl:"%REPO%\xsl\PubNote-xml2txt%SUFFIX%.xsl" -o:"%OUTPUT%" labels=no %MARKDOWN%
+java -cp "%REPO%\utilities\saxonhe\saxonhe.jar" net.sf.saxon.Transform -s:"%~1" -xsl:"%REPO%\xsl\PubNote-xml2txt%SUFFIX%.xsl" -o:"%OUTPUT%" labels=no %PNNOINDENT% %MARKDOWN%
 set RETVAL=%errorlevel%
 
 REM Check for "batch=yes" as the last argument

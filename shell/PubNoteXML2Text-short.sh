@@ -11,4 +11,4 @@
 # 
 # ---------------------------------------------------------------------------
 
-SUFFIX=-short $(dirname "$0")/PubNoteXML2Text.sh "$1"
+SUFFIX=-short PNNOINDENT="indent=no" $(dirname "$0")/PubNoteXML2Text.sh "$1"

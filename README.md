@@ -32,7 +32,7 @@ Suffixes **-xx**:
 
 <img src="images/formats.png" width="100%"/>
 
-Also included is a simple text file rendering following particular syntax conventions recognized in the conversion from text to XML. Each of the languages is available to be used to prep for editing and conversion:
+Also included is a simple text file rendering following particular syntax conventions recognized in the conversion from text to XML. Each of the languages is available to be used to prep for editing and conversion ([XML](test/PubMedIn-1/PubMedIn-1.xml.txt), [English](test/PubMedIn-1/PubMedIn-1.xml-en.txt), [German](test/PubMedIn-1/PubMedIn-1.xml-de.txt), and [French](test/PubMedIn-1/PubMedIn-1.xml-fr.txt)):
 
 <img src="images/multilingual.png" width="100%"/>
 
