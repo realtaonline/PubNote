@@ -1,0 +1,50 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+  <!-- PubMed DTDs -->
+  <public publicId="-//NLM//DTD PubMed 2.5//EN" uri="pubmed_250101.dtd"/>
+  <public publicId="-//NLM//DTD PubMed 2.x//EN" uri="PubMed.dtd"/>
+  <system systemId="pubmed_250101.dtd" uri="pubmed_250101.dtd"/>
+  <system systemId="PubMed.dtd" uri="PubMed.dtd"/>
+
+  <!-- MathML Module -->
+  <system systemId="mathml-in-pubmed.mod" uri="mathml-in-pubmed.mod"/>
+
+  <!-- W3C HTML Entity Modules -->
+  <public publicId="-//W3C//ENTITIES Latin 1 for XHTML//EN" uri="xhtml-lat1.ent"/>
+  <public publicId="-//W3C//ENTITIES Special for XHTML//EN" uri="xhtml-special.ent"/>
+  <public publicId="-//W3C//ENTITIES Symbols for XHTML//EN" uri="xhtml-symbol.ent"/>
+  <public publicId="-//W3C//ENTITIES Predefined for XML//EN" uri="predefined.ent"/>
+
+  <!-- ISO 8879:1986 Entity Sets -->
+  <public publicId="-//ISO 8879:1986//ENTITIES Box and Line Drawing//EN" uri="isobox.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Diacritical Marks//EN" uri="isodia.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Greek Letters//EN" uri="isogrk3.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Added Latin 1//EN" uri="isolat1.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Added Latin 2//EN" uri="isolat2.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN" uri="isonum.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Publishing//EN" uri="isopub.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Russian Cyrillic//EN" uri="isocyr1.ent"/>
+  <public publicId="-//ISO 8879:1986//ENTITIES Non-Russian Cyrillic//EN" uri="isocyr2.ent"/>
+
+  <!-- ISO 9573-13 MathML Symbol Sets -->
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Arrow Relations//EN" uri="isoamsa.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Binary Operators//EN" uri="isoamsb.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Delimiters//EN" uri="isoamsc.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Negated Relations//EN" uri="isoamsn.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Ordinary//EN" uri="isoamso.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Added Math Symbols: Relations//EN" uri="isoamsr.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Alternative Greek Symbols//EN" uri="isogrk3.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Math Alphabets: Fraktur//EN" uri="isomfrk.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Math Alphabets: Open Face//EN" uri="isomopf.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES Math Alphabets: Script//EN" uri="isomscr.ent"/>
+  <public publicId="-//ISO 9573-13//ENTITIES General Technical//EN" uri="isotech.ent"/>
+
+  <!-- W3C sets-->
+  <public publicId="-//W3C//ENTITIES Combined Character Entities//EN" uri="isochars.ent"/>
+
+  <!-- MathML-specific extensions -->
+  <system systemId="mmlextra.ent" uri="mmlextra.ent"/>
+  <system systemId="mmlalias.ent" uri="mmlalias.ent"/>
+
+</catalog>

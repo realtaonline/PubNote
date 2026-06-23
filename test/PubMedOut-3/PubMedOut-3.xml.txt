@@ -1,0 +1,107 @@
+PubmedArticle:
+  MedlineCitation: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PMID: @Version: 1  3 
+    DateCompleted:
+      Year: 2000 
+      Month: 01 
+      Day: 01 
+    DateRevised:
+      Year: 2000 
+      Month: 01 
+      Day: 01 
+    Article: @PubModel: Print 
+      Journal:
+        ISSN: @IssnType: Print  0000-0000 
+        JournalIssue: @CitedMedium: Print 
+          Volume: 66 
+          Issue: 4 
+          PubDate:
+            Year: 2000 
+            Month: 01 
+            Day: 01 
+        Title: AStudyonPlaceholderData 
+        ISOAbbreviation: JPlaceholderStud ArticleTitle: "AStudyonPlaceholderData"
+      Pagination:
+        MedlinePgn: 100--1175 
+      AuthorList: @CompleteYN: Y 
+        Author: @ValidYN: Y 
+          LastName: Crusoe 
+          ForeName: Yvonne 
+          Initials: AA 
+        Author: @ValidYN: Y 
+          LastName: Pickwick 
+          ForeName: Zachary 
+          Initials: AA 
+      Language: eng 
+      PublicationTypeList:
+        PublicationType: @UI: D016428  JournalArticle 
+        PublicationType: @UI: D013487  ResearchSupport,U.S.Gov't,P.H.S. 
+    MedlineJournalInfo:
+      Country: UnitedStates 
+      MedlineTA: JPlaceholderStud 
+      NlmUniqueID: FAKEID00001 
+      ISSNLinking: 0000-0000 
+    ChemicalList:
+      Chemical:
+        RegistryNumber: 00BH33GNGH 
+        NameOfSubstance: @UI: D002104  Cadmium 
+      Chemical:
+        RegistryNumber: EC4.2.1.1 
+        NameOfSubstance: @UI: D002256  CarbonicAnhydrases 
+      Chemical:
+        RegistryNumber: FXS1BY2PGL 
+        NameOfSubstance: @UI: D008628  Mercury 
+      Chemical:
+        RegistryNumber: J41CSQ7QDS 
+        NameOfSubstance: @UI: D015032  Zinc 
+    CitationSubset: IM 
+    MeshHeadingList:
+      MeshHeading:
+        DescriptorName: @UI: D000818  @MajorTopicYN: N  Animals 
+      MeshHeading:
+        DescriptorName: @UI: D001665  @MajorTopicYN: N  BindingSites 
+      MeshHeading:
+        DescriptorName: @UI: D002104  @MajorTopicYN: Y  Cadmium 
+      MeshHeading:
+        DescriptorName: @UI: D002256  @MajorTopicYN: Y  CarbonicAnhydrases 
+        QualifierName: @UI: Q000378  @MajorTopicYN: N  metabolism 
+      MeshHeading:
+        DescriptorName: @UI: D002417  @MajorTopicYN: N  Cattle 
+      MeshHeading:
+        DescriptorName: @UI: D006801  @MajorTopicYN: N  Humans 
+      MeshHeading:
+        DescriptorName: @UI: D006863  @MajorTopicYN: N  Hydrogen-IonConcentration 
+      MeshHeading:
+        DescriptorName: @UI: D009682  @MajorTopicYN: N  MagneticResonanceSpectroscopy 
+      MeshHeading:
+        DescriptorName: @UI: D008628  @MajorTopicYN: Y  Mercury 
+      MeshHeading:
+        DescriptorName: @UI: D011485  @MajorTopicYN: N  ProteinBinding 
+      MeshHeading:
+        DescriptorName: @UI: D011487  @MajorTopicYN: N  ProteinConformation 
+      MeshHeading:
+        DescriptorName: @UI: D015032  @MajorTopicYN: Y  Zinc 
+        QualifierName: @UI: Q000494  @MajorTopicYN: N  pharmacology 
+  PubmedData:
+    History:
+      PubMedPubDate: @PubStatus: pubmed 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+      PubMedPubDate: @PubStatus: medline 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+        Hour: 0 
+        Minute: 1 
+      PubMedPubDate: @PubStatus: entrez 
+        Year: 2000 
+        Month: 01 
+        Day: 01 
+        Hour: 0 
+        Minute: 0 
+    PublicationStatus: ppublish 
+    ArticleIdList:
+      ArticleId: @IdType: pubmed  FAKEID00001 
+      ArticleId: @IdType: pii  FAKEID00001 
+      ArticleId: @IdType: doi  10.9999\/fake.doi.00001 

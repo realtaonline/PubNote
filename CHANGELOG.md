@@ -8,6 +8,12 @@ Latest release: [![Latest release](https://img.shields.io/github/v/release/realt
 
 ---
 
+### [v1.1.0] – 2026-06-22
+- addition of text rendering and text-to-XML conversion
+- addressed https://github.com/realtaonline/PubNote/issues/43 - dark mode images
+- addressed https://github.com/realtaonline/PubNote/issues/44 - PubNoteInIndent
+- addressed https://github.com/realtaonline/PubNote/issues/45 - Crane-txt2xml
+
 ### [v1.0.0] – 2025-07-14
 - first release; no changes since v0.0.12
 

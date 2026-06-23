@@ -4,7 +4,8 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteOutCheck.bat
 ::
-:: A batch file for validating a PubNote distribution XML output file.
+:: Validates a PubNote distribution XML output file against the
+:: distribution DTD.
 ::
 :: Usage:
 ::   PubNoteOutCheck.bat file.xml
@@ -66,7 +67,7 @@ goto loop
 
 :afterloop
 if /i "%LASTARG%"=="batch=yes" goto end
-
+echo >con ...
 pause
 
 :end

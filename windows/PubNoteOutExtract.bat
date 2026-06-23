@@ -4,10 +4,9 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteOutExtract.bat
 ::
-:: A batch file for processing a PubNote distribution XML output file into
-:: the set of XML Article files found embedded in an ArticleSet document 
-:: element. This also will copy an XML output file that has an Article document
-:: element.
+:: Extracts the individual XML Article files embedded in a PubNote
+:: distribution XML ArticleSet document (or copies a single Article
+:: document).
 ::
 :: Usage:
 ::   PubNoteOutExtract.bat file.xml [indent=yes]
@@ -35,7 +34,7 @@ set "INPUTBASE=%~n1"
 set "FILEDIR=%~dp1"
 
 :: Paths
-set "SAXON_JAR=%THIS%\..\utilities\saxon12he\saxon12he.jar"
+set "SAXON_JAR=%THIS%\..\utilities\saxonhe\saxonhe.jar"
 set "XSL=%THIS%\..\xsl\PubNoteOutExtract.xsl"
 set "LOG=%FILEDIR%\%~nx1.extract.log.txt"
 
@@ -65,7 +64,7 @@ goto loop
 
 :afterloop
 if /i "%LASTARG%"=="batch=yes" goto end
-
+echo >con ...
 pause
 
 :end

@@ -1,0 +1,4 @@
+[submodule "Crane-txt2xml"]
+	branch = main
+	path = Crane-txt2xml
+	url = git@github.com:CraneSoftwrights/Crane-txt2xml.git

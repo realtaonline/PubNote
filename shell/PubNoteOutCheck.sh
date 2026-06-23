@@ -3,7 +3,8 @@
 # ---------------------------------------------------------------------------
 # PubNoteOutCheck.sh
 #
-# A shell script for validating a PubNote distribution XML output file.
+# Validates a PubNote distribution XML output file against the distribution
+# DTD that has been converted to RNG.
 #
 # Usage:
 #   PubNoteOutCheck.sh file.xml

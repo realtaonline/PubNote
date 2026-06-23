@@ -4,3 +4,8 @@ utilities/fop/fop-config.windows.xml
 
 # Ignore build directory used for release packaging
 build/
+
+# Miscellaneous local development
+*.zip
+*.tar.gz
+tarball.sh

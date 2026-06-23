@@ -3,8 +3,7 @@
 # ---------------------------------------------------------------------------
 # PubNoteOutIndent.sh
 #
-# A shell script for processing a PubNote distribution XML output file into
-# an indented version of itself.
+# Produces an indented version of a PubNote distribution XML output file.
 #
 # Usage:
 #   PubNoteOutIndent.sh file.xml
@@ -33,7 +32,7 @@ INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 
 # Paths
-SAXON_JAR="$REPO/utilities/saxon12he/saxon12he.jar"
+SAXON_JAR="$REPO/utilities/saxonhe/saxonhe.jar"
 XSL="$REPO/xsl/PubNoteOutExtract.xsl"
 LOG="${INPUT}.indent.log.txt"
 

@@ -1,11 +1,11 @@
 @echo off
+setlocal
+
 :: ---------------------------------------------------------------------------
 :: PubNoteRender-de.bat
 ::
-:: Hilfsskript zum Aufruf von PubNoteRender-en.bat mit dem Suffix -de.
-::
-:: Unterstützt Drag-and-Drop oder automatisierte Aufrufe zur Erzeugung
-:: deutschsprachiger Ausgaben aus einer PubNote-XML-Datei.
+:: Erzeugt aus einer PubNote-XML-Datei PDF-, HTML-, DOCX- und Textausgaben
+:: mit deutschsprachigen Bezeichnungen.
 ::
 :: Die Ausgabedateien werden in ein Unterverzeichnis geschrieben, das nach
 :: der Eingabedatei benannt ist. Temporäre Dateien werden gelöscht, sofern

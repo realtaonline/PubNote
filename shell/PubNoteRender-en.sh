@@ -1,13 +1,19 @@
 #!/bin/bash
 
 # ---------------------------------------------------------------------------
-# PubNoteRender-en.bat
+# PubNoteRender-en.sh
 #
-# A shell script for processing a PubNote XML input file into
-# PDF, HTML, and DOCX outputs using Saxon, FOP, and Wordinator.
+# Renders a PubNote XML file to PDF, HTML, DOCX, and text using Saxon, FOP,
+# and Wordinator.
 #
 # Supports an optional language suffix (e.g., -fr, -de) passed as the
 # first argument, and handles transformation, rendering, and cleanup.
+#
+# Also supports an optional language suffix supplied via the environment
+# variable $SUFFIX (e.g., SUFFIX=-de PubNoteRender-en.sh file.xml). If
+# $SUFFIX is explicitly set to the empty string, the raw XML element and
+# attribute names are used as labels rather than natural language labels.
+# If $SUFFIX is not set at all, it defaults to "-en".
 #
 # Usage:
 #   PubNoteRender-en.sh [-suffix] file.xml
@@ -21,13 +27,13 @@
 # Get the absolute path to the script's parent's directory (inside the repo)
 REPO="$(cd "$(dirname "$0")" && cd .. && pwd)"
 
-# Optional suffix like -fr, -de, -us
-SUFFIX="-en"
-
 # Check for optional -suffix argument
 if [[ "$1" == -* ]]; then
   SUFFIX="$1"
   shift
+fi
+if [[ -z "${SUFFIX+x}" ]]; then
+  SUFFIX="-en"
 fi
 
 # Require input file
@@ -45,7 +51,7 @@ INPUT="$(basename "$1")"
 INPUTBASE="${INPUT%.*}"
 
 # Paths
-SAXON_JAR="$REPO/utilities/saxon12he/saxon12he.jar"
+SAXON_JAR="$REPO/utilities/saxonhe/saxonhe.jar"
 WORDINATOR_JAR="$REPO/utilities/wordinator/wordinator-1.1.1-fat.jar"
 XSLDIR="$REPO/xsl"
 XSLRENDER="$XSLDIR/PubNoteRender${SUFFIX}.xsl"
@@ -58,25 +64,66 @@ HTML="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.html"
 DOCX_NAME="${INPUT}${SUFFIX}.docx"
 SWPX_NAME="${INPUT}${SUFFIX}.swpx"
 DOCX="$FILEDIR/${INPUTBASE}/${DOCX_NAME}"
-SWPXDIR="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}/"
+SWPXDIR="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-SWPX/"
 DOCX_TEMP="$SWPXDIR/${DOCX_NAME}"
 SWPX="$SWPXDIR/${SWPX_NAME}"
 DOTX="$REPO/dev/PubNoteRender.dotx"
 LOG="$FILEDIR/${INPUT}${SUFFIX}.pdf.log.txt"
+TEXT="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
+TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}-markdown.txt"
 
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" with "$LOG"...
-echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" with "$LOG"... 1> "$LOG"
+#Example input and all outputs including round-trip equivalents
+#
+#PM0.xml
+#PM0/PM0.txt
+#PM0/PM0/PM0.txt.xml
+#PM0/PM0-markdown.txt
+#PM0/PM0-markdown/PM0-markdown.txt.xml
+#PM0/PM0-en.txt
+#PM0/PM0-en/PM0-en.txt.xml
+#PM0/PM0-en-markdown.txt
+#PM0/PM0-en-markdown/PM0-markdown-en.txt.xml
+#PM0/PM0-en.pdf
+#PM0/PM0-en.html
+#PM0/PM0-en.docx
 
 if [[ ! -d "$FILEDIR/$INPUTBASE" ]] ; then mkdir "$FILEDIR/$INPUTBASE" ; fi
 
-# Delete outputs and temporary files
+# Delete outputs and temporary files from any previous run
 if [[ -f "$FOPFO" ]]; then rm "$FOPFO" ;  fi
 if [[ -f "$FO" ]];    then rm "$FO" ;  fi
 if [[ -f "$PDF" ]];   then rm "$PDF" ; fi
 if [[ -f "$LOG" ]];   then rm "$LOG" ; fi
 
-echo Transform XML to FO...
-echo Transform XML to FO... 1>> "$LOG"
+# Create the four text renderings for round-tripping
+
+echo Transform XML to XML text...  | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2Text.sh" "$1" 2>&1 | tee -a "$LOG"
+TEXT="$FILEDIR/${INPUTBASE}/${INPUT}.txt"
+
+echo Transform XML to XML text with markdown... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown.sh" "$1" 2>&1 | tee -a "$LOG"
+TEXTM="$FILEDIR/${INPUTBASE}/${INPUT}-markdown.txt"
+
+if [[ ! "${SUFFIX}" == "-us" ]] ; then
+
+echo Transform XML to "${SUFFIX}" text... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
+TEXTS="$FILEDIR/${INPUTBASE}/${INPUT}${SUFFIX}.txt"
+
+echo Transform XML to "${SUFFIX}" text with markdown... | tee -a "$LOG"
+"$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh" "$1" 2>&1 | tee -a "$LOG"
+TEXTMS="$FILEDIR/${INPUTBASE}/${INPUT}-markdown${SUFFIX}.txt"
+
+else
+
+echo Explicitly skipping "$REPO/shell/PubNoteXML2Text${SUFFIX}.sh" and "$REPO/shell/PubNoteXML2TextMarkdown${SUFFIX}.sh"
+
+fi
+
+echo Rendering "$FILEDIR/$INPUT" using "$XSL" to "$PDF" ... | tee -a "$LOG"
+
+echo Transform XML to FO... | tee -a "$LOG"
 java -jar "$SAXON_JAR" -s:"$FILEDIR/$INPUT" -xsl:"$XSLRENDER" -o:"$FO" 2>> "$LOG"
 retval=$?
 if [[ "$retval" != "0" ]]; then
@@ -84,8 +131,7 @@ if [[ "$retval" != "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform FO to FOP FO...
-  echo Transform FO to FOP FO... 1>> "$LOG"
+  echo Transform FO to FOP FO... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$FO" -xsl:"$XSLDIR/scrubPubNote.xsl" -o:"$FOPFO" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
@@ -94,8 +140,7 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Render FOP FO to PDF...
-  echo Render FOP FO to PDF... 1>> "$LOG"
+  echo Render FOP FO to PDF... | tee -a "$LOG"
   (
     cd "$REPO" || exit 1
     sh "$FOP" -fo "$FOPFO" -pdf "$PDF" 2>> "$LOG"
@@ -105,8 +150,7 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform FO to HTML...
-  echo Transform FO to HTML... 1>> "$LOG"
+  echo Transform FO to HTML... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$FO" -xsl:"$XSLDIR/pnfo2html.xsl" -o:"$HTML" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
@@ -115,15 +159,13 @@ if [[ "$retval" == "0" ]]; then
 fi
 
 if [[ "$retval" == "0" ]]; then
-  echo Transform HTML to SWPX...
-  echo Transform HTML to SWPX... 1>> "$LOG"
+  echo Transform HTML to SWPX... | tee -a "$LOG"
   java -jar "$SAXON_JAR" -s:"$HTML" -xsl:"$XSLDIR/html2swpx.xsl" -o:"$SWPX" 2>> "$LOG"
   retval=$?
   if [[ "$retval" != "0" ]]; then
     echo Saxon execution error creating SWPX
   fi
-  echo Transform SWPX to DOCX...
-  echo Transform SWPX to DOCX... 1>> "$LOG"
+  echo Transform SWPX to DOCX... | tee -a "$LOG"
   cp "$DOTX" "$SWPXDIR"
   java -jar "$WORDINATOR_JAR" -i "$SWPXDIR" -o "$SWPXDIR" -t "$DOTX" 2>&1 1>> "$LOG"
   if [[ -f  "$DOCX_TEMP" ]]; then cp "$DOCX_TEMP" "$DOCX" ; fi

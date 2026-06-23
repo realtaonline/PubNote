@@ -4,43 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Resources/ApplicationStub.icns</key>
-		<data>
-		RYTqh+7iocnEIV8iTs9EgJjEkO4=
-		</data>
-		<key>Resources/Assets.car</key>
-		<data>
-		1asgte35t0XNisvnycP4aGmipIg=
-		</data>
 		<key>Resources/InfoPlist.loctable</key>
 		<data>
 		KEQC0DFC9lrETWe0E5eVGGsPylc=
 		</data>
+		<key>Resources/Realta.icns</key>
+		<data>
+		km/qLQtIqjsX3fETHXkO8OKUueo=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Resources/ApplicationStub.icns</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RYTqh+7iocnEIV8iTs9EgJjEkO4=
-			</data>
-			<key>hash2</key>
-			<data>
-			odOqeBevxysHIbR5V5qgZz11qTuV9cL5jKaIcUw3R0I=
-			</data>
-		</dict>
-		<key>Resources/Assets.car</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1asgte35t0XNisvnycP4aGmipIg=
-			</data>
-			<key>hash2</key>
-			<data>
-			Xgq054HrP1eyabRZMpm0pFNNC86HMaE2/DNOSgA5p6Q=
-			</data>
-		</dict>
 		<key>Resources/InfoPlist.loctable</key>
 		<dict>
 			<key>hash</key>
@@ -52,6 +26,17 @@
 			3cSIcj64rHY2k+pLrnrgd1Li6hmbquwgX94QcefajJ8=
 			</data>
 		</dict>
+		<key>Resources/Realta.icns</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			km/qLQtIqjsX3fETHXkO8OKUueo=
+			</data>
+			<key>hash2</key>
+			<data>
+			DWXDQO6+5Zn5HGK922V0dAhuHQ2a/1ua5g00czxQV38=
+			</data>
+		</dict>
 		<key>document.wflow</key>
 		<dict>
 			<key>cdhash</key>
@@ -59,7 +44,7 @@
 			kdvIkRUZLqbvwn7gix/n8lOeiBI=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"2af9cfbb39231488e0932f7184a099c703e56a79" or cdhash H"91dbc89115192ea6efc27ee08b1fe7f2539e8812"</string>
+			<string>cdhash H"91dbc89115192ea6efc27ee08b1fe7f2539e8812"</string>
 		</dict>
 	</dict>
 	<key>rules</key>

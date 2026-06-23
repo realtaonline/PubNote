@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 # PubNoteInCheck.sh
 #
-# A shell script for validating a PubNote submission XML input file.
+# Validates a PubNote submission XML input file against the submission DTD.
 #
 # Usage:
 #   PubNoteInCheck.sh file.xml

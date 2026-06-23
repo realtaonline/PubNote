@@ -7,7 +7,7 @@
 	<key>AMStayOpen</key>
 	<false/>
 	<key>BuildMachineOSBuild</key>
-	<string>23A344011</string>
+	<string>23A344017</string>
 	<key>CFBundleAllowMixedLocalizations</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -35,6 +35,8 @@
 	<string>Automator Application Stub</string>
 	<key>CFBundleIconFile</key>
 	<string>Realta</string>
+	<key>CFBundleIconName</key>
+	<string>ApplicationStub</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.apple.automator.PubNoteOutExtract</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -54,7 +56,7 @@
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>528</string>
+	<string>534</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -62,15 +64,15 @@
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>15.5</string>
+	<string>26.5</string>
 	<key>DTSDKBuild</key>
-	<string>24F62</string>
+	<string>25F63</string>
 	<key>DTSDKName</key>
-	<string>macosx15.5.internal</string>
+	<string>macosx26.5.internal</string>
 	<key>DTXcode</key>
-	<string>1630</string>
+	<string>2630</string>
 	<key>DTXcodeBuild</key>
-	<string>16E6052g</string>
+	<string>17E6107</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9</string>
 	<key>LSUIElement</key>

@@ -4,8 +4,7 @@ setlocal enabledelayedexpansion
 :: ---------------------------------------------------------------------------
 :: PubNoteOutIndent.bat
 ::
-:: A batch file for processing a PubNote distribution XML output file into
-:: an indented version of itself.
+:: Produces an indented version of a PubNote distribution XML output file.
 ::
 :: Usage:
 ::   PubNoteOutIndent.bat file.xml
@@ -33,7 +32,7 @@ set "INPUTBASE=%~n1"
 set "FILEDIR=%~dp1"
 
 :: Paths
-set "SAXON_JAR=%THIS%\..\utilities\saxon12he\saxon12he.jar"
+set "SAXON_JAR=%THIS%\..\utilities\saxonhe\saxonhe.jar"
 set "XSL=%THIS%\..\xsl\PubNoteOutExtract.xsl"
 set "LOG=%FILEDIR%\%~nx1.indent.log.txt"
 
@@ -62,7 +61,7 @@ goto loop
 
 :afterloop
 if /i "%LASTARG%"=="batch=yes" goto end
-
+echo >con ...
 pause
 
 :end

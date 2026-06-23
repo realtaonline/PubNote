@@ -1,0 +1,57 @@
+Groupe d'articles:
+  Article:
+    Journal:
+      Nom de l'éditeur: Sage Publications 
+      Intitulé de la revue: Journal of Placeholder Studies 
+      ISSN: 0000-0000 
+      Volume: 31 
+      Numéro: 2 
+      Date de publication: @Statut de publication: ppublish 
+        Année: 2000 
+        Mois: 01 
+    Remplace: @Type d'identifiant: doi  10.1177\/1049909113482745 ArticleTitle: `A Study on Placeholder Data`
+    Première page: @Zéro non significatif: delete  211 
+    Dernière page: 219 
+    ID d'emplacement électronique: @Type d'identifiant électronique: doi  @Valide: Y  10.9999\/fake.doi.00001 
+    Langue: EN 
+    Liste des auteurs:
+      Auteur:
+        Prénom: @Vide: N  Lewis 
+        Nom: Crusoe 
+        Affiliation: Department of Placeholder Studies, Fictional University 
+      Auteur:
+        Prénom: @Vide: N  Henry 
+        Nom: Rochester 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+        Détails sur l'affiliation:
+          Affiliation: Department of Placeholder Studies, Fictional University 
+        /Détails sur l'affiliation 
+    Type de publication: JOURNAL ARTICLE 
+    Liste des identifiants des articles:
+      Identifiant de l'article: @Type d'identifiant: pii  FAKEID00001 
+      Identifiant de l'article: @Type d'identifiant: doi  10.9999\/fake.doi.00001 
+    Historique:
+      Date de publication: @Statut de publication: aheadofprint 
+        Année: 2000 
+        Mois: 01 
+        Jour: 01 
+    L'abrégé: `This is a placeholder abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Lorem ipsum dolor `
+    Liste d'objets:
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `brain`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `dyspnea`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `electrical`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `nausea`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `neuromodulation`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `pain`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `palliative care`
+      Objet: @Type: keyword 
+        Paramètre: @Nom: value  `stimulation`

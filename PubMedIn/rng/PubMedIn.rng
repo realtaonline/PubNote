@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PubMed Journal Article DTD Version 3.0 -->
+<!--
+  This document is still under revision and may change.
+  
+      Changes:
+  
+  version 2.8
+   - Added elements for reference citations:
+        ReferenceList
+        Title
+        Reference
+        Citation
+        PMID
+   - Added CDATA Type attribute to OtherAbstract      	  
+  
+  version 2.7
+   - Added MathML3 support files
+   - removed directly referenced character files (ISO*.ent) in favor of MathML characters
+        - added pubmedchars/ISOchars.ent to define 138 ISO characters that were defined
+  	in the previous PubMed.dtd but were not covered by the mathml iso sets
+  
+      version 2.6:
+       - added attributes on Article tag:
+         VersionID
+         VersionDate
+  
+      version 2.5:
+       - added tags:
+  	    OtherAbstract
+  
+      version 2.4:
+       - added tags:
+  	    CopyrightInformation
+  
+  
+      version 2.3:
+       - added tags:
+  	    GroupList
+  	    Group
+  	    GroupName
+  	    IndividualName
+  	    ELocationID
+  
+      version 2.2:
+       - added "EmptyYN" attribute to FirstName tag
+  
+   version 2.1:
+   - AuthorList changed from containing (Author+) to (Author*)
+   - Removal of FullTextURL element
+       - Addition of euro entity
+  
+-->
+<!--
+  Typical usage:
+  
+  <!DOCTYPE ArticleSet PUBLIC "-//NLM//DTD PubMed 2.0//EN" "http://www.ncbi.nlm.nih.gov:80/entrez/query/static/PubMed.dtd">
+  <ArticleSet>
+  ...
+   </ArticleSet>
+  
+   or:
+  
+  <!DOCTYPE ArticleSet PUBLIC "-//NLM//DTD PubMed//EN" "http://www.ncbi.nlm.nih.gov:80/entrez/query/static/PubMed.dtd">
+  <ArticleSet>
+  ...
+   </ArticleSet>
+-->
+<!-- ============================================================= -->
+<!-- MATHML 3.0 SETUP -->
+<!-- ============================================================= -->
+<!-- MATHML SETUP FILE -->
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink" datatypeLibrary="">
+  <include href="mathml-in-pubmed.mod.rng"/>
+  <!-- ============================================================= -->
+  <!-- REMAINING PUBMED CHARACTERS -->
+  <!-- ============================================================= -->
+  <define name="data">
+    <choice>
+      <text/>
+      <ref name="sup"/>
+      <ref name="inf"/>
+      <ref name="b"/>
+      <ref name="u"/>
+      <ref name="i"/>
+      <ref name="sub"/>
+    </choice>
+  </define>
+  <define name="pub.status.int">
+    <choice>
+      <value>pmc</value>
+      <value>pmcr</value>
+      <value>pubmed</value>
+      <value>pubmedr</value>
+      <value>premedline</value>
+      <value>medline</value>
+      <value>medliner</value>
+    </choice>
+  </define>
+  <define name="pub.status">
+    <choice>
+      <value>received</value>
+      <value>accepted</value>
+      <value>epublish</value>
+      <value>ppublish</value>
+      <value>revised</value>
+      <value>aheadofprint</value>
+      <value>ecollection</value>
+      <ref name="pub.status.int"/>
+    </choice>
+  </define>
+  <define name="art.id.type.int">
+    <choice>
+      <value>pubmed</value>
+      <value>medline</value>
+      <value>pmcid</value>
+    </choice>
+  </define>
+  <define name="art.id.type">
+    <choice>
+      <value>doi</value>
+      <value>pii</value>
+      <value>pmcpid</value>
+      <value>pmpid</value>
+      <ref name="art.id.type.int"/>
+    </choice>
+  </define>
+  <!-- This is the top level element -->
+  <define name="ArticleSet">
+    <element name="ArticleSet">
+      <ref name="ArticleSet.attlist"/>
+      <oneOrMore>
+        <ref name="Article"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ArticleSet.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Article">
+    <element name="Article">
+      <ref name="Article.attlist"/>
+      <ref name="Journal"/>
+      <optional>
+        <ref name="Replaces"/>
+      </optional>
+      <optional>
+        <ref name="ArticleTitle"/>
+      </optional>
+      <optional>
+        <ref name="VernacularTitle"/>
+      </optional>
+      <optional>
+        <ref name="FirstPage"/>
+      </optional>
+      <optional>
+        <ref name="LastPage"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="ELocationID"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="Language"/>
+      </zeroOrMore>
+      <optional>
+        <ref name="AuthorList"/>
+      </optional>
+      <optional>
+        <ref name="GroupList"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="PublicationType"/>
+      </zeroOrMore>
+      <optional>
+        <ref name="ArticleIdList"/>
+      </optional>
+      <optional>
+        <ref name="History"/>
+      </optional>
+      <optional>
+        <ref name="Abstract"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="OtherAbstract"/>
+      </zeroOrMore>
+      <optional>
+        <ref name="CopyrightInformation"/>
+      </optional>
+      <optional>
+        <ref name="CoiStatement"/>
+      </optional>
+      <optional>
+        <ref name="ObjectList"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="ReferenceList"/>
+      </zeroOrMore>
+      <optional>
+        <ref name="ArchiveCopySource"/>
+      </optional>
+    </element>
+  </define>
+  <define name="Article.attlist" combine="interleave">
+    <optional>
+      <attribute name="VersionID"/>
+    </optional>
+    <optional>
+      <attribute name="VersionDate"/>
+    </optional>
+  </define>
+  <define name="AbstractText">
+    <element name="AbstractText">
+      <ref name="AbstractText.attlist"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="data"/>
+          <ref name="math"/>
+          <ref name="DispFormula"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="AbstractText.attlist" combine="interleave">
+    <attribute name="Label"/>
+  </define>
+  <define name="abstract.common">
+    <choice>
+      <text/>
+      <ref name="AbstractText"/>
+      <ref name="sup"/>
+      <ref name="inf"/>
+      <ref name="b"/>
+      <ref name="u"/>
+      <ref name="i"/>
+      <ref name="sub"/>
+      <ref name="math"/>
+      <ref name="DispFormula"/>
+    </choice>
+  </define>
+  <define name="abstract">
+    <zeroOrMore>
+      <ref name="abstract.common"/>
+    </zeroOrMore>
+  </define>
+  <define name="other.abstract">
+    <zeroOrMore>
+      <choice>
+        <ref name="abstract.common"/>
+        <ref name="ArticleTitle"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+  <define name="Journal">
+    <element name="Journal">
+      <ref name="Journal.attlist"/>
+      <ref name="PublisherName"/>
+      <ref name="JournalTitle"/>
+      <ref name="Issn"/>
+      <optional>
+        <ref name="Volume"/>
+      </optional>
+      <optional>
+        <ref name="Issue"/>
+      </optional>
+      <ref name="PubDate"/>
+    </element>
+  </define>
+  <define name="Journal.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="PublisherName">
+    <element name="PublisherName">
+      <ref name="PublisherName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="PublisherName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="JournalTitle">
+    <element name="JournalTitle">
+      <ref name="JournalTitle.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="JournalTitle.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Issn">
+    <element name="Issn">
+      <ref name="Issn.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Issn.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Volume">
+    <element name="Volume">
+      <ref name="Volume.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Volume.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Issue">
+    <element name="Issue">
+      <ref name="Issue.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Issue.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="PubDate">
+    <element name="PubDate">
+      <ref name="PubDate.attlist"/>
+      <ref name="Year"/>
+      <optional>
+        <ref name="Month"/>
+      </optional>
+      <optional>
+        <ref name="Day"/>
+      </optional>
+      <optional>
+        <ref name="Season"/>
+      </optional>
+    </element>
+  </define>
+  <define name="PubDate.attlist" combine="interleave">
+    <optional>
+      <attribute name="PubStatus" a:defaultValue="ppublish">
+        <ref name="pub.status"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="Year">
+    <element name="Year">
+      <ref name="Year.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Year.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Month">
+    <element name="Month">
+      <ref name="Month.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Month.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Day">
+    <element name="Day">
+      <ref name="Day.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Day.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Season">
+    <element name="Season">
+      <ref name="Season.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Season.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <!-- End of PubDate group -->
+  <define name="History">
+    <element name="History">
+      <ref name="History.attlist"/>
+      <zeroOrMore>
+        <ref name="PubDate"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="History.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <!-- End of Journal group -->
+  <define name="Replaces">
+    <element name="Replaces">
+      <ref name="Replaces.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Replaces.attlist" combine="interleave">
+    <optional>
+      <attribute name="IdType" a:defaultValue="pubmed">
+        <ref name="art.id.type"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="ArticleTitle">
+    <element name="ArticleTitle">
+      <ref name="ArticleTitle.attlist"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="data"/>
+          <ref name="math"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="ArticleTitle.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="VernacularTitle">
+    <element name="VernacularTitle">
+      <ref name="VernacularTitle.attlist"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="data"/>
+          <ref name="math"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="VernacularTitle.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="FirstPage">
+    <element name="FirstPage">
+      <ref name="FirstPage.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="FirstPage.attlist" combine="interleave">
+    <optional>
+      <attribute name="LZero" a:defaultValue="delete">
+        <choice>
+          <value>Save</value>
+          <value>save</value>
+          <value>delete</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="LastPage">
+    <element name="LastPage">
+      <ref name="LastPage.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="LastPage.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Language">
+    <element name="Language">
+      <ref name="Language.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Language.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="AuthorList">
+    <element name="AuthorList">
+      <ref name="AuthorList.attlist"/>
+      <zeroOrMore>
+        <ref name="Author"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="AuthorList.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="affiliation">
+    <optional>
+      <choice>
+        <ref name="Affiliation"/>
+        <oneOrMore>
+          <ref name="AffiliationInfo"/>
+        </oneOrMore>
+      </choice>
+    </optional>
+  </define>
+  <define name="Author">
+    <element name="Author">
+      <ref name="Author.attlist"/>
+      <choice>
+        <group>
+          <ref name="FirstName"/>
+          <optional>
+            <ref name="MiddleName"/>
+          </optional>
+          <ref name="LastName"/>
+          <optional>
+            <ref name="Suffix"/>
+          </optional>
+          <optional>
+            <ref name="Initials"/>
+          </optional>
+        </group>
+        <ref name="CollectiveName"/>
+      </choice>
+      <ref name="affiliation"/>
+      <zeroOrMore>
+        <ref name="Identifier"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="Author.attlist" combine="interleave">
+    <optional>
+      <attribute name="EqualContrib">
+        <choice>
+          <value>Y</value>
+          <value>N</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="FirstName">
+    <element name="FirstName">
+      <ref name="FirstName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="FirstName.attlist" combine="interleave">
+    <optional>
+      <attribute name="EmptyYN" a:defaultValue="N">
+        <choice>
+          <value>Y</value>
+          <value>N</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="MiddleName">
+    <element name="MiddleName">
+      <ref name="MiddleName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="MiddleName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="LastName">
+    <element name="LastName">
+      <ref name="LastName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="LastName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="CollectiveName">
+    <element name="CollectiveName">
+      <ref name="CollectiveName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="CollectiveName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Suffix">
+    <element name="Suffix">
+      <ref name="Suffix.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Suffix.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Initials">
+    <element name="Initials">
+      <ref name="Initials.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Initials.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Affiliation">
+    <element name="Affiliation">
+      <ref name="Affiliation.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Affiliation.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="AffiliationInfo">
+    <element name="AffiliationInfo">
+      <ref name="AffiliationInfo.attlist"/>
+      <ref name="Affiliation"/>
+      <zeroOrMore>
+        <ref name="Identifier"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="AffiliationInfo.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Identifier">
+    <element name="Identifier">
+      <ref name="Identifier.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Identifier.attlist" combine="interleave">
+    <attribute name="Source"/>
+  </define>
+  <!-- End of Author group -->
+  <!-- End of AuthorList group -->
+  <define name="PublicationType">
+    <element name="PublicationType">
+      <ref name="PublicationType.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="PublicationType.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ArticleIdList">
+    <element name="ArticleIdList">
+      <ref name="ArticleIdList.attlist"/>
+      <zeroOrMore>
+        <ref name="ArticleId"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="ArticleIdList.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ArticleId">
+    <element name="ArticleId">
+      <ref name="ArticleId.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="ArticleId.attlist" combine="interleave">
+    <optional>
+      <attribute name="IdType" a:defaultValue="pii">
+        <ref name="art.id.type"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="Abstract">
+    <element name="Abstract">
+      <ref name="Abstract.attlist"/>
+      <ref name="abstract"/>
+    </element>
+  </define>
+  <define name="Abstract.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="OtherAbstract">
+    <element name="OtherAbstract">
+      <ref name="OtherAbstract.attlist"/>
+      <ref name="other.abstract"/>
+    </element>
+  </define>
+  <define name="OtherAbstract.attlist" combine="interleave">
+    <attribute name="Language"/>
+    <optional>
+      <attribute name="Type"/>
+    </optional>
+  </define>
+  <define name="ObjectList">
+    <element name="ObjectList">
+      <ref name="ObjectList.attlist"/>
+      <oneOrMore>
+        <ref name="Object"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ObjectList.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Object">
+    <element name="Object">
+      <ref name="Object.attlist"/>
+      <zeroOrMore>
+        <ref name="Param"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="Object.attlist" combine="interleave">
+    <attribute name="Type"/>
+  </define>
+  <define name="Param">
+    <element name="Param">
+      <ref name="Param.attlist"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="data"/>
+          <ref name="math"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="Param.attlist" combine="interleave">
+    <attribute name="Name"/>
+  </define>
+  <define name="ReferenceList">
+    <element name="ReferenceList">
+      <ref name="ReferenceList.attlist"/>
+      <optional>
+        <ref name="Title"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="Reference"/>
+      </zeroOrMore>
+      <zeroOrMore>
+        <ref name="ReferenceList"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="ReferenceList.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Title">
+    <element name="Title">
+      <ref name="Title.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="Title.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Reference">
+    <element name="Reference">
+      <ref name="Reference.attlist"/>
+      <choice>
+        <ref name="Citation"/>
+        <ref name="PMID"/>
+      </choice>
+      <optional>
+        <ref name="ArticleIdList"/>
+      </optional>
+    </element>
+  </define>
+  <define name="Reference.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Citation">
+    <element name="Citation">
+      <ref name="Citation.attlist"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="data"/>
+          <ref name="math"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="Citation.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="PMID">
+    <element name="PMID">
+      <ref name="PMID.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="PMID.attlist" combine="interleave">
+    <optional>
+      <attribute name="VersionID"/>
+    </optional>
+  </define>
+  <!-- End of Article group -->
+  <!-- End of ArticleSet group -->
+  <define name="sup">
+    <element name="sup">
+      <ref name="sup.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="sup.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="inf">
+    <element name="inf">
+      <ref name="inf.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="inf.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="sub">
+    <element name="sub">
+      <ref name="sub.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="sub.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="b">
+    <element name="b">
+      <ref name="b.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="b.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="i">
+    <element name="i">
+      <ref name="i.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="i.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="u">
+    <element name="u">
+      <ref name="u.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="u.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="DispFormula">
+    <element name="DispFormula">
+      <ref name="DispFormula.attlist"/>
+      <ref name="math"/>
+    </element>
+  </define>
+  <define name="DispFormula.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="GroupList">
+    <element name="GroupList">
+      <ref name="GroupList.attlist"/>
+      <oneOrMore>
+        <ref name="Group"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="GroupList.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="Group">
+    <element name="Group">
+      <ref name="Group.attlist"/>
+      <optional>
+        <ref name="GroupName"/>
+      </optional>
+      <oneOrMore>
+        <ref name="IndividualName"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="Group.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="GroupName">
+    <element name="GroupName">
+      <ref name="GroupName.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="GroupName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="IndividualName">
+    <element name="IndividualName">
+      <ref name="IndividualName.attlist"/>
+      <ref name="FirstName"/>
+      <optional>
+        <ref name="MiddleName"/>
+      </optional>
+      <ref name="LastName"/>
+      <optional>
+        <ref name="Suffix"/>
+      </optional>
+      <ref name="affiliation"/>
+      <zeroOrMore>
+        <ref name="Identifier"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="IndividualName.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ELocationID">
+    <element name="ELocationID">
+      <ref name="ELocationID.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="ELocationID.attlist" combine="interleave">
+    <attribute name="EIdType">
+      <choice>
+        <value>doi</value>
+        <value>pii</value>
+      </choice>
+    </attribute>
+    <optional>
+      <attribute name="ValidYN" a:defaultValue="Y">
+        <choice>
+          <value>Y</value>
+          <value>N</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="CopyrightInformation">
+    <element name="CopyrightInformation">
+      <ref name="CopyrightInformation.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="CopyrightInformation.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="CoiStatement">
+    <element name="CoiStatement">
+      <ref name="CoiStatement.attlist"/>
+      <zeroOrMore>
+        <ref name="data"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="CoiStatement.attlist" combine="interleave">
+    <empty/>
+  </define>
+  <define name="ArchiveCopySource">
+    <element name="ArchiveCopySource">
+      <ref name="ArchiveCopySource.attlist"/>
+      <text/>
+    </element>
+  </define>
+  <define name="ArchiveCopySource.attlist" combine="interleave">
+    <optional>
+      <attribute name="DocType" a:defaultValue="pdf">
+        <value type="string">pdf</value>
+      </attribute>
+    </optional>
+  </define>
+  <start>
+    <choice>
+      <ref name="ArticleSet"/>
+      <ref name="Article"/>
+    </choice>
+  </start>
+</grammar>

@@ -1,0 +1,97 @@
+PubMed-Artikel:
+  Medline-Zitat: @Status: MEDLINE  @IndexingMethod: Manual  @Owner: NLM 
+    PubMed-ID: @Version: 1  2 
+    Abschlussdatum:
+      Jahr: 2000 
+      Monat: 01 
+      Tag: 01 
+    Überarbeitungsdatum:
+      Jahr: 2000 
+      Monat: 01 
+      Tag: 01 
+    Artikel: @PubModel: Print 
+      Zeitschrift:
+        ISSN: @IssnType: Electronic  0000-0000 
+        Zeitschriftenausgabe: @CitedMedium: Internet 
+          Band: 66 
+          Ausgabe: 4 
+          Veröffentlichungsdatum:
+            Jahr: 2000 
+            Monat: 01 
+            Tag: 01 
+        Titel: AStudyonPlaceholderData 
+        ISO-Abkürzung: JPlaceholderStud ArticleTitle: `AStudyonPlaceholderData`
+      Seitennummerierung:
+        Medline-Seitenzahl: 100--1064 
+      Autorenliste: @CompleteYN: Y 
+        Autor: @Gültig: Y 
+          Nachname: Wilkins 
+          Vorname: Kate 
+          Initialen: AA 
+        Autor: @Gültig: Y 
+          Nachname: Sawyer 
+          Vorname: Dorothy 
+          Initialen: AA 
+      Sprache: eng 
+      Publikationstypliste:
+        Publikationstyp: @UI: D016428  JournalArticle 
+        Publikationstyp: @UI: D013486  ResearchSupport,U.S.Gov't,Non-P.H.S. 
+        Publikationstyp: @UI: D013487  ResearchSupport,U.S.Gov't,P.H.S. 
+    Medline-Zeitschrifteninfo:
+      Land: UnitedStates 
+      Medline-Titelabkürzung: JPlaceholderStud 
+      Eindeutige NLM-ID: FAKEID00001 
+      ISSN-Verknüpfung: 0000-0000 
+    Chemikalienliste:
+      Chemikalie:
+        Registrierungsnummer: 0U46U6E8UK 
+        Name der Substanz: @UI: D009243  NAD 
+      Chemikalie:
+        Registrierungsnummer: 53-59-8 
+        Name der Substanz: @UI: D009249  NADP 
+    Zitationsuntergruppe: IM 
+    Liste der Kommentarkorrekturen:
+      Kommentarkorrekturen: @RefType: ErratumIn 
+        Referenzquelle: BiochemPharmacol.1975Aug15;24(16)\:1517-21.doi\:10.1016\/0006-2952(75)90029-5 
+        PubMed-ID: @Version: 1  8 
+    MeSH-Überschriftenliste:
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D005583  @MajorTopicYN: N  FourierAnalysis 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D009682  @MajorTopicYN: N  MagneticResonanceSpectroscopy 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D008958  @MajorTopicYN: N  Models,Molecular 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D008968  @MajorTopicYN: N  MolecularConformation 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D009243  @MajorTopicYN: Y  NAD 
+        Qualifikatorname: @UI: Q000031  @MajorTopicYN: N  analogs&derivatives 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D009249  @MajorTopicYN: Y  NADP 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D013329  @MajorTopicYN: N  Structure-ActivityRelationship 
+      MeSH-Überschrift:
+        Deskriptorname: @UI: D013696  @MajorTopicYN: N  Temperature 
+  PubMed-Daten:
+    Historie:
+      PubMed-Veröffentlichungsdatum: @Veröffentlichungsstatus: pubmed 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+      PubMed-Veröffentlichungsdatum: @Veröffentlichungsstatus: medline 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+        Stunde: 0 
+        Minute: 1 
+      PubMed-Veröffentlichungsdatum: @Veröffentlichungsstatus: entrez 
+        Jahr: 2000 
+        Monat: 01 
+        Tag: 01 
+        Stunde: 0 
+        Minute: 0 
+    Veröffentlichungsstatus: ppublish 
+    Artikel-ID-Liste:
+      Artikel-ID: @Kennungstyp: pubmed  FAKEID00001 
+      Artikel-ID: @Kennungstyp: pii  FAKEID00001 
+      Artikel-ID: @Kennungstyp: doi  10.9999\/fake.doi.00001 
